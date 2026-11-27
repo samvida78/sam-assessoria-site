@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sam-assessoria-v4.0.3';
+const CACHE_NAME = 'sam-assessoria-v4.1.0';
 const CORE_ASSETS = [
   './',
   './index.html',
