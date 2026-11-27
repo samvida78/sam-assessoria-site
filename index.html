@@ -3476,6 +3476,99 @@ tr.corban-row-tier-10p > td:first-child {
 .apoio-topic-btn.accent-gold .apoio-topic-cta {
   color: var(--mol-gold-dark);
 }
+.apoio-topic-btn.accent-emerald { border-left-color: #059669; }
+.apoio-topic-btn.accent-emerald .apoio-topic-num { background: linear-gradient(135deg, #047857, #10b981); }
+.apoio-topic-btn.accent-emerald .apoio-topic-cta { color: #059669; }
+.apoio-topic-btn.accent-sapphire { border-left-color: #1d4ed8; }
+.apoio-topic-btn.accent-sapphire .apoio-topic-num { background: linear-gradient(135deg, #1e3a8a, #2563eb); }
+.apoio-topic-btn.accent-sapphire .apoio-topic-cta { color: #1d4ed8; }
+.apoio-topic-btn.accent-indigo { border-left-color: #6d28d9; }
+.apoio-topic-btn.accent-indigo .apoio-topic-num { background: linear-gradient(135deg, #4c1d95, #7c3aed); }
+.apoio-topic-btn.accent-indigo .apoio-topic-cta { color: #6d28d9; }
+.apoio-topic-btn.accent-teal { border-left-color: #0f766e; }
+.apoio-topic-btn.accent-teal .apoio-topic-num { background: linear-gradient(135deg, #115e59, #0d9488); }
+.apoio-topic-btn.accent-teal .apoio-topic-cta { color: #0f766e; }
+
+.apoio-featured-wrap {
+  max-width: 900px;
+  margin: 0 auto 22px;
+}
+.apoio-featured-hero-btn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+  background: linear-gradient(135deg, #1a070d 0%, #5c0c1c 48%, #0f172a 100%);
+  border: 2px solid var(--mol-gold);
+  border-radius: 20px;
+  padding: 24px 26px;
+  cursor: pointer;
+  color: #ffffff;
+  box-shadow: 0 14px 32px rgba(92, 12, 28, 0.28), 0 0 0 4px rgba(198, 155, 66, 0.14);
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+.apoio-featured-hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 38px rgba(92, 12, 28, 0.36), 0 0 0 5px rgba(226, 192, 110, 0.25);
+}
+.apoio-featured-badge {
+  background: linear-gradient(135deg, #c69b42, #f3d078);
+  color: #090c13;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  padding: 4px 11px;
+  border-radius: 999px;
+}
+.apoio-featured-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.11);
+  border: 1.5px solid rgba(243, 208, 120, 0.65);
+  color: #f3d078;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  flex-shrink: 0;
+}
+.apoio-featured-title {
+  font-size: clamp(23px, 3vw, 30px);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 5px;
+}
+.apoio-featured-pill {
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  color: #f8f5ef;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+.apoio-featured-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 13px;
+  border-top: 1px solid rgba(243, 208, 120, 0.32);
+  font-size: 14px;
+  font-weight: 800;
+  color: #f3d078;
+}
+.apoio-featured-hero-btn .apoio-topic-dur {
+  color: rgba(248, 245, 239, 0.88);
+}
+@media (max-width: 767.98px) {
+  .apoio-featured-hero-btn { padding: 18px 16px; border-radius: 16px; }
+  .apoio-featured-icon { width: 48px; height: 48px; font-size: 21px; }
+}
 
 .apoio-topic-placeholder {
   border: 1.5px dashed var(--mol-border-strong);
@@ -3755,9 +3848,97 @@ tr.corban-row-tier-10p > td:first-child {
 [data-theme="dark"] .apoio-quiz-opt.is-correct { color: #6ee7b7; }
 [data-theme="dark"] .apoio-quiz-opt.is-wrong { color: #fca5a5; }
 
+.apoio-section-card {
+  background: var(--mol-surface);
+  border: 1px solid var(--mol-border);
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: var(--mol-shadow-sm);
+}
+.apoio-kpi-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  gap: 10px;
+}
+.apoio-kpi-box {
+  background: var(--mol-surface-2);
+  border: 1px solid var(--mol-border);
+  border-top: 3px solid var(--mol-gold);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+.apoio-kpi-val {
+  font-family: var(--mol-font-mono);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--mol-crimson);
+  line-height: 1.2;
+  margin-bottom: 3px;
+}
+.apoio-kpi-lbl {
+  font-size: 12px;
+  color: var(--mol-ink-muted);
+  line-height: 1.35;
+}
+.apoio-sim-result.is-block {
+  border-color: rgba(220, 38, 38, 0.45);
+  background: rgba(220, 38, 38, 0.08);
+}
+.apoio-step-card {
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+}
+.apoio-step-phase {
+  font-size: 10.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--mol-gold-dark);
+}
+.apoio-step-title {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--mol-ink);
+  margin-bottom: 4px;
+}
+.apoio-step-desc {
+  font-size: 12px;
+  color: var(--mol-ink-muted);
+  line-height: 1.45;
+}
+.apoio-step-check {
+  font-size: 15px;
+  color: var(--mol-ink-muted);
+}
+.apoio-client-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--mol-surface-2);
+  border: 1px solid var(--mol-border);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+.apoio-client-num {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #090c13, #1f2a42);
+  color: #f3d078;
+  font-family: var(--mol-font-mono);
+  font-size: 12px;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 767.98px) {
   .apoio-hero, .apoio-lesson-header { padding: 15px 15px; border-radius: 14px; }
-  .apoio-topic-grid, .apoio-steps-grid, .apoio-client-steps, .apoio-exc-grid, .apoio-support-grid {
+  .apoio-section-card { padding: 14px 13px; border-radius: 14px; }
+  .apoio-topic-grid, .apoio-kpi-row, .apoio-steps-grid, .apoio-client-steps, .apoio-exc-grid, .apoio-support-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -4389,7 +4570,7 @@ html, body {
             <div class="sam-logo-pill-hero sm"><img data-sam-logo="full" alt="SAM Assessoria e Treinamento" /></div>
             <div>
               <div class="auth-brand-title">RECUPERAÇÃO SEGURA</div>
-              <div class="auth-brand-sub">Validação Cadastral Obrigatória · SAM 4.6</div>
+              <div class="auth-brand-sub">Validação Cadastral Obrigatória · SAM 5.0</div>
             </div>
           </div>
           <h2 class="auth-hero-headline" style="font-size:21px;">Valide sua <em>identidade</em> para redefinir.</h2>
@@ -4466,7 +4647,7 @@ html, body {
         <div class="mol-sidebar-top">
           <div class="mol-brand-inline">
             <div class="sam-logo-pill-sidebar"><img data-sam-logo="full" alt="SAM Assessoria e Treinamento" /></div>
-            <span class="brand-exec-pill">4.6</span>
+            <span class="brand-exec-pill">5.0</span>
           </div>
           <button class="btn btn-sm text-white-50 border-0 p-1" onclick="toggleSidebar()" title="Recolher menu"><i class="fa-solid fa-angles-left"></i></button>
         </div>
@@ -4522,7 +4703,7 @@ html, body {
           </button>
           <button class="mol-nav-link" data-page="apoio" onclick="navigate('apoio')">
             <span class="mol-nav-left"><i class="fa-solid fa-graduation-cap"></i><span>Material de Apoio</span></span>
-            <span id="navApoioCount" class="nav-badge-pill">2</span>
+            <span id="navApoioCount" class="nav-badge-pill">7</span>
           </button>
           <button class="mol-nav-link" data-page="recursos" onclick="navigate('recursos')">
             <span class="mol-nav-left"><i class="fa-solid fa-book-open"></i><span>Recursos · Junho/25</span></span>
@@ -7604,7 +7785,7 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
 
   </script>
   <script data-inline="training-hub">
-/* SAM Assessoria e Treinamentos — Central de Material de Apoio para Multiplicadores (v4.6)
+/* SAM Assessoria e Treinamentos — Central de Material de Apoio para Multiplicadores (v5.0)
  * Arquitetura modular por botões de assunto: cada tema enviado entra como um botão próprio,
  * mantendo as aulas organizadas, simplificadas, interativas e sem mistura de conteúdos.
  */
@@ -7614,6 +7795,19 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
   const STORAGE_KEY = 'sam_apoio_progress_v1';
 
   const TRAINING_TOPICS = [
+    {
+      id: 'negocios',
+      order: 'DESTAQUE',
+      featured: true,
+      buttonLabel: 'Negócios',
+      category: 'Tema Central · Visão Estratégica & Conversão em Loja',
+      subtitle: 'O assunto mais importante do Corban: visão figital 2T26, estratégia PADE, comparativo dos 3 Consignados (INSS/Público/Privado), abordagem "Melhor Oferta" e Abertura de Contas (Conta-Fácil / Invest-Fácil).',
+      duration: '6 módulos · Simulador + QUIZ',
+      icon: 'fa-solid fa-crown',
+      accent: 'featured',
+      highlights: ['Resultado 2T26 & Figital', 'PADE & Equilíbrio', 'Consignados INSS/Público/Privado', 'Abertura de Contas'],
+      sources: ['Maratona do Saber: Negócios (23 slides)']
+    },
     {
       id: 'tutorial_nova_plataforma',
       order: '01',
@@ -7641,6 +7835,50 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
         'Consórcio: Mais que uma oferta. Um novo negócio para o CORBAN! (24 slides)',
         'Consórcio: Passo a Passo para Comercialização (22 slides)'
       ]
+    },
+    {
+      id: 'consignado_privado',
+      order: '03',
+      buttonLabel: 'Consignado Privado',
+      category: 'Maratona do Saber · Crédito CLT Bradesco Expresso',
+      subtitle: 'Crédito CLT sem convênio e sem folha Bradesco: condições, janela mensal Dataprev (dia 20 às 22h até dia 23 às 6h), simulador margem 35%, 12 passos com alerta CPV e exceções.',
+      duration: '5 módulos · Simulador + QUIZ',
+      icon: 'fa-solid fa-hand-holding-dollar',
+      accent: 'emerald',
+      sources: ['Maratona do Saber: Consignado Privado (14 slides)']
+    },
+    {
+      id: 'contabil',
+      order: '04',
+      buttonLabel: 'Contábil',
+      category: 'Maratona do Saber · Suporte Operacional Contábil',
+      subtitle: 'Resolução 4.935/21, limites iniciais e migração, razão 01.27 × BIBC, repasse D+1 e YMLO, regra D3 (R$ 1,00), estorno 15 min, antifraude com Token TDS e suporte 0800.',
+      duration: '5 módulos · Segurança + QUIZ',
+      icon: 'fa-solid fa-scale-balanced',
+      accent: 'sapphire',
+      sources: ['Maratona do Saber: Contábil (9 slides)']
+    },
+    {
+      id: 'orgaos_pagadores',
+      order: '05',
+      buttonLabel: 'Órgãos Pagadores',
+      category: 'Maratona do Saber · Rede INSS & Movimentos',
+      subtitle: 'Papel estratégico no INSS, os 7 serviços oficiais (PVBE, RE50, RR50, VC23, PECA, HOBI, CPBI), regras Cadastro vs. Substituição (até 3 KM), trajeto e equipe responsável.',
+      duration: '4 módulos · Simulador + QUIZ',
+      icon: 'fa-solid fa-landmark',
+      accent: 'indigo',
+      sources: ['Maratona do Saber: Órgãos Pagadores (6 slides)']
+    },
+    {
+      id: 'prova_de_vida',
+      order: '06',
+      buttonLabel: 'Prova de Vida',
+      category: 'Maratona do Saber · INSS Bradesco por Biometria',
+      subtitle: 'Guia direto da comprovação de vida facial em Órgãos Pagadores, envio ao INSS em até 1 dia útil, confirmação no app Meu INSS e jornada em 4 passos.',
+      duration: '3 módulos · Direto ao Ponto',
+      icon: 'fa-solid fa-user-check',
+      accent: 'teal',
+      sources: ['Maratona do Saber: Prova de Vida (3 slides)']
     }
   ];
 
@@ -7866,6 +8104,14 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
   ];
 
   const TOPIC_TABS = {
+    negocios: [
+      { id: 'neg_visao', label: 'Visão & 2T26', icon: 'fa-solid fa-chart-line' },
+      { id: 'neg_estrategia', label: 'Estratégia & PADE', icon: 'fa-solid fa-bullseye' },
+      { id: 'neg_consignados', label: 'Consignados (3 Linhas)', icon: 'fa-solid fa-coins' },
+      { id: 'neg_abordagem', label: 'Abordagem & Oferta', icon: 'fa-solid fa-comments-dollar' },
+      { id: 'neg_contas', label: 'Abertura de Contas', icon: 'fa-solid fa-wallet' },
+      { id: 'neg_quiz', label: 'Roteiro & Quiz', icon: 'fa-solid fa-circle-check' }
+    ],
     tutorial_nova_plataforma: [
       { id: 'resumo', label: 'Resumo & DE→PARA', icon: 'fa-solid fa-wand-magic-sparkles' },
       { id: 'elegibilidade', label: 'Quem Pode? (Simulador)', icon: 'fa-solid fa-calculator' },
@@ -7881,6 +8127,31 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
       { id: 'cons_venda', label: 'Passo a Passo Venda', icon: 'fa-solid fa-laptop-file' },
       { id: 'cons_suporte', label: 'Ferramentas & Suporte', icon: 'fa-solid fa-headset' },
       { id: 'cons_quiz', label: 'Checklist & Quiz', icon: 'fa-solid fa-circle-check' }
+    ],
+    consignado_privado: [
+      { id: 'cp_produto', label: 'Produto & Oportunidade', icon: 'fa-solid fa-briefcase' },
+      { id: 'cp_condicoes', label: 'Condições & Simulador', icon: 'fa-solid fa-calculator' },
+      { id: 'cp_jornada', label: 'Jornada (12 Passos)', icon: 'fa-solid fa-route' },
+      { id: 'cp_excecoes', label: 'Exceções & Roteiro', icon: 'fa-solid fa-triangle-exclamation' },
+      { id: 'cp_quiz', label: 'Quiz de Fixação', icon: 'fa-solid fa-circle-check' }
+    ],
+    contabil: [
+      { id: 'ct_inauguracao', label: 'Inauguração & Limites', icon: 'fa-solid fa-building-circle-check' },
+      { id: 'ct_contas', label: 'Prestação & D3', icon: 'fa-solid fa-file-invoice-dollar' },
+      { id: 'ct_risco', label: 'Transações de Risco', icon: 'fa-solid fa-shield-exclamation' },
+      { id: 'ct_antifraude', label: 'Antifraude & TDS', icon: 'fa-solid fa-user-secret' },
+      { id: 'ct_quiz', label: 'Quiz de Fixação', icon: 'fa-solid fa-circle-check' }
+    ],
+    orgaos_pagadores: [
+      { id: 'op_servicos', label: 'Quem São & 7 Serviços', icon: 'fa-solid fa-list-ol' },
+      { id: 'op_movimentos', label: 'Cadastro vs. Substituição', icon: 'fa-solid fa-arrows-left-right' },
+      { id: 'op_equipe', label: 'Trajeto & Equipe', icon: 'fa-solid fa-people-group' },
+      { id: 'op_quiz', label: 'Quiz de Fixação', icon: 'fa-solid fa-circle-check' }
+    ],
+    prova_de_vida: [
+      { id: 'pv_geral', label: 'Informações Gerais', icon: 'fa-solid fa-circle-info' },
+      { id: 'pv_jornada', label: 'Jornada em 4 Passos', icon: 'fa-solid fa-camera' },
+      { id: 'pv_quiz', label: 'Roteiro & Quiz', icon: 'fa-solid fa-circle-check' }
     ]
   };
 
@@ -7979,11 +8250,315 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
     { id: 'corban_imo', label: 'Corban Imóvel (18,9%)', carta: 150108, adm: 18.9, fr: 3, prazo: 145 }
   ];
 
+  const NEGOCIOS_QUIZ = [
+    {
+      id: 'negq1',
+      question: 'Qual é o teto de prazo e margem consignável do Consignado INSS em comparação ao Privado e ao Público?',
+      options: [
+        'INSS até 108 meses e margem até 40%; Público até 144 meses e 35%; Privado até 72 meses e 35% da renda líquida',
+        'Todos têm exatamente 72 meses e 30% de margem',
+        'INSS até 72 meses e 35%; Privado até 108 meses e 40%',
+        'Apenas o Público permite margem acima de 30%'
+      ],
+      correctIndex: 0,
+      explanation: 'Tabela comparativa oficial (Slide 14): INSS (18–83a · até 108m · juros até 1,85% · carência 30–90d · até 40% renda); Público (18–79a · até 144m · carência 30–180d · até 35%); Privado (18–80a · até 72m · taxa por CPF · carência 15–60d · até 35% renda líquida).'
+    },
+    {
+      id: 'negq2',
+      question: 'Na abertura de Conta-Fácil (Conta Corrente + Poupança), como funciona a movimentação entre os dois lados e o Invest-Fácil?',
+      options: [
+        'A transferência entre Poupança e Conta Corrente é automática todo dia útil',
+        'A transferência NÃO é automática (movimentação manual), e o Invest-Fácil faz o saldo disponível na Conta Corrente render automaticamente de forma progressiva',
+        'O Invest-Fácil exige aplicação manual na agência todo mês',
+        'Poupança e Conta Corrente usam senhas separadas e não permitem resgate no Corban'
+      ],
+      correctIndex: 1,
+      explanation: 'Regra importante do Slide 19: a transferência entre Conta Corrente e Poupança NÃO é automática; o Invest-Fácil aplica rendimento automático progressivo sobre o dinheiro parado na Conta Corrente.'
+    },
+    {
+      id: 'negq3',
+      question: 'Na abertura de conta para cliente não alfabetizado (analfabeto), quem NÃO pode atuar como uma das duas testemunhas obrigatórias?',
+      options: [
+        'Qualquer familiar maior de 18 anos com documento válido',
+        'Dois vizinhos portando RG ou CIN',
+        'O Correspondente ou qualquer funcionário do Correspondente',
+        'Pessoas conhecidas que saibam assinar e estejam presentes'
+      ],
+      correctIndex: 2,
+      explanation: 'Regra estrita de elegibilidade (Slide 20): analfabetos exigem 2 testemunhas presenciais, que NUNCA podem ser o Correspondente nem qualquer funcionário do Correspondente.'
+    },
+    {
+      id: 'negq4',
+      question: 'Quantos titulares permite a Conta Conjunta (OU) e como funciona a movimentação?',
+      options: [
+        'Apenas 1 titular sem exceção',
+        '2 ou até 3 titulares, com movimentação independente sem necessidade de autorização dos demais',
+        'Até 5 titulares exigindo assinatura conjunta em todo saque',
+        'Somente cônjuges com renda comprovada em folha Bradesco'
+      ],
+      correctIndex: 1,
+      explanation: 'Conta Conjunta (OU) permite 2 ou até 3 titulares com movimentação independente (ideal para dividir gestão financeira com familiares).'
+    },
+    {
+      id: 'negq5',
+      question: 'Qual a sequência correta dos 4 pilares da Estratégia de Gestão do Negócio Expresso (até o patamar PADE)?',
+      options: [
+        'ONDE contratar → QUEM contratar → GERAR NEGÓCIOS → COMO SUSTENTAR (Ponto de equilíbrio e PADE)',
+        'COMO encerrar → ONDE bloquear → GERAR tarifas',
+        'Focar apenas em boletos transacionais sem oferta de produtos',
+        'Aguardar o cliente procurar o banco para oferecer serviços'
+      ],
+      correctIndex: 0,
+      explanation: 'Estratégia oficial (Slide 8): 1. Onde contratar → 2. Quem contratar → 4. Gerar negócios → 5. Como sustentar (ritmo, recorrência, ponto de equilíbrio e PADE), com foco em Expansão, Velocidade, Qualidade e Sustentação.'
+    }
+  ];
+
+  const CONSIGNADO_PRIVADO_STEPS = [
+    { id: 'cp1', phase: 'Fase 1 · Validação', num: '01', title: 'Clicar em "Consignado privado" na Tela Inicial', desc: 'Na tela inicial de Produtos do Bradesco Expresso, selecione o card Consignado privado.' },
+    { id: 'cp2', phase: 'Fase 1 · Validação', num: '02', title: 'Informar o CPF do Cliente', desc: 'Digite o CPF do trabalhador CLT no campo destacado e avance na lupa.' },
+    { id: 'cp3', phase: 'Fase 1 · Validação', num: '03', title: 'Termo de Autorização MET / DATAPREV', desc: 'Explique os dados consultados (matrícula, empregador, vencimentos, margem, admissão/desligamento, afastamento/aviso prévio, empréstimos ativos), clique "Ok, entendi" (autorização 30d / contratação até 45d) e marque o aceite.' },
+    { id: 'cp4', phase: 'Fase 1 · Validação', num: '04', title: '1ª Biometria Facial do Cliente', desc: 'Local iluminado, retirar boné, óculos ou acessórios, posicionar a câmera na altura do rosto e clicar Continuar.' },
+    { id: 'cp5', phase: 'Fase 1 · Validação', num: '05', title: 'Escolher Conta-Corrente para Crédito', desc: 'Se o cliente possuir mais de uma conta Bradesco, peça para escolher em qual deseja receber o empréstimo.' },
+    { id: 'cp6', phase: 'Fase 2 · Simulação & Autorizações', num: '06', title: 'Ver Oferta Recomendada ou Simular Personalizado', desc: 'Avalie a oferta recomendada (juros a.m./a.a.) ou clique em "Fazer simulação personalizada" informando valor (mín. R$ 100) e parcelas → Simular.' },
+    { id: 'cp7', phase: 'Fase 2 · Simulação & Autorizações', num: '07', title: 'Comparar Resultado e Clicar em "Contratar"', desc: 'Compare lado a lado a Simulação e a Oferta recomendada (CET, parcelas, vencimento). Se aceito, clique em Contratar.' },
+    { id: 'cp8', phase: 'Fase 2 · Simulação & Autorizações', num: '08', title: 'Autorizações Finais na Conta-Corrente', desc: 'Orientar e marcar as 2 autorizações caso a parcela não seja descontada do salário: novas tentativas inclusive parciais com saldo disponível e uso do limite de crédito (sujeito a análise).' },
+    { id: 'cp9', phase: 'Fase 3 · CPV, Contrato & Resultado', num: '09', title: 'ATENÇÃO REDOBRADA · Alerta CPV', desc: 'Para Clientes Potencialmente Vulneráveis (CPV) alto ou muito alto, explique cuidadosamente valor pré-aprovado, vencimento, taxas, tarifas, multas e tire todas as dúvidas → Ok, entendi.' },
+    { id: 'cp10', phase: 'Fase 3 · CPV, Contrato & Resultado', num: '10', title: 'Conferência Completa & Aceite do Contrato', desc: 'Confira nome, CPF, conta, parcelas, CET e valor líquido aproximado; marque "Li e concordo com o contrato" → Confirmar.' },
+    { id: 'cp11', phase: 'Fase 3 · CPV, Contrato & Resultado', num: '11', title: '2ª Biometria Facial (Validação do Contrato)', desc: 'Realize uma nova biometria facial do cliente para autenticar a contratação definitiva.' },
+    { id: 'cp12', phase: 'Fase 3 · CPV, Contrato & Resultado', num: '12', title: 'Resultado: Aprovado na Conta ou Análise (5 dias úteis)', desc: '12.1 Empréstimo aprovado (valor já disponível na conta) OU 12.2 Em análise pela Dataprev (retorno em até 5 dias úteis — orientar consulta de saldo). Enviar comprovante por e-mail ou imprimir.' }
+  ];
+
+  const CONSIGNADO_PRIVADO_QUIZ = [
+    {
+      id: 'cpq1',
+      question: 'Quem pode contratar o Consignado Privado no Bradesco Expresso e qual a regra sobre folha de pagamento ou convênio?',
+      options: [
+        'Somente empresas conveniadas com folha no Bradesco',
+        'Qualquer correntista Bradesco CLT (18 a 80 anos, vínculo mínimo de 6 meses na jornada), NÃO precisando ser cliente folha Bradesco nem depender de convênio com a empresa',
+        'Apenas servidores públicos concursados',
+        'Somente quem ganha acima de 5 salários mínimos'
+      ],
+      correctIndex: 1,
+      explanation: 'Slides 3 e 5: disponível a qualquer correntista Bradesco CLT (18–80 anos, mín. 6 meses CLT) — sem depender de convênio com a empresa e sem precisar receber o salário no Bradesco.'
+    },
+    {
+      id: 'cpq2',
+      question: 'Em qual janela mensal a Dataprev fica INDISPONÍVEL impedindo novas contratações de Consignado Privado?',
+      options: [
+        'Todo domingo à noite',
+        'Das 22h do dia 20 até às 6h do dia 23 (horário de Brasília), ficando dias 21 e 22 bloqueados',
+        'Apenas no último dia útil de cada ano',
+        'Das 12h às 14h todos os dias'
+      ],
+      correctIndex: 1,
+      explanation: 'Janela Dataprev (Slides 4 e 13): indisponível mensalmente das 22h do dia 20 até às 6h do dia 23 (horário de Brasília).'
+    },
+    {
+      id: 'cpq3',
+      question: 'Qual é o limite da renda líquida comprometida e o que ocorre em caso de perda de vínculo empregatício?',
+      options: [
+        'Limite de 10%; em caso de demissão a dívida é perdoada',
+        'Até 35% da renda líquida; em caso de perda de vínculo, é descontado até 35% do valor da verba rescisória para quitação ou abatimento do saldo devedor',
+        'Até 50% da renda bruta sem impacto na rescisão',
+        'Até 20% apenas para parcelas acima de R$ 500'
+      ],
+      correctIndex: 1,
+      explanation: 'Slide 4: margem até 35% da renda líquida; na perda de vínculo, desconto de até 35% da verba rescisória.'
+    },
+    {
+      id: 'cpq4',
+      question: 'O que significa o alerta do Passo 9 ("CPV alto ou muito alto") durante a contratação?',
+      options: [
+        'Erro de conexão com a câmera',
+        'Clientes Potencialmente Vulneráveis — exige atenção redobrada do Corban na explicação de valores, taxas, vencimento e multas antes de prosseguir',
+        'Cliente bloqueado permanentemente',
+        'Solicitação de segundo avalista'
+      ],
+      correctIndex: 1,
+      explanation: 'Slide 11: CPV significa Clientes Potencialmente Vulneráveis; requer explicação calma e confirmação clara de dúvidas antes de clicar "Ok, entendi".'
+    },
+    {
+      id: 'cpq5',
+      question: 'Quando a proposta fica "Em análise pela Dataprev", qual o prazo de retorno e qual o prazo legal de cancelamento?',
+      options: [
+        'Retorno em até 5 dias úteis (cliente confere saldo depois); cancelamento em até 7 dias',
+        'Retorno em 30 dias corridos; sem direito a cancelamento',
+        'Retorno em 1 hora; cancelamento apenas no mesmo minuto',
+        'Retorno em 15 dias úteis; cancelamento em até 24h'
+      ],
+      correctIndex: 0,
+      explanation: 'Slides 4 e 12: análise Dataprev retorna dentro de 5 dias úteis; cancelamento pode ser feito em até 7 dias.'
+    }
+  ];
+
+  const CONTABIL_QUIZ = [
+    {
+      id: 'ctq1',
+      question: 'Como o Corban acompanha corretamente o movimento contábil diário e em quanto tempo deve prestar contas?',
+      options: [
+        'Apenas uma vez por mês sem conferência de caixa',
+        'Confrontar o extrato da razão 01.27 com a rotina BIBC e o fechamento da fita de caixa; repasse dos valores ao banco em até D+1',
+        'Guardar o dinheiro por 5 dias úteis antes de depositar',
+        'Somente aguardar ligação do gerente da agência'
+      ],
+      correctIndex: 1,
+      explanation: 'Slide 5: prestação de contas em até D+1, confrontando extrato da razão 01.27 + rotina BIBC + fechamento da fita de caixa do Bradesco Expresso.'
+    },
+    {
+      id: 'ctq2',
+      question: 'O que acontece no D3 com o Corban que fica 2 dias seguidos sem prestar contas integralmente?',
+      options: [
+        'Nada muda no limite',
+        'Tem seu limite reduzido para R$ 1,00 (mantendo saques/recebimentos com cartão e negócios); após pagar, pode pedir "Restabelecimento de Limite" ou aguardar restabelecimento automático em D+1',
+        'É encerrado definitivamente no mesmo segundo sem volta',
+        'Recebe aumento automático de limite'
+      ],
+      correctIndex: 1,
+      explanation: 'Slides 4 e 6: inadimplência de 2 dias reduz limite no D3 para R$ 1,00 (mantendo transações com cartão e negócios); após acerto integral, há restabelecimento no Portal ou automático no dia subsequente.'
+    },
+    {
+      id: 'ctq3',
+      question: 'Sobre ESTORNO e RECIBO DE RETIRADA nas Transações de Risco, qual afirmação é verdadeira?',
+      options: [
+        'Qualquer boleto de cobrança ou tributo pode ser estornado em até 24h',
+        'Estorno só em emergência em até 15 minutos se for a última transação (boletos e tributos NÃO estornam); Recibo de Retirada é exclusivo do 1º saque INSS de não correntista',
+        'Recibo de Retirada dispensa conferência de assinatura',
+        'Estorno é feito apenas pelo suporte por WhatsApp sem prazo'
+      ],
+      correctIndex: 1,
+      explanation: 'Slide 7: Estorno = emergência em até 15 min na última transação (nunca boleto/tributo). Recibo de Retirada = 1º saque INSS não correntista, ALTO RISCO, conferência obrigatória de assinaturas.'
+    },
+    {
+      id: 'ctq4',
+      question: 'Como saber se um contato do suporte técnico TDS é verdadeiro e não golpe antifraude?',
+      options: [
+        'Se a pessoa pedir depósito ou pagamento de "teste" por WhatsApp',
+        'Se pedir para passar a senha do terminal ou entregar a máquina POS',
+        'O suporte oficial da TDS sempre informa um Token de Atendimento — nunca faça depósitos, testes, atualizações ou informe senhas por telefone/WhatsApp',
+        'Qualquer pessoa que se identificar como gerente do banco pode testar o POS'
+      ],
+      correctIndex: 2,
+      explanation: 'Slide 8: O suporte oficial da TDS SEMPRE informa um Token de Atendimento. Na dúvida, desligue, não use o POS e ligue para 0800 727 7667 ou WhatsApp (11) 3534-8599.'
+    },
+    {
+      id: 'ctq5',
+      question: 'Quais são os canais oficiais de Chamado Técnico TDS e Suporte ao Time Comercial / Multiplicadores?',
+      options: [
+        'Chamado Técnico TDS: 0800 727 7667 | WhatsApp: (11) 3534-8599 | Suporte Time Comercial / Multiplicadores: 0800 941 4807',
+        'Apenas formulário em papel pelos Correios',
+        'Exclusivamente telefone 4004-4436',
+        'Não existe suporte telefônico para Multiplicadores'
+      ],
+      correctIndex: 0,
+      explanation: 'Slide 9: Chamado Técnico TDS 0800 727 7667, WhatsApp (11) 3534-8599 e Suporte Comercial/Multiplicadores 0800 941 4807.'
+    }
+  ];
+
+  const OP_SERVICOS = [
+    ['PVBE', 'Prova de Vida – Tablet', 'Biometria facial do beneficiário INSS'],
+    ['RE50', 'Saque com Cartão C/C', 'Pagamento de benefício INSS com cartão da conta'],
+    ['RR50', 'Saque com Recibo de Retirada', 'Saque sem cartão (1º saque do benefício — exige conferência rigorosa)'],
+    ['VC23', 'Revalidação de Senha', 'Prova de vida com validação de identidade'],
+    ['PECA', 'Pedido de Cartão', 'Solicitação do cartão do beneficiário'],
+    ['HOBI', 'Holerite INSS', 'Emissão do demonstrativo/holerite do benefício'],
+    ['CPBI', 'Consulta de Benefício INSS', 'Consulta de dados e situação do benefício']
+  ];
+
+  const OP_QUIZ = [
+    {
+      id: 'opq1',
+      question: 'Qual serviço do Órgão Pagador corresponde ao "Saque com Recibo de Retirada (saque sem cartão)" e qual à "Prova de Vida no Tablet"?',
+      options: ['RR50 e PVBE', 'HOBI e CPBI', 'PECA e RE50', 'VC23 e PECA'],
+      correctIndex: 0,
+      explanation: 'Slide 3: PVBE = Prova de Vida – Tablet; RR50 = Saque com Recibo de Retirada (Saque sem cartão).'
+    },
+    {
+      id: 'opq2',
+      question: 'No movimento de CADASTRO de um novo Órgão Pagador, o que NÃO é permitido segundo os critérios do INSS?',
+      options: [
+        'Realizar saque na loja',
+        'Ter estrutura adequada para atendimento',
+        'Cadastrar em região pioneira (onde existe apenas um único órgão pagador, seja Bradesco ou outra IF)',
+        'Integrar a agência de relacionamento'
+      ],
+      correctIndex: 2,
+      explanation: 'Slide 4: Para Cadastro, o Corban deve realizar saque, ter estrutura e NÃO pode ser cadastrado em região pioneira.'
+    },
+    {
+      id: 'opq3',
+      question: 'Em caso de SUBSTITUIÇÃO de um Órgão Pagador inoperante/encerrado, quais os 3 critérios obrigatórios?',
+      options: [
+        'Distância máxima de até 3 KM (a pé) da origem, estar dentro do mesmo município e integrar a mesma agência de relacionamento',
+        'Até 25 KM de distância em qualquer município vizinho',
+        'Estar apenas no mesmo estado',
+        'Não há limite de distância ou vínculo com agência'
+      ],
+      correctIndex: 0,
+      explanation: 'Slide 4: Substituição exige distância até 3 KM a pé da origem, mesmo município e mesma agência de relacionamento.'
+    },
+    {
+      id: 'opq4',
+      question: 'Qual é o trajeto oficial de tramitação dos movimentos até o cadastro dos serviços e quem é o Gerente de Área responsável?',
+      options: [
+        'Indicação → Envio ao INSS → Retorno para cadastro de serviços | Gerente de Área: Kássio Estivalli Altafini (com Beatriz Karine Oliveira PL e Gabriel Oliveira Rodrigues JR)',
+        'Apenas ligação informal sem registro no INSS',
+        'Envio direto do cliente sem passar pela equipe',
+        'Somente abertura de conta poupança'
+      ],
+      correctIndex: 0,
+      explanation: 'Slides 5 e 6: Trajeto Indicação → Envio → Retorno; Equipe: Kássio Estivalli Altafini (Gerente de Área), Beatriz Karine Oliveira (PL) e Gabriel Oliveira Rodrigues (JR).'
+    }
+  ];
+
+  const PROVA_VIDA_QUIZ = [
+    {
+      id: 'pvq1',
+      question: 'Em quais Correspondentes o serviço de Prova de Vida do INSS (Bradesco Expresso) está disponível e como é validado?',
+      options: [
+        'Em qualquer loja sem saque; validado apenas com assinatura em papel',
+        'Nos Correspondentes Órgãos Pagadores para clientes INSS Bradesco, com validação via biometria facial',
+        'Apenas em agências físicas da capital',
+        'Exclusivamente por telefone fixo'
+      ],
+      correctIndex: 1,
+      explanation: 'Slide 2: Disponível nos Correspondentes Órgãos Pagadores para clientes INSS Bradesco, validado por biometria facial.'
+    },
+    {
+      id: 'pvq2',
+      question: 'Em quanto tempo a Prova de Vida realizada é enviada ao INSS e onde o beneficiário pode confirmar depois?',
+      options: [
+        'Enviada ao INSS em até 1 dia útil; o beneficiário confirma no aplicativo Meu INSS',
+        'Enviada em 30 dias; sem consulta pelo aplicativo',
+        'Somente enviada após 15 dias úteis pelo Correio',
+        'Não há envio nem comprovante para o cliente'
+      ],
+      correctIndex: 0,
+      explanation: 'Slide 2: Envio para o INSS em até 1 dia útil e confirmação no aplicativo Meu INSS (além de envio de comprovante por e-mail ou impresso na hora).'
+    },
+    {
+      id: 'pvq3',
+      question: 'Qual cuidado prático deve ser orientado ao beneficiário durante a etapa da biometria facial?',
+      options: [
+        'Usar óculos escuros e boné em local escuro',
+        'Ficar em local iluminado, retirar boné, óculos ou acessórios que cubram o rosto e posicionar a câmera na altura do rosto',
+        'Fotografar apenas o documento impresso',
+        'Pedir para o atendente fazer a selfie no lugar do idoso'
+      ],
+      correctIndex: 1,
+      explanation: 'Slide 3: Local iluminado, sem boné, óculos ou acessórios cobrindo o rosto e câmera na altura do rosto.'
+    }
+  ];
+
   let state = {
     activeTopicId: null,
     activeTabByTopic: {
+      negocios: 'neg_visao',
       tutorial_nova_plataforma: 'resumo',
-      consorcio: 'cons_produto'
+      consorcio: 'cons_produto',
+      consignado_privado: 'cp_produto',
+      contabil: 'ct_inauguracao',
+      orgaos_pagadores: 'op_servicos',
+      prova_de_vida: 'pv_geral'
     },
     branchSearch: '',
     sim: {
@@ -7999,13 +8574,38 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
       fr: 5,
       prazo: 44
     },
+    cpSim: {
+      netSalary: 3000,
+      age: 35,
+      cltMonths: 12,
+      isAccountHolder: 'sim',
+      dayOfMonth: 10
+    },
+    negApproachProfile: 'clt_atraso',
+    opSim: {
+      mode: 'cadastro',
+      pioneira: 'nao',
+      saqueEstrutura: 'sim',
+      distKm: 1.5,
+      mesmaPracaAgencia: 'sim'
+    },
     checkedSteps: {},
     quizAnswers: {},
     consVendaSteps: {},
     consVisitChecklist: {},
     consQuizAnswers: {},
+    negQuizAnswers: {},
+    cpSteps: {},
+    cpQuizAnswers: {},
+    ctQuizAnswers: {},
+    opQuizAnswers: {},
+    pvQuizAnswers: {},
     copiedFeedback: false,
-    consCopiedFeedback: false
+    consCopiedFeedback: false,
+    negCopiedFeedback: false,
+    cpCopiedFeedback: false,
+    ctCopiedFeedback: false,
+    pvCopiedFeedback: false
   };
 
   function getActiveTab(topicId) {
@@ -8022,11 +8622,15 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
       if (!raw) return;
       const parsed = JSON.parse(raw);
       if (parsed && typeof parsed === 'object') {
-        if (parsed.checkedSteps && typeof parsed.checkedSteps === 'object') state.checkedSteps = parsed.checkedSteps;
-        if (parsed.quizAnswers && typeof parsed.quizAnswers === 'object') state.quizAnswers = parsed.quizAnswers;
-        if (parsed.consVendaSteps && typeof parsed.consVendaSteps === 'object') state.consVendaSteps = parsed.consVendaSteps;
-        if (parsed.consVisitChecklist && typeof parsed.consVisitChecklist === 'object') state.consVisitChecklist = parsed.consVisitChecklist;
-        if (parsed.consQuizAnswers && typeof parsed.consQuizAnswers === 'object') state.consQuizAnswers = parsed.consQuizAnswers;
+        const keys = [
+          'checkedSteps', 'quizAnswers',
+          'consVendaSteps', 'consVisitChecklist', 'consQuizAnswers',
+          'negQuizAnswers', 'cpSteps', 'cpQuizAnswers',
+          'ctQuizAnswers', 'opQuizAnswers', 'pvQuizAnswers'
+        ];
+        keys.forEach((k) => {
+          if (parsed[k] && typeof parsed[k] === 'object') state[k] = parsed[k];
+        });
       }
     } catch {}
   }
@@ -8038,7 +8642,13 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
         quizAnswers: state.quizAnswers,
         consVendaSteps: state.consVendaSteps,
         consVisitChecklist: state.consVisitChecklist,
-        consQuizAnswers: state.consQuizAnswers
+        consQuizAnswers: state.consQuizAnswers,
+        negQuizAnswers: state.negQuizAnswers,
+        cpSteps: state.cpSteps,
+        cpQuizAnswers: state.cpQuizAnswers,
+        ctQuizAnswers: state.ctQuizAnswers,
+        opQuizAnswers: state.opQuizAnswers,
+        pvQuizAnswers: state.pvQuizAnswers
       }));
     } catch {}
   }
@@ -8413,19 +9023,375 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
     openExternalLink('https://wa.me/?text=' + encodeURIComponent(buildClientWhatsappScript()));
   }
 
-  function openSupportWhatsapp(waPhone, name) {
-    const msg = `Olá ${name}, sou Multiplicador e preciso de apoio sobre uma prospecção na Nova Plataforma Expresso.`;
+  function openSupportWhatsapp(waPhone, name, contextText) {
+    const ctx = contextText || 'uma prospecção na Nova Plataforma Expresso';
+    const msg = `Olá ${name}, sou Multiplicador e preciso de apoio sobre ${ctx}.`;
     openExternalLink(`https://wa.me/${waPhone}?text=${encodeURIComponent(msg)}`);
   }
 
+  function renderGenericStepsChecklist(stepsList, checkedMap, toggleFnName, resetFnName, title, subtitle) {
+    const done = stepsList.filter((s) => !!checkedMap[s.id]).length;
+    const total = stepsList.length;
+    const pct = total ? Math.round((done / total) * 100) : 0;
+    return `
+      <div class="apoio-section-card mb-3">
+        <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap mb-2">
+          <div>
+            <h5 class="fw-bold mb-0"><i class="fa-solid fa-route me-2" style="color:var(--mol-crimson);"></i>${escHtml(title)}</h5>
+            <div class="small" style="color:var(--mol-ink-muted);">${escHtml(subtitle)}</div>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <span class="badge bg-dark">${done}/${total} concluídos (${pct}%)</span>
+            ${done > 0 ? `<button type="button" class="btn btn-xs btn-outline-secondary" onclick="SamTraining.${resetFnName}()"><i class="fa-solid fa-rotate-left me-1"></i>Limpar</button>` : ''}
+          </div>
+        </div>
+        <div class="progress mb-3" style="height:8px;border-radius:999px;">
+          <div class="progress-bar bg-success" style="width:${pct}%;"></div>
+        </div>
+        <div class="apoio-steps-grid">
+          ${stepsList.map((s) => {
+            const checked = !!checkedMap[s.id];
+            return `
+              <button type="button" id="stepBtn_${escHtml(s.id)}" class="apoio-step-card ${checked ? 'is-done' : ''}" onclick="SamTraining.${toggleFnName}('${escHtml(s.id)}')">
+                <div class="d-flex align-items-center justify-content-between gap-2 mb-1">
+                  <span class="apoio-step-phase">${escHtml(s.phase)}</span>
+                  <span class="apoio-step-check">${checked ? '<i class="fa-solid fa-circle-check text-success"></i>' : '<i class="fa-regular fa-circle"></i>'}</span>
+                </div>
+                <div class="apoio-step-title">Passo ${escHtml(s.num)} · ${escHtml(s.title)}</div>
+                <div class="apoio-step-desc">${escHtml(s.desc)}</div>
+              </button>
+            `;
+          }).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  function renderGenericQuizPanel(quizList, answersMap, answerFnName, resetFnName, domPrefix) {
+    const answeredCount = quizList.filter((q) => typeof answersMap[q.id] === 'number').length;
+    const correctCount = quizList.filter((q) => answersMap[q.id] === q.correctIndex).length;
+    return `
+      <div class="apoio-section-card">
+        <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap mb-3">
+          <div>
+            <h5 class="fw-bold mb-0"><i class="fa-solid fa-circle-check me-2" style="color:var(--mol-crimson);"></i>Quiz Rápido de Fixação</h5>
+            <div class="small" style="color:var(--mol-ink-muted);">Teste seu domínio antes de treinar a loja e orientar os clientes.</div>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <span id="${escHtml(domPrefix)}ScoreBadge" class="badge bg-dark">${correctCount}/${quizList.length} acertos (${answeredCount} resp.)</span>
+            ${answeredCount > 0 ? `<button type="button" class="btn btn-xs btn-outline-secondary" onclick="SamTraining.${resetFnName}()"><i class="fa-solid fa-rotate-left me-1"></i>Reiniciar Quiz</button>` : ''}
+          </div>
+        </div>
+        <div class="d-flex flex-column gap-3">
+          ${quizList.map((q, qi) => {
+            const chosen = answersMap[q.id];
+            const hasAnswered = typeof chosen === 'number';
+            const isCorrect = chosen === q.correctIndex;
+            return `
+              <div class="apoio-quiz-card">
+                <div class="fw-bold small mb-2">${qi + 1}. ${escHtml(q.question)}</div>
+                <div class="d-flex flex-column gap-2">
+                  ${q.options.map((opt, oi) => {
+                    let cls = 'apoio-quiz-opt';
+                    if (hasAnswered) {
+                      if (oi === q.correctIndex) cls += ' is-correct';
+                      else if (oi === chosen) cls += ' is-wrong';
+                    }
+                    return `
+                      <button type="button" id="quizOpt_${escHtml(q.id)}_${oi}" class="${cls}" onclick="SamTraining.${answerFnName}('${escHtml(q.id)}', ${oi})">
+                        <span class="me-2 fw-bold">${String.fromCharCode(65 + oi)})</span>${escHtml(opt)}
+                      </button>
+                    `;
+                  }).join('')}
+                </div>
+                ${hasAnswered ? `
+                  <div class="mt-2 small p-2 rounded-2 ${isCorrect ? 'bg-success bg-opacity-10 text-success' : 'bg-danger bg-opacity-10 text-danger'}">
+                    <strong>${isCorrect ? 'Correto!' : 'Revise esta regra:'}</strong> ${escHtml(q.explanation)}
+                  </div>
+                ` : ''}
+              </div>
+            `;
+          }).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  function toggleStateMapItem(mapKey, itemId) {
+    state[mapKey][itemId] = !state[mapKey][itemId];
+    saveProgress();
+    rerenderRoot();
+  }
+
+  function resetStateMap(mapKey) {
+    state[mapKey] = {};
+    saveProgress();
+    rerenderRoot();
+  }
+
+  function answerStateQuiz(mapKey, qId, optIdx) {
+    state[mapKey][qId] = Number(optIdx);
+    saveProgress();
+    rerenderRoot();
+  }
+
+  function toggleCpStep(id) { return toggleStateMapItem('cpSteps', id); }
+  function resetCpSteps() { return resetStateMap('cpSteps'); }
+  function answerNegQuiz(qId, oi) { return answerStateQuiz('negQuizAnswers', qId, oi); }
+  function resetNegQuiz() { return resetStateMap('negQuizAnswers'); }
+  function answerCpQuiz(qId, oi) { return answerStateQuiz('cpQuizAnswers', qId, oi); }
+  function resetCpQuiz() { return resetStateMap('cpQuizAnswers'); }
+  function answerCtQuiz(qId, oi) { return answerStateQuiz('ctQuizAnswers', qId, oi); }
+  function resetCtQuiz() { return resetStateMap('ctQuizAnswers'); }
+  function answerOpQuiz(qId, oi) { return answerStateQuiz('opQuizAnswers', qId, oi); }
+  function resetOpQuiz() { return resetStateMap('opQuizAnswers'); }
+  function answerPvQuiz(qId, oi) { return answerStateQuiz('pvQuizAnswers', qId, oi); }
+  function resetPvQuiz() { return resetStateMap('pvQuizAnswers'); }
+
+  const NEG_APPROACH_PROFILES = {
+    inss: {
+      badge: 'BENEFICIÁRIO INSS · SAQUE OU NOVO BENEFÍCIO',
+      product: 'Consignado INSS Bradesco Expresso',
+      pitch: 'Aposentado/pensionista com benefício ativo há mais de 90 dias já pode aproveitar parcela menor, prazo de até 108 meses, taxa até 1,85% a.m. e até 40% de margem — sem sair da loja.',
+      bullets: [
+        'Idade: 18 a 83 anos | Carência: 30 a 90 dias',
+        'Obrigatória confirmação no aplicativo Meu INSS',
+        'Atenção à abordagem de Seguro Prestamista e Conta-Fácil quando fizer sentido'
+      ]
+    },
+    servidor: {
+      badge: 'SERVIDOR PÚBLICO · FEDERAL, ESTADUAL, MUNICIPAL OU MILITAR',
+      product: 'Consignado Público (Convênios)',
+      pitch: 'Servidores ativos/inativos, estatutários, celetistas concursados e Militares das Forças Armadas contam com prazo estendido de até 144 meses e margem até 35% (correntistas Bradesco).',
+      bullets: [
+        'Idade: 18 a 79 anos | Taxas variam conforme convênio ativo',
+        'Carência: 30 a 180 dias para início do desconto',
+        'Consulte na hora se o órgão conveniado do cliente está habilitado'
+      ]
+    },
+    clt_atraso: {
+      badge: 'TRABALHADOR CLT · ORGANIZAÇÃO OU CRÉDITO RÁPIDO',
+      product: 'Consignado Privado (Crédito CLT)',
+      pitch: 'Correntista Bradesco com carteira assinada consegue contratar em poucos minutos sem depender de convênio da empresa nem receber salário no Bradesco, com até 72 meses e taxa personalizada por CPF.',
+      bullets: [
+        'Idade: 18 a 80 anos | Margem até 35% da renda líquida | Carência: 15 a 60 dias',
+        'Tempo mínimo de vínculo: 3+ meses na visão geral de oferta (e trava de 6+ meses CLT na contratação Dataprev)',
+        'Parcelas entre R$ 5,00 e R$ 5.000,00 | Cancelamento garantido em até 7 dias'
+      ]
+    },
+    melhor_oferta: {
+      badge: 'BUSCANDO CRÉDITO OU NOVO CLIENTE · OFERTA INTEGRADA',
+      product: 'Roteiro "Melhor Oferta" + Abertura de Conta-Fácil',
+      pitch: 'Não existe atendimento neutro! Identifique a necessidade: comece pela "Melhor Oferta" e, se ainda não for correntista, faça a abertura da Conta-Fácil (18+ anos) habilitando Débito, Seguros e Crédito futuro.',
+      bullets: [
+        'Conta-Fácil reúne Conta Corrente + Poupança + Invest-Fácil (rendimento automático na C/C)',
+        'Cartão de Débito, Cartão de Crédito*, Seguros de Cartões, Adiantamento a Depositante, Limite Pessoal* e Cheque Especial* (*sujeitos a análise)',
+        'Conta Individual (1 titular) ou Conjunta "OU" (2 ou até 3 titulares com movimentação livre)'
+      ]
+    }
+  };
+
+  function renderNegApproachBox() {
+    const p = NEG_APPROACH_PROFILES[state.negApproachProfile] || NEG_APPROACH_PROFILES.clt_atraso;
+    return `
+      <div class="apoio-sim-result is-ok">
+        <div class="small fw-bold mb-1" style="color:var(--mol-gold-dark);">${escHtml(p.badge)}</div>
+        <h6 class="fw-bold mb-2">${escHtml(p.product)}</h6>
+        <p class="small mb-2">${escHtml(p.pitch)}</p>
+        <ul class="small mb-0 ps-3">
+          ${p.bullets.map((b) => `<li class="mb-1">${escHtml(b)}</li>`).join('')}
+        </ul>
+      </div>
+    `;
+  }
+
+  function onNegApproachChange(profileId) {
+    if (!NEG_APPROACH_PROFILES[profileId]) return;
+    state.negApproachProfile = profileId;
+    rerenderRoot();
+  }
+
+  function evaluateCpSim() {
+    const s = state.cpSim;
+    const netSalary = Math.max(0, Number(s.netSalary) || 0);
+    const age = Number(s.age) || 0;
+    const cltMonths = Number(s.cltMonths) || 0;
+    const dayOfMonth = Math.max(1, Math.min(31, Number(s.dayOfMonth) || 1));
+    const maxParcela = netSalary * 0.35;
+    const usableMaxParcela = Math.min(maxParcela, 5000);
+
+    const blocks = [];
+    const warns = [];
+    if (s.isAccountHolder !== 'sim') {
+      blocks.push('Cliente não é correntista Bradesco — utilizar botão "Abrir conta" antes de simular o Consignado Privado.');
+    }
+    if (age < 18 || age > 80) {
+      blocks.push(`Idade (${age} anos) fora da faixa elegível oficial de 18 a 80 anos.`);
+    }
+    if (cltMonths < 6) {
+      blocks.push(`Vínculo CLT de ${cltMonths} meses abaixo do mínimo obrigatório de 6 meses na contratação.`);
+    }
+    if (dayOfMonth === 21 || dayOfMonth === 22) {
+      blocks.push(`Dia ${dayOfMonth} cai em plena janela de manutenção Dataprev (indisponível do dia 20 às 22h até dia 23 às 6h, horário de Brasília).`);
+    } else if (dayOfMonth === 20 || dayOfMonth === 23) {
+      warns.push(`Dia ${dayOfMonth}: atenção ao horário-limite da janela Dataprev (bloqueia dia 20 às 22h e libera dia 23 às 6h, Brasília).`);
+    }
+    if (maxParcela < 5 && netSalary > 0) {
+      warns.push(`Margem líquida calculada (R$ ${formatBRL(maxParcela)}) ficou abaixo da parcela mínima de R$ 5,00.`);
+    }
+    return { netSalary, age, cltMonths, dayOfMonth, maxParcela, usableMaxParcela, blocks, warns, ok: blocks.length === 0 };
+  }
+
+  function renderCpSimResultBox() {
+    const r = evaluateCpSim();
+    const cls = !r.ok ? 'is-block' : (r.warns.length ? 'is-warn' : 'is-ok');
+    return `
+      <div class="apoio-sim-result ${cls}">
+        <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap mb-2">
+          <div class="fw-bold">
+            ${!r.ok
+              ? '<i class="fa-solid fa-circle-xmark text-danger me-1"></i>ATENÇÃO: Possui Impedimento no Momento'
+              : (r.warns.length
+                ? '<i class="fa-solid fa-triangle-exclamation text-warning me-1"></i>ELEGÍVEL COM ALERTA DE JANELA/PARCELA'
+                : '<i class="fa-solid fa-circle-check text-success me-1"></i>ELEGÍVEL PARA SIMULAR NO BRADESCO EXPRESSO')}
+          </div>
+          <span class="badge bg-dark">Margem Máx. (35%): <span id="cpSimMargemVal">R$ ${formatBRL(r.usableMaxParcela)}</span>/mês</span>
+        </div>
+        ${r.blocks.length ? `<ul class="small text-danger fw-semibold mb-1 ps-3">${r.blocks.map((b) => `<li>${escHtml(b)}</li>`).join('')}</ul>` : ''}
+        ${r.warns.length ? `<ul class="small text-warning-emphasis mb-1 ps-3">${r.warns.map((w) => `<li>${escHtml(w)}</li>`).join('')}</ul>` : ''}
+        <div class="small" style="color:var(--mol-ink-muted);">
+          Parâmetros oficiais: mínimo <strong>R$ 100,00</strong> · parcela de <strong>R$ 5,00 a R$ 5.000,00</strong> · até <strong>72 meses</strong> · carência <strong>15–60 dias</strong> · desligamento até <strong>35% da verba rescisória</strong>.
+        </div>
+      </div>
+    `;
+  }
+
+  function onCpSimChange(field, value) {
+    if (field === 'isAccountHolder') state.cpSim[field] = value;
+    else state.cpSim[field] = Number(value) || 0;
+    const box = document.getElementById('cpSimResult');
+    if (box) box.innerHTML = renderCpSimResultBox();
+  }
+
+  function evaluateOpSim() {
+    const s = state.opSim;
+    const reasons = [];
+    if (s.mode === 'cadastro') {
+      if (s.saqueEstrutura !== 'sim') reasons.push('Para Cadastro de Órgão Pagador é obrigatório realizar saque e possuir estrutura adequada.');
+      if (s.pioneira === 'sim') reasons.push('Regra INSS: NÃO é permitido cadastrar em região pioneira (onde existe apenas um único órgão pagador, seja Bradesco ou outra IF).');
+    } else {
+      const km = Number(s.distKm) || 0;
+      if (km > 3) reasons.push(`Distância informada (${km.toString().replace('.', ',')} KM a pé) excede o máximo permitido de até 3 KM da origem.`);
+      if (s.mesmaPracaAgencia !== 'sim') reasons.push('Substituição exige estar dentro do mesmo município e integrar a mesma agência de relacionamento do ponto substituído.');
+    }
+    return { mode: s.mode, ok: reasons.length === 0, reasons };
+  }
+
+  function renderOpSimResultBox() {
+    const r = evaluateOpSim();
+    return `
+      <div class="apoio-sim-result ${r.ok ? 'is-ok' : 'is-block'}">
+        <div class="fw-bold mb-1">
+          ${r.ok
+            ? `<i class="fa-solid fa-circle-check text-success me-1"></i>APTO PARA ${r.mode === 'cadastro' ? 'INDICAÇÃO DE CADASTRO' : 'PEDIDO DE SUBSTITUIÇÃO'}`
+            : '<i class="fa-solid fa-circle-xmark text-danger me-1"></i>FORA DOS CRITÉRIOS DO INSS'}
+        </div>
+        ${r.reasons.length
+          ? `<ul class="small text-danger mb-1 ps-3">${r.reasons.map((x) => `<li>${escHtml(x)}</li>`).join('')}</ul>`
+          : '<div class="small" style="color:var(--mol-ink);">Critérios atendidos! Próxima etapa no trajeto: <strong>Indicação → Envio ao INSS → Retorno</strong> para cadastro dos serviços.</div>'}
+      </div>
+    `;
+  }
+
+  function onOpSimChange(field, value) {
+    if (field === 'mode') {
+      state.opSim.mode = value === 'substituicao' ? 'substituicao' : 'cadastro';
+      rerenderRoot();
+      return;
+    }
+    if (field === 'distKm') state.opSim.distKm = Number(value) || 0;
+    else state.opSim[field] = value;
+    const box = document.getElementById('opSimResult');
+    if (box) box.innerHTML = renderOpSimResultBox();
+  }
+
+  function appendSenderContact(lines) {
+    const contact = String(global.SamCards?.getSenderContact?.() || '').trim();
+    if (contact) {
+      lines.push('');
+      lines.push(contact);
+    }
+    return lines.join('\n');
+  }
+
+  function buildNegWhatsappScript() {
+    return appendSenderContact([
+      'Resumo Estratégico do Negócio Corban · SAM Assessoria:',
+      'Não existe atendimento neutro — todo atendimento no balcão é uma oportunidade!',
+      '• Aposentado/Pensionista INSS -> Consignado INSS (18–83a · até 108m · até 40% margem)',
+      '• Servidor Público -> Consignado Público (18–79a · até 144m · até 35% margem)',
+      '• Trabalhador CLT -> Consignado Privado (18–80a · até 72m · até 35% renda líquida)',
+      '• Sem conta ainda -> Conta-Fácil (C/C + Poupança + Invest-Fácil) + Cartão/Seguro.',
+      'Conte comigo para acelerar sua meta até o patamar PADE!'
+    ]);
+  }
+  function copyNegScript() { return copyTextToClipboard(buildNegWhatsappScript(), 'negCopyScriptBtn', 'negCopiedFeedback', 'Resumo de abordagem Negócios copiado para WhatsApp.'); }
+  function openNegWhatsapp() { openExternalLink('https://wa.me/?text=' + encodeURIComponent(buildNegWhatsappScript())); }
+
+  function buildCpWhatsappScript() {
+    return appendSenderContact([
+      'Consignado Privado CLT · Passo a Passo no Bradesco Expresso:',
+      '• Para qualquer correntista Bradesco CLT (18 a 80 anos, vínculo mínimo 6 meses), mesmo sem folha Bradesco e sem convênio da empresa.',
+      '• Margem até 35% da renda líquida · até 72 meses · parcela R$ 5,00 a R$ 5.000,00 · carência 15–60 dias.',
+      '• Atenção à janela mensal Dataprev: bloqueada do dia 20 (22h) até dia 23 (6h, Brasília).',
+      '• Cancelamento em até 7 dias. Em análise Dataprev, retorno em até 5 dias úteis no saldo!'
+    ]);
+  }
+  function copyCpScript() { return copyTextToClipboard(buildCpWhatsappScript(), 'cpCopyScriptBtn', 'cpCopiedFeedback', 'Roteiro Consignado Privado copiado.'); }
+  function openCpWhatsapp() { openExternalLink('https://wa.me/?text=' + encodeURIComponent(buildCpWhatsappScript())); }
+
+  function buildCtWhatsappScript() {
+    return appendSenderContact([
+      'Checklist Diário Contábil & Antifraude Corban:',
+      '1) Conferir diariamente Extrato da Razão 01.27 × rotina BIBC × fita de caixa.',
+      '2) Prestar contas até D+1 integralmente para evitar redução de limite D3 para R$ 1,00.',
+      '3) Estorno: somente emergência em até 15 minutos da última transação (boletos/tributos NÃO estornam).',
+      '4) Recibo de Retirada: exclusivo 1º saque INSS não correntista (conferir assinatura!).',
+      '5) SEGURANÇA: suporte técnico oficial TDS SEMPRE informa Token de Atendimento (0800 727 7667 | WhatsApp (11) 3534-8599). Nunca teste POS nem faça depósito pedido por telefone!'
+    ]);
+  }
+  function copyCtScript() { return copyTextToClipboard(buildCtWhatsappScript(), 'ctCopyScriptBtn', 'ctCopiedFeedback', 'Checklist Contábil e Antifraude copiado.'); }
+  function openCtWhatsapp() { openExternalLink('https://wa.me/?text=' + encodeURIComponent(buildCtWhatsappScript())); }
+
+  function buildPvWhatsappScript() {
+    return appendSenderContact([
+      'Olá! Você já pode fazer sua Prova de Vida INSS Bradesco aqui com atendimento rápido e seguro:',
+      '1) Compareça com documento oficial de identificação e informe seu CPF.',
+      '2) Fazemos a validação por biometria facial em local iluminado (sem boné ou óculos escuros).',
+      '3) Entregamos seu comprovante na hora (impresso ou por e-mail).',
+      '4) O envio para o INSS ocorre em até 1 dia útil e você confere tudo no app Meu INSS!'
+    ]);
+  }
+  function copyPvScript() { return copyTextToClipboard(buildPvWhatsappScript(), 'pvCopyScriptBtn', 'pvCopiedFeedback', 'Convite de Prova de Vida pronto para WhatsApp.'); }
+  function openPvWhatsapp() { openExternalLink('https://wa.me/?text=' + encodeURIComponent(buildPvWhatsappScript())); }
+
   function renderHubView() {
     const doneSteps = MULTIPLIER_STEPS.filter((s) => !!state.checkedSteps[s.id]).length
-      + CONSORCIO_VENDA_STEPS.filter((s) => !!state.consVendaSteps[s.id]).length;
-    const totalSteps = MULTIPLIER_STEPS.length + CONSORCIO_VENDA_STEPS.length;
+      + CONSORCIO_VENDA_STEPS.filter((s) => !!state.consVendaSteps[s.id]).length
+      + CONSIGNADO_PRIVADO_STEPS.filter((s) => !!state.cpSteps[s.id]).length;
+    const totalSteps = MULTIPLIER_STEPS.length + CONSORCIO_VENDA_STEPS.length + CONSIGNADO_PRIVADO_STEPS.length;
     const quizCorrect = QUIZ_QUESTIONS.filter((q) => state.quizAnswers[q.id] === q.correctIndex).length
-      + CONSORCIO_QUIZ.filter((q) => state.consQuizAnswers[q.id] === q.correctIndex).length;
-    const totalQuiz = QUIZ_QUESTIONS.length + CONSORCIO_QUIZ.length;
+      + CONSORCIO_QUIZ.filter((q) => state.consQuizAnswers[q.id] === q.correctIndex).length
+      + NEGOCIOS_QUIZ.filter((q) => state.negQuizAnswers[q.id] === q.correctIndex).length
+      + CONSIGNADO_PRIVADO_QUIZ.filter((q) => state.cpQuizAnswers[q.id] === q.correctIndex).length
+      + CONTABIL_QUIZ.filter((q) => state.ctQuizAnswers[q.id] === q.correctIndex).length
+      + OP_QUIZ.filter((q) => state.opQuizAnswers[q.id] === q.correctIndex).length
+      + PROVA_VIDA_QUIZ.filter((q) => state.pvQuizAnswers[q.id] === q.correctIndex).length;
+    const totalQuiz = QUIZ_QUESTIONS.length + CONSORCIO_QUIZ.length + NEGOCIOS_QUIZ.length
+      + CONSIGNADO_PRIVADO_QUIZ.length + CONTABIL_QUIZ.length + OP_QUIZ.length + PROVA_VIDA_QUIZ.length;
     const topicCount = getTopicCount();
+    const featuredTopic = TRAINING_TOPICS.find((t) => t.featured);
+    const gridTopics = TRAINING_TOPICS.filter((t) => !t.featured);
 
     return `
       <div class="apoio-hero">
@@ -8438,22 +9404,53 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
             </p>
           </div>
           <div class="apoio-hero-stats">
-            <span class="apoio-stat-chip"><i class="fa-solid fa-layer-group me-1"></i>${topicCount} ${topicCount === 1 ? 'assunto disponível' : 'assuntos disponíveis'}</span>
+            <span class="apoio-stat-chip"><i class="fa-solid fa-layer-group me-1"></i>${topicCount} assuntos disponíveis</span>
             <span class="apoio-stat-chip"><i class="fa-solid fa-list-check me-1"></i>${doneSteps}/${totalSteps} passos</span>
             <span class="apoio-stat-chip"><i class="fa-solid fa-award me-1"></i>Quiz ${quizCorrect}/${totalQuiz}</span>
           </div>
         </div>
       </div>
 
+      ${featuredTopic ? `
+        <div class="text-center mb-2">
+          <div class="small fw-bold text-uppercase" style="letter-spacing:0.06em;color:var(--mol-crimson);"><i class="fa-solid fa-crown me-1" style="color:var(--mol-gold-dark);"></i>Assunto Principal em Destaque Central</div>
+        </div>
+        <div id="apoioFeaturedWrap" class="apoio-featured-wrap">
+          <button type="button" id="topicBtn_${escHtml(featuredTopic.id)}" class="apoio-featured-hero-btn" onclick="SamTraining.openTopic('${escHtml(featuredTopic.id)}')">
+            <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap">
+              <span class="apoio-featured-badge"><i class="fa-solid fa-star me-1"></i>TEMA CENTRAL · ACESSO PRINCIPAL</span>
+              <span class="apoio-topic-dur"><i class="fa-regular fa-clock me-1"></i>${escHtml(featuredTopic.duration)}</span>
+            </div>
+            <div class="d-flex align-items-start gap-3 flex-wrap">
+              <div class="apoio-featured-icon"><i class="${escHtml(featuredTopic.icon)}"></i></div>
+              <div style="min-width:220px;flex:1;">
+                <div class="small fw-bold text-uppercase mb-1" style="color:#f3d078;letter-spacing:0.04em;">${escHtml(featuredTopic.category)}</div>
+                <div class="apoio-featured-title">${escHtml(featuredTopic.buttonLabel)}</div>
+                <div class="small" style="color:rgba(248,245,239,.88);line-height:1.5;">${escHtml(featuredTopic.subtitle)}</div>
+                ${(featuredTopic.highlights || []).length ? `
+                  <div class="d-flex flex-wrap gap-2 mt-2">
+                    ${featuredTopic.highlights.map((h) => `<span class="apoio-featured-pill">${escHtml(h)}</span>`).join('')}
+                  </div>
+                ` : ''}
+              </div>
+            </div>
+            <div class="apoio-featured-cta">
+              <span><i class="fa-solid fa-bolt me-1"></i>Abrir Treinamento Central de Negócios</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </button>
+        </div>
+      ` : ''}
+
       <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap mb-3">
         <div>
-          <h5 class="fw-bold mb-0" style="color:var(--mol-ink);"><i class="fa-solid fa-folder-open me-2" style="color:var(--mol-gold-dark);"></i>Selecione o Assunto para Estudar</h5>
-          <div class="small" style="color:var(--mol-ink-muted);">Novos treinamentos enviados ficarão organizados aqui como novos botões individuais.</div>
+          <h5 class="fw-bold mb-0" style="color:var(--mol-ink);"><i class="fa-solid fa-folder-open me-2" style="color:var(--mol-gold-dark);"></i>Demais Assuntos de Treinamento</h5>
+          <div class="small" style="color:var(--mol-ink-muted);">Cada assunto possui sua própria aula interativa, sem mistura de conteúdos.</div>
         </div>
       </div>
 
       <div id="apoioTopicGrid" class="apoio-topic-grid">
-        ${TRAINING_TOPICS.map((t) => `
+        ${gridTopics.map((t) => `
           <button type="button" id="topicBtn_${escHtml(t.id)}" class="apoio-topic-btn accent-${escHtml(t.accent)}" onclick="SamTraining.openTopic('${escHtml(t.id)}')">
             <div class="apoio-topic-top">
               <span class="apoio-topic-num">ASSUNTO ${escHtml(t.order)}</span>
@@ -9410,17 +10407,716 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
     `;
   }
 
+  function renderNegTabVisao() {
+    const team = [
+      { role: 'Superintendente Sr.', name: 'Rafael Terra', area: 'Superintendência' },
+      { role: 'Gerente de Estratégia', name: 'Bruno Leite', area: 'Estratégia & Redes' },
+      { role: 'Capacitação e Desenvolvimento', name: 'Raquel Rodrigues · Beatriz Oliveira · Giovana Soares', area: 'Time Comercial' },
+      { role: 'Capacitação e Desenvolvimento', name: 'Giselle Cestari · Kemily Gomes', area: 'Time de Terceiros' }
+    ];
+    return `
+      <div class="apoio-section-card mb-3">
+        <h5 class="fw-bold mb-1"><i class="fa-solid fa-crown me-2" style="color:var(--mol-gold-dark);"></i>Bradesco 2T26 (Ago/2026) &amp; Nossa Missão no Expresso</h5>
+        <p class="small mb-3" style="color:var(--mol-ink-muted);">
+          Base oficial de <strong>Maratona do Saber: Negócios</strong>: alinhe os números do Conglomerado e a transformação figital para mostrar ao Corban por que ele faz parte do maior canal não bancário do país.
+        </p>
+        <div class="apoio-kpi-row mb-3">
+          <div class="apoio-kpi-box">
+            <div class="apoio-kpi-val">R$ 7,1 bi</div>
+            <div class="apoio-kpi-lbl">Lucro Líquido Recorrente 2T26 (+16,2% a/a)</div>
+          </div>
+          <div class="apoio-kpi-box">
+            <div class="apoio-kpi-val">16,2%</div>
+            <div class="apoio-kpi-lbl">ROAE 2T26 (+1,6 p.p. no comparativo anual)</div>
+          </div>
+          <div class="apoio-kpi-box">
+            <div class="apoio-kpi-val">46,5%</div>
+            <div class="apoio-kpi-lbl">Índice de Eficiência Operacional (-3,4 p.p. a/a)</div>
+          </div>
+        </div>
+        <div class="p-3 rounded-3 border mb-3" style="background:rgba(198,155,66,.12);border-color:rgba(198,155,66,.35)!important;">
+          <div class="small fw-bold text-uppercase mb-1" style="color:var(--mol-gold-dark);">Nossa Missão no Bradesco Expresso</div>
+          <div class="fw-bold">"Ser o maior canal não bancário de distribuição de produtos financeiros, Seguros e Consórcio."</div>
+        </div>
+        <h6 class="fw-bold mb-2">Transformação Figital &amp; 4 Alavancas</h6>
+        <div class="row g-2 mb-3">
+          <div class="col-md-4"><div class="p-2 rounded-3 border bg-body-tertiary small"><strong>Agências:</strong> Bradesco Prime + Empresas &amp; Negócios</div></div>
+          <div class="col-md-4"><div class="p-2 rounded-3 border bg-body-tertiary small"><strong>App Digital:</strong> Varejo Digital + MEI com autoatendimento</div></div>
+          <div class="col-md-4"><div class="p-2 rounded-3 border bg-body-tertiary small"><strong>Corban Físico:</strong> Capilaridade presencial para Varejo Digital + MEI</div></div>
+        </div>
+        <div class="row g-2 mb-3">
+          <div class="col-md-6"><div class="p-2 rounded-3 border small"><strong>1. Expansão:</strong> Presença em municípios de maior potencial.</div></div>
+          <div class="col-md-6"><div class="p-2 rounded-3 border small"><strong>2. Integração Figital:</strong> Experiência conectada loja + app.</div></div>
+          <div class="col-md-6"><div class="p-2 rounded-3 border small"><strong>3. Recorrência:</strong> Maior geração contínua de negócios.</div></div>
+          <div class="col-md-6"><div class="p-2 rounded-3 border small"><strong>4. Produtividade:</strong> Mais resultado financeiro por ponto.</div></div>
+        </div>
+        <h6 class="fw-bold mb-2">Quem Somos · Liderança &amp; Capacitação</h6>
+        <div class="apoio-support-grid">
+          ${team.map((m) => `
+            <div class="apoio-support-card">
+              <div class="small fw-bold" style="color:var(--mol-gold-dark);">${escHtml(m.area)}</div>
+              <div class="fw-bold small">${escHtml(m.role)}</div>
+              <div class="small" style="color:var(--mol-ink-muted);">${escHtml(m.name)}</div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  function renderNegTabEstrategia() {
+    const pillars = [
+      { n: '1 · ONDE contratar', desc: 'Mapear municípios de maior potencial e suprir lacunas de atendimento local.' },
+      { n: '2 · QUEM contratar', desc: 'Selecionar lojistas com estrutura física adequada e forte perfil comercial.' },
+      { n: '4 · O QUE gerar', desc: 'Ativar geração de negócios logo na estreia, combatendo a base sem produção.' },
+      { n: '5 · COMO sustentar', desc: 'Manter ritmo recorrente acima do ponto de equilíbrio até consolidar o patamar PADE.' }
+    ];
+    return `
+      <div class="apoio-section-card mb-3">
+        <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap mb-3">
+          <div>
+            <h5 class="fw-bold mb-1"><i class="fa-solid fa-bullseye me-2" style="color:var(--mol-crimson);"></i>Do Transacional ao Negócio · Estratégia PADE</h5>
+            <div class="small" style="color:var(--mol-ink-muted);">Lema oficial: <strong>+ EFICIÊNCIA · + NEGÓCIOS · + RECEITA</strong></div>
+          </div>
+          <span class="badge bg-dark">Expansão · Velocidade · Qualidade · Sustentação</span>
+        </div>
+        <div class="row g-2 mb-3">
+          <div class="col-sm-6 col-lg-3"><div class="apoio-support-card h-100"><div class="fw-bold small mb-1">1. Mais Fluxo</div><div class="small" style="color:var(--mol-ink-muted);">Serviços financeiros trazem novos clientes para dentro da loja.</div></div></div>
+          <div class="col-sm-6 col-lg-3"><div class="apoio-support-card h-100"><div class="fw-bold small mb-1">2. Receita Diversificada</div><div class="small" style="color:var(--mol-ink-muted);">Comissões de crédito, contas, seguros e consórcio somam à venda do varejo.</div></div></div>
+          <div class="col-sm-6 col-lg-3"><div class="apoio-support-card h-100"><div class="fw-bold small mb-1">3. Maior Fidelização</div><div class="small" style="color:var(--mol-ink-muted);">Cliente volta todo mês para pagar, sacar, contratar e indicar.</div></div></div>
+          <div class="col-sm-6 col-lg-3"><div class="apoio-support-card h-100"><div class="fw-bold small mb-1">4. Relevância Local</div><div class="small" style="color:var(--mol-ink-muted);">Corban se torna referência bancária do bairro + garante seu Ponto de Equilíbrio.</div></div></div>
+        </div>
+        <h6 class="fw-bold mb-2">Os 4 Pilares de Gestão do Canal</h6>
+        <div class="row g-2 mb-3">
+          ${pillars.map((p) => `
+            <div class="col-md-6">
+              <div class="p-3 rounded-3 border h-100 bg-body-tertiary">
+                <div class="fw-bold small mb-1" style="color:var(--mol-crimson);">${escHtml(p.n)}</div>
+                <div class="small" style="color:var(--mol-ink);">${escHtml(p.desc)}</div>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+        <div class="p-3 rounded-3 border" style="border-left:4px solid var(--mol-crimson)!important;">
+          <div class="fw-bold small mb-1">4 Direcionadores do Multiplicador em Campo</div>
+          <div class="small"><strong>Expansão</strong> (novas praças) · <strong>Velocidade</strong> (encurtar tempo até o 1º negócio) · <strong>Qualidade</strong> (aumentar % da base produzindo) · <strong>Sustentação</strong> (garantir ponto de equilíbrio e evolução para PADE).</div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderNegTabConsignados() {
+    const rows = [
+      ['Consignado INSS', 'Aposentado/Pensionista (> 90 dias benefício ativo + Meu INSS)', '18 a 83 anos', 'Até 108 meses', 'Até 1,85% a.m.', '30 a 90 dias', 'Até 40% da renda'],
+      ['Consignado Público', 'Servidores ativos/inativos, estatutários, celetistas concursados, militares FA (correntista Bradesco)', '18 a 79 anos', 'Até 144 meses', 'Varia conforme convênio', '30 a 180 dias', 'Até 35% da renda'],
+      ['Consignado Privado', 'Trabalhador CLT correntista Bradesco (não precisa salário no banco; 3+ meses CLT na oferta / 6+ meses na trava Dataprev)', '18 a 80 anos', 'Até 72 meses', 'Personalizada por CPF', '15 a 60 dias', 'Até 35% renda líquida']
+    ];
+    return `
+      <div class="apoio-section-card mb-3">
+        <h5 class="fw-bold mb-1"><i class="fa-solid fa-coins me-2" style="color:var(--mol-crimson);"></i>Comparativo Oficial das 3 Linhas de Consignado</h5>
+        <p class="small mb-3" style="color:var(--mol-ink-muted);">Memorize as diferenças de idade, prazo, carência e margem entre INSS, Público e Privado.</p>
+        <div class="table-responsive">
+          <table class="table table-sm table-bordered align-middle mb-0" style="font-size:12.5px;">
+            <thead class="table-dark">
+              <tr>
+                <th>Linha</th>
+                <th>Público &amp; Regras</th>
+                <th>Idade</th>
+                <th>Prazo</th>
+                <th>Taxa</th>
+                <th>Carência</th>
+                <th>Margem</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${rows.map((r) => `
+                <tr>
+                  <td class="fw-bold">${escHtml(r[0])}</td>
+                  <td>${escHtml(r[1])}</td>
+                  <td>${escHtml(r[2])}</td>
+                  <td class="fw-semibold">${escHtml(r[3])}</td>
+                  <td>${escHtml(r[4])}</td>
+                  <td>${escHtml(r[5])}</td>
+                  <td class="fw-bold text-success">${escHtml(r[6])}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderNegTabAbordagem() {
+    const btns = [
+      { id: 'inss', label: 'Saque / Benefício INSS', icon: 'fa-solid fa-user-shield' },
+      { id: 'servidor', label: 'Servidor Público', icon: 'fa-solid fa-landmark' },
+      { id: 'clt_atraso', label: 'CLT com Contas em Atraso', icon: 'fa-solid fa-briefcase' },
+      { id: 'melhor_oferta', label: 'Buscando Crédito / Novo Cliente', icon: 'fa-solid fa-wand-magic-sparkles' }
+    ];
+    return `
+      <div class="apoio-section-card mb-3">
+        <h5 class="fw-bold mb-1"><i class="fa-solid fa-comments-dollar me-2" style="color:var(--mol-crimson);"></i>"Não existe atendimento neutro. Todo atendimento é oportunidade."</h5>
+        <p class="small mb-3" style="color:var(--mol-ink-muted);">Selecione o perfil do cliente no balcão (Slide 16) para gerar a abordagem ideal em segundos:</p>
+        <div class="d-flex flex-wrap gap-2 mb-3">
+          ${btns.map((b) => `
+            <button type="button" id="negProfBtn_${escHtml(b.id)}" class="btn btn-sm ${state.negApproachProfile === b.id ? 'btn-dark' : 'btn-outline-secondary'}" onclick="SamTraining.onNegApproachChange('${escHtml(b.id)}')">
+              <i class="${escHtml(b.icon)} me-1"></i>${escHtml(b.label)}
+            </button>
+          `).join('')}
+        </div>
+        <div id="negApproachResult">${renderNegApproachBox()}</div>
+      </div>
+    `;
+  }
+
+  function renderNegTabContas() {
+    const products = ['Cartão de Débito', 'Cartão de Crédito*', 'Seguros de cartões de débito e crédito', 'Adiantamento a Depositante', 'Limite de Crédito Pessoal*', 'Cheque especial*'];
+    return `
+      <div class="apoio-section-card mb-3">
+        <h5 class="fw-bold mb-1"><i class="fa-solid fa-wallet me-2" style="color:var(--mol-crimson);"></i>Abertura de Contas no Expresso (Slides 18 a 22)</h5>
+        <p class="small mb-3" style="color:var(--mol-ink-muted);">5 finalidades principais: Inclusão financeira, Organização financeira, Recebimento de valores, Transações bancárias e Acesso a crédito/produtos.</p>
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <div class="p-3 rounded-3 border h-100 bg-body-tertiary">
+              <div class="fw-bold small mb-1">Conta-Fácil + Invest-Fácil</div>
+              <p class="small mb-2">Integra <strong>Conta Corrente + Poupança</strong>. <strong>ATENÇÃO:</strong> a transferência entre Poupança e Conta Corrente <strong>NÃO é automática</strong>.</p>
+              <div class="small" style="color:var(--mol-ink-muted);"><strong>Invest-Fácil:</strong> rendimento automático progressivo aplicado sobre o saldo parado na Conta Corrente.</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-3 rounded-3 border h-100" style="border-left:4px solid #dc2626!important;">
+              <div class="fw-bold small text-danger mb-1">Elegibilidade, Documentos &amp; Analfabetos</div>
+              <ul class="small mb-0 ps-3">
+                <li>Idade mínima: <strong>18 anos</strong></li>
+                <li>Brasileiros: <strong>RG, CNH ou CIN</strong> | Estrangeiros: <strong>Identidade Nacional, RNM, RNE</strong></li>
+                <li><strong>Não alfabetizados:</strong> exigem <strong>2 testemunhas</strong> presenciais — <strong>NUNCA podem ser o Correspondente nem funcionários do Correspondente</strong>.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row g-3 mb-3">
+          <div class="col-md-6"><div class="p-2 rounded-3 border small"><strong>Conta Individual:</strong> 1 titular único.</div></div>
+          <div class="col-md-6"><div class="p-2 rounded-3 border small"><strong>Conta Conjunta (OU):</strong> 2 ou até <strong>3 titulares</strong>, com movimentação independente.</div></div>
+        </div>
+        <h6 class="fw-bold mb-2">6 Produtos Liberáveis (+ sujeitos à análise)</h6>
+        <div class="d-flex flex-wrap gap-2 mb-2">
+          ${products.map((p) => `<span class="badge bg-light text-dark border p-2">${escHtml(p)}</span>`).join('')}
+        </div>
+        <div class="small" style="color:var(--mol-ink-muted);">*Cartão de Crédito, Limite de Crédito Pessoal e Cheque Especial estão sujeitos à análise de crédito.</div>
+      </div>
+    `;
+  }
+
+  function renderNegTabQuiz() {
+    return `
+      <div class="apoio-section-card mb-3">
+        <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap mb-2">
+          <div>
+            <h5 class="fw-bold mb-0"><i class="fa-brands fa-whatsapp text-success me-2"></i>Cola Estratégica de Negócios (WhatsApp do Corban)</h5>
+            <div class="small" style="color:var(--mol-ink-muted);">Envie este resumo com seus dados automáticos do SAM para treinar rapidamente o lojista.</div>
+          </div>
+          <div class="d-flex gap-2 flex-wrap">
+            <button type="button" id="negCopyScriptBtn" class="btn btn-sm ${state.negCopiedFeedback ? 'btn-success' : 'btn-dark'}" onclick="SamTraining.copyNegScript()">
+              <i class="fa-solid ${state.negCopiedFeedback ? 'fa-check' : 'fa-copy'} me-1"></i>${state.negCopiedFeedback ? 'Roteiro Copiado!' : 'Copiar Roteiro'}
+            </button>
+            <button type="button" class="btn btn-sm btn-success" onclick="SamTraining.openNegWhatsapp()"><i class="fa-brands fa-whatsapp me-1"></i>Enviar no WhatsApp</button>
+          </div>
+        </div>
+        <pre class="apoio-script-pre mb-0">${escHtml(buildNegWhatsappScript())}</pre>
+      </div>
+      ${renderGenericQuizPanel(NEGOCIOS_QUIZ, state.negQuizAnswers, 'answerNegQuiz', 'resetNegQuiz', 'negQuiz')}
+    `;
+  }
+
+  function renderCpTabProduto() {
+    return `
+      <div class="apoio-section-card mb-3">
+        <h5 class="fw-bold mb-1"><i class="fa-solid fa-hand-holding-dollar me-2 text-success"></i>Consignado Privado CLT · Bradesco Expresso</h5>
+        <p class="small mb-3" style="color:var(--mol-ink-muted);">
+          Crédito direto para trabalhadores com carteira assinada (CLT) correntistas Bradesco — sem depender de convênio da empresa empregadora e sem precisar receber o salário no Bradesco.
+        </p>
+        <div class="apoio-kpi-row mb-3">
+          <div class="apoio-kpi-box"><div class="apoio-kpi-val">Até 35%</div><div class="apoio-kpi-lbl">Margem da renda líquida mensal</div></div>
+          <div class="apoio-kpi-box"><div class="apoio-kpi-val">Até 72x</div><div class="apoio-kpi-lbl">Parcelamento (R$ 5 a R$ 5.000/mês)</div></div>
+          <div class="apoio-kpi-box"><div class="apoio-kpi-val">R$ 100,00</div><div class="apoio-kpi-lbl">Valor mínimo para contratação</div></div>
+          <div class="apoio-kpi-box"><div class="apoio-kpi-val">7 dias</div><div class="apoio-kpi-lbl">Prazo garantido de cancelamento</div></div>
+        </div>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="p-3 rounded-3 border h-100 bg-body-tertiary">
+              <div class="fw-bold small mb-2">Vantagens para o Cliente &amp; Loja</div>
+              <ul class="small mb-0 ps-3">
+                <li><strong>Não é necessário ser Cliente folha de pagamento Bradesco.</strong></li>
+                <li>Dispensa convênio entre empresa e banco.</li>
+                <li>Carência inicial de <strong>15 a 60 dias</strong> para primeira parcela.</li>
+                <li>Em caso de desligamento: uso de <strong>até 35% da verba rescisória</strong> para amortização/quitação.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-3 rounded-3 border h-100" style="border-left:4px solid #dc2626!important;">
+              <div class="fw-bold small text-danger mb-2">Janela Mensal de Bloqueio Dataprev</div>
+              <p class="small mb-2">A Dataprev fica <strong>INDISPONÍVEL todos os meses</strong> das <strong>22h do dia 20 até às 6h do dia 23</strong> (Horário de Brasília).</p>
+              <div class="small fw-semibold">Dias 21 e 22 inteiros ficam fora do ar — oriente o retorno a partir das 6h do dia 23!</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderCpTabCondicoes() {
+    const s = state.cpSim;
+    return `
+      <div class="apoio-section-card mb-3">
+        <h5 class="fw-bold mb-1"><i class="fa-solid fa-calculator me-2 text-success"></i>Simulador Rápido de Elegibilidade &amp; Margem (35%)</h5>
+        <p class="small mb-3" style="color:var(--mol-ink-muted);">Teste idade (18–80), vínculo CLT (mín. 6 meses na jornada), correntista e dia do mês para validar a Dataprev.</p>
+        <div class="row g-3 mb-3">
+          <div class="col-sm-6 col-lg-3">
+            <label class="form-label small fw-bold">Salário Líquido (R$)</label>
+            <input type="number" id="cpSimSalary" class="form-control form-control-sm" min="0" step="100" value="${escHtml(s.netSalary)}" oninput="SamTraining.onCpSimChange('netSalary', this.value)" />
+          </div>
+          <div class="col-sm-6 col-lg-2">
+            <label class="form-label small fw-bold">Idade (18–80)</label>
+            <input type="number" id="cpSimAge" class="form-control form-control-sm" min="16" max="95" value="${escHtml(s.age)}" oninput="SamTraining.onCpSimChange('age', this.value)" />
+          </div>
+          <div class="col-sm-6 col-lg-2">
+            <label class="form-label small fw-bold">Meses CLT</label>
+            <input type="number" id="cpSimMonths" class="form-control form-control-sm" min="0" max="300" value="${escHtml(s.cltMonths)}" oninput="SamTraining.onCpSimChange('cltMonths', this.value)" />
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <label class="form-label small fw-bold">Correntista Bradesco?</label>
+            <select id="cpSimAccount" class="form-select form-select-sm" onchange="SamTraining.onCpSimChange('isAccountHolder', this.value)">
+              <option value="sim" ${s.isAccountHolder === 'sim' ? 'selected' : ''}>Sim, possui conta Bradesco</option>
+              <option value="nao" ${s.isAccountHolder === 'nao' ? 'selected' : ''}>Não possui conta</option>
+            </select>
+          </div>
+          <div class="col-sm-6 col-lg-2">
+            <label class="form-label small fw-bold">Dia do Mês</label>
+            <input type="number" id="cpSimDay" class="form-control form-control-sm" min="1" max="31" value="${escHtml(s.dayOfMonth)}" oninput="SamTraining.onCpSimChange('dayOfMonth', this.value)" />
+          </div>
+        </div>
+        <div id="cpSimResult">${renderCpSimResultBox()}</div>
+      </div>
+    `;
+  }
+
+  function renderCpTabJornada() {
+    return renderGenericStepsChecklist(
+      CONSIGNADO_PRIVADO_STEPS,
+      state.cpSteps,
+      'toggleCpStep',
+      'resetCpSteps',
+      'Jornada Completa · 12 Passos do Consignado Privado',
+      'Inclui termo MET/DATAPREV (30d/45d), 2 biometrias, alerta CPV e telas finais 12.1 (aprovado) / 12.2 (análise até 5 dias úteis).'
+    );
+  }
+
+  function renderCpTabExcecoes() {
+    const ex = [
+      { title: '1. Janela de Manutenção Dataprev', desc: 'Indisponível todo mês das 22h do dia 20 até às 6h do dia 23 (Horário de Brasília).', act: 'Agendar atendimento do cliente a partir das 6h do dia 23.' },
+      { title: '2. Trabalhador Não Correntista Bradesco', desc: 'O Consignado Privado exige conta-corrente ativa no Bradesco (mas não exige folha).', act: 'Clicar direto no botão "Abrir conta" na tela de exceção e concluir abertura antes de simular.' },
+      { title: '3. Vínculo CLT Inferior a 6 Meses', desc: 'Dataprev exige no mínimo 6 meses de registro na empresa atual no fluxo de contratação.', act: 'Orientar retorno quando completar 6 meses ou avaliar outra linha elegível.' }
+    ];
+    return `
+      <div class="apoio-section-card mb-3">
+        <h5 class="fw-bold mb-2"><i class="fa-solid fa-triangle-exclamation text-warning me-2"></i>3 Telas de Exceção Oficiais</h5>
+        <div class="apoio-exc-grid mb-3">
+          ${ex.map((e) => `
+            <div class="apoio-exc-card tone-warning">
+              <div class="fw-bold small mb-1">${escHtml(e.title)}</div>
+              <p class="small mb-2" style="color:var(--mol-ink-muted);">${escHtml(e.desc)}</p>
+              <div class="apoio-exc-action"><strong>Conduta:</strong> ${escHtml(e.act)}</div>
+            </div>
+          `).join('')}
+        </div>
+        <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap mb-2">
+          <div class="fw-bold small"><i class="fa-brands fa-whatsapp text-success me-1"></i>Roteiro Rápido para WhatsApp do Corban/Cliente</div>
+          <div class="d-flex gap-2">
+            <button type="button" id="cpCopyScriptBtn" class="btn btn-sm ${state.cpCopiedFeedback ? 'btn-success' : 'btn-dark'}" onclick="SamTraining.copyCpScript()">
+              <i class="fa-solid ${state.cpCopiedFeedback ? 'fa-check' : 'fa-copy'} me-1"></i>${state.cpCopiedFeedback ? 'Roteiro Copiado!' : 'Copiar Roteiro'}
+            </button>
+            <button type="button" class="btn btn-sm btn-success" onclick="SamTraining.openCpWhatsapp()"><i class="fa-brands fa-whatsapp me-1"></i>Enviar no WhatsApp</button>
+          </div>
+        </div>
+        <pre class="apoio-script-pre mb-0">${escHtml(buildCpWhatsappScript())}</pre>
+      </div>
+    `;
+  }
+
+  function renderCpTabQuiz() {
+    return renderGenericQuizPanel(CONSIGNADO_PRIVADO_QUIZ, state.cpQuizAnswers, 'answerCpQuiz', 'resetCpQuiz', 'cpQuiz');
+  }
+
+  function renderCtTabInauguracao() {
+    return `
+      <div class="apoio-section-card mb-3">
+        <h5 class="fw-bold mb-1"><i class="fa-solid fa-building-circle-check me-2" style="color:#1d4ed8;"></i>Inauguração, Regulação &amp; Limites Padrão</h5>
+        <p class="small mb-3" style="color:var(--mol-ink-muted);">
+          Todo ponto Expresso cumpre diligências da <strong>Resolução 4.935/21</strong> e registro no <strong>UNICAD-BACEN</strong>, com monitoramento contínuo pela área Contábil.
+        </p>
+        <div class="apoio-kpi-row mb-3">
+          <div class="apoio-kpi-box"><div class="apoio-kpi-val">R$ 5 mil / 10 mil</div><div class="apoio-kpi-lbl">Limite diário operacional inicial</div></div>
+          <div class="apoio-kpi-box"><div class="apoio-kpi-val">R$ 2.000,00</div><div class="apoio-kpi-lbl">Limite transação: Recebimentos &amp; Transferência</div></div>
+          <div class="apoio-kpi-box"><div class="apoio-kpi-val">R$ 2.500,00</div><div class="apoio-kpi-lbl">Limite transação: Saque com Cartão</div></div>
+          <div class="apoio-kpi-box"><div class="apoio-kpi-val">R$ 1.000,00</div><div class="apoio-kpi-lbl">Limite transação: Depósito padrão</div></div>
+        </div>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="p-3 rounded-3 border bg-body-tertiary h-100">
+              <div class="fw-bold small mb-1">Migração de Categoria</div>
+              <div class="small">Evolução gradual conforme maturidade e histórico para: <strong>Órgão Pagador</strong>, <strong>Avançado</strong>, <strong>Presença</strong> e <strong>Apoio UN</strong>.</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-3 rounded-3 border h-100">
+              <div class="fw-bold small mb-1">Ações de Monitoramento &amp; Desbloqueio</div>
+              <div class="small">Redução de limites, Bloqueio, Restritivo ou Encerramento. <strong>Regra de Ouro:</strong> após prestação de contas integral, o desbloqueio ocorre automaticamente em <strong>D+1</strong>.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderCtTabContas() {
+    const formas = [
+      '1. Boleto Bancário',
+      '2. BDN Envelope',
+      '3. Terminal Financeiro* (On-line YMLO)',
+      '4. Recicladora Depósito Imediato* (On-line YMLO)',
+      '5. PIX* (On-line YMLO)',
+      '6. Acerto Financeiro Eletrônico'
+    ];
+    return `
+      <div class="apoio-section-card mb-3">
+        <h5 class="fw-bold mb-1"><i class="fa-solid fa-file-invoice-dollar me-2" style="color:#1d4ed8;"></i>Prestação de Contas (D+1), YMLO &amp; Regra D3 (R$ 1,00)</h5>
+        <p class="small mb-3" style="color:var(--mol-ink-muted);">
+          Conferência diária obrigatória: confrontar <strong>Extrato da Razão 01.27</strong> × <strong>Rotina BIBC</strong> × <strong>Fechamento da fita de caixa</strong>. Repasse ao banco em até <strong>D+1</strong>.
+        </p>
+        <h6 class="fw-bold mb-2">6 Formas Oficiais de Acerto (*com Sensibilização On-line no YMLO)</h6>
+        <div class="d-flex flex-wrap gap-2 mb-3">
+          ${formas.map((f) => `<span class="badge bg-light text-dark border p-2">${escHtml(f)}</span>`).join('')}
+        </div>
+        <div class="p-3 rounded-3 border" style="border-left:4px solid #dc2626!important;background:rgba(220,38,38,.06);">
+          <div class="fw-bold small text-danger mb-1">Atenção Crítica · Regra de Inadimplência D3</div>
+          <p class="small mb-2">
+            Ao completar <strong>2 dias consecutivos</strong> sem prestar contas integralmente, o limite cai no D3 para <strong>R$ 1,00</strong> (permanecendo ativos apenas saques/recebimentos com cartão e originação de negócios).
+          </p>
+          <div class="small fw-semibold">Como regularizar: quitar o saldo integral, solicitar <em>"Restabelecimento de Limite"</em> no Portal Expresso ou aguardar o restabelecimento automático no dia seguinte.</div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderCtTabRisco() {
+    return `
+      <div class="apoio-section-card mb-3">
+        <h5 class="fw-bold mb-2"><i class="fa-solid fa-shield-halved me-2" style="color:#1d4ed8;"></i>3 Transações de Alto Risco Operacional</h5>
+        <div class="apoio-exc-grid mb-3">
+          <div class="apoio-exc-card tone-danger">
+            <div class="fw-bold small mb-1">1. ESTORNO</div>
+            <p class="small mb-2">Permitido somente em emergência, dentro de <strong>até 15 minutos</strong> e exclusivamente para a <strong>última transação no POS</strong>.</p>
+            <div class="apoio-exc-action"><strong>Bloqueio absoluto:</strong> boletos de cobrança e tributos NÃO estornam.</div>
+          </div>
+          <div class="apoio-exc-card tone-warning">
+            <div class="fw-bold small mb-1">2. RECIBO DE RETIRADA</div>
+            <p class="small mb-2">Exclusivo do <strong>1º saque INSS de não correntista</strong>. Transação classificada como <strong>ALTO RISCO</strong>.</p>
+            <div class="apoio-exc-action"><strong>Obrigações:</strong> conferir assinaturas rigorosamente e acompanhar extravio ou atraso de cartão.</div>
+          </div>
+          <div class="apoio-exc-card tone-info">
+            <div class="fw-bold small mb-1">3. PROVA DE VIDA</div>
+            <p class="small mb-2">Autorizada apenas ao próprio titular, procurador ou representante legal devidamente cadastrado.</p>
+            <div class="apoio-exc-action"><strong>Obrigação:</strong> validar identidade oficial presencialmente antes de avançar.</div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap mb-2">
+          <div class="fw-bold small"><i class="fa-brands fa-whatsapp text-success me-1"></i>Checklist Contábil Diário para WhatsApp do Corban</div>
+          <div class="d-flex gap-2">
+            <button type="button" id="ctCopyScriptBtn" class="btn btn-sm ${state.ctCopiedFeedback ? 'btn-success' : 'btn-dark'}" onclick="SamTraining.copyCtScript()">
+              <i class="fa-solid ${state.ctCopiedFeedback ? 'fa-check' : 'fa-copy'} me-1"></i>${state.ctCopiedFeedback ? 'Roteiro Copiado!' : 'Copiar Roteiro'}
+            </button>
+            <button type="button" class="btn btn-sm btn-success" onclick="SamTraining.openCtWhatsapp()"><i class="fa-brands fa-whatsapp me-1"></i>Enviar no WhatsApp</button>
+          </div>
+        </div>
+        <pre class="apoio-script-pre mb-0">${escHtml(buildCtWhatsappScript())}</pre>
+      </div>
+    `;
+  }
+
+  function renderCtTabAntifraude() {
+    return `
+      <div class="apoio-section-card mb-3">
+        <div class="p-3 rounded-3 border mb-3" style="border-left:5px solid #dc2626!important;background:rgba(220,38,38,.08);">
+          <h5 class="fw-bold text-danger mb-1"><i class="fa-solid fa-user-secret me-2"></i>Segurança Antifraude &amp; Token Obrigatório TDS</h5>
+          <p class="small mb-2">
+            O suporte técnico oficial da <strong>TDS SEMPRE informa um Token de Atendimento</strong>. Se alguém ligar ou enviar WhatsApp sem Token válido: <strong>desligue e NÃO use a máquina POS!</strong>
+          </p>
+          <ul class="small fw-semibold mb-0 ps-3">
+            <li>NUNCA realizar testes ou atualizações de limite por telefone ou WhatsApp.</li>
+            <li>NUNCA fazer depósitos/transferências a pedido de supostos técnicos ou gerentes.</li>
+            <li>NUNCA informar senhas ou entregar a máquina POS a terceiros.</li>
+          </ul>
+        </div>
+        <h6 class="fw-bold mb-2">Canais Oficiais de Suporte (Slide 9)</h6>
+        <div class="apoio-support-grid">
+          <div class="apoio-support-card">
+            <div class="small fw-bold" style="color:#1d4ed8;">Chamado Técnico TDS</div>
+            <div class="fw-bold" style="font-size:18px;font-family:var(--mol-font-mono);">0800 727 7667</div>
+            <div class="small" style="color:var(--mol-ink-muted);">Atendimento técnico oficial com Token</div>
+          </div>
+          <div class="apoio-support-card">
+            <div class="small fw-bold text-success">WhatsApp TDS / Suporte</div>
+            <div class="fw-bold" style="font-size:18px;font-family:var(--mol-font-mono);">(11) 3534-8599</div>
+            <div class="small" style="color:var(--mol-ink-muted);">Canal oficial verificado para suporte</div>
+          </div>
+          <div class="apoio-support-card">
+            <div class="small fw-bold" style="color:var(--mol-crimson);">Time Comercial &amp; Multiplicadores</div>
+            <div class="fw-bold" style="font-size:18px;font-family:var(--mol-font-mono);">0800 941 4807</div>
+            <div class="small" style="color:var(--mol-ink-muted);">Dúvidas comerciais e operacionais do canal</div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderCtTabQuiz() {
+    return renderGenericQuizPanel(CONTABIL_QUIZ, state.ctQuizAnswers, 'answerCtQuiz', 'resetCtQuiz', 'ctQuiz');
+  }
+
+  function renderOpTabServicos() {
+    return `
+      <div class="apoio-section-card mb-3">
+        <h5 class="fw-bold mb-1"><i class="fa-solid fa-landmark me-2" style="color:#6d28d9;"></i>Órgãos Pagadores INSS &amp; Os 7 Serviços Oficiais</h5>
+        <p class="small mb-3" style="color:var(--mol-ink-muted);">
+          Correspondentes credenciados como Órgão Pagador ampliam o atendimento presencial aos aposentados e pensionistas com estes 7 serviços dedicados:
+        </p>
+        <div class="table-responsive">
+          <table class="table table-sm table-bordered align-middle mb-0" style="font-size:12.5px;">
+            <thead class="table-dark">
+              <tr><th>Código</th><th>Serviço Oficial</th><th>Finalidade no Balcão</th></tr>
+            </thead>
+            <tbody>
+              ${OP_SERVICOS.map((s) => `
+                <tr>
+                  <td><span class="badge bg-dark font-monospace">${escHtml(s[0])}</span></td>
+                  <td class="fw-bold">${escHtml(s[1])}</td>
+                  <td>${escHtml(s[2])}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderOpTabMovimentos() {
+    const s = state.opSim;
+    return `
+      <div class="apoio-section-card mb-3">
+        <h5 class="fw-bold mb-1"><i class="fa-solid fa-arrows-left-right me-2" style="color:#6d28d9;"></i>Critérios INSS: Cadastro vs. Substituição</h5>
+        <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <div class="p-3 rounded-3 border bg-body-tertiary h-100">
+              <div class="fw-bold small mb-1" style="color:#6d28d9;">Movimento de CADASTRO (Novo Ponto)</div>
+              <ul class="small mb-0 ps-3">
+                <li>Corban precisa <strong>realizar saque</strong> e possuir <strong>estrutura física adequada</strong>.</li>
+                <li>Integrado à agência de relacionamento.</li>
+                <li><strong>Vedação INSS:</strong> NÃO permitido em <strong>região pioneira</strong> (onde existe apenas um único órgão pagador, Bradesco ou outra IF).</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-3 rounded-3 border bg-body-tertiary h-100">
+              <div class="fw-bold small mb-1" style="color:#6d28d9;">Movimento de SUBSTITUIÇÃO (Ponto Inoperante/Encerrado)</div>
+              <ul class="small mb-0 ps-3">
+                <li>Distância máxima de <strong>até 3 KM (a pé)</strong> do ponto de origem.</li>
+                <li>Estar dentro do <strong>mesmo município</strong>.</li>
+                <li>Integrar a <strong>mesma agência de relacionamento</strong>.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <h6 class="fw-bold mb-2">Simulador de Enquadramento INSS</h6>
+        <div class="row g-3 mb-3">
+          <div class="col-md-4">
+            <label class="form-label small fw-bold">Tipo de Movimento</label>
+            <select id="opSimMode" class="form-select form-select-sm" onchange="SamTraining.onOpSimChange('mode', this.value)">
+              <option value="cadastro" ${s.mode === 'cadastro' ? 'selected' : ''}>Cadastro (Novo Órgão Pagador)</option>
+              <option value="substituicao" ${s.mode === 'substituicao' ? 'selected' : ''}>Substituição (Ponto Encerrado)</option>
+            </select>
+          </div>
+          ${s.mode === 'cadastro' ? `
+            <div class="col-md-4">
+              <label class="form-label small fw-bold">Região Pioneira (só 1 OP local)?</label>
+              <select id="opSimPioneira" class="form-select form-select-sm" onchange="SamTraining.onOpSimChange('pioneira', this.value)">
+                <option value="nao" ${s.pioneira === 'nao' ? 'selected' : ''}>Não (há mais de 1 órgão pagador)</option>
+                <option value="sim" ${s.pioneira === 'sim' ? 'selected' : ''}>Sim (região pioneira)</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label small fw-bold">Realiza Saque &amp; Tem Estrutura?</label>
+              <select id="opSimSaque" class="form-select form-select-sm" onchange="SamTraining.onOpSimChange('saqueEstrutura', this.value)">
+                <option value="sim" ${s.saqueEstrutura === 'sim' ? 'selected' : ''}>Sim, completo</option>
+                <option value="nao" ${s.saqueEstrutura === 'nao' ? 'selected' : ''}>Não atende ainda</option>
+              </select>
+            </div>
+          ` : `
+            <div class="col-md-4">
+              <label class="form-label small fw-bold">Distância a pé da origem (KM)</label>
+              <input type="number" id="opSimKm" class="form-control form-control-sm" min="0" step="0.5" value="${escHtml(s.distKm)}" oninput="SamTraining.onOpSimChange('distKm', this.value)" />
+            </div>
+            <div class="col-md-4">
+              <label class="form-label small fw-bold">Mesmo município e mesma agência?</label>
+              <select id="opSimPraca" class="form-select form-select-sm" onchange="SamTraining.onOpSimChange('mesmaPracaAgencia', this.value)">
+                <option value="sim" ${s.mesmaPracaAgencia === 'sim' ? 'selected' : ''}>Sim, mesma praça e agência</option>
+                <option value="nao" ${s.mesmaPracaAgencia === 'nao' ? 'selected' : ''}>Não (município ou agência distinta)</option>
+              </select>
+            </div>
+          `}
+        </div>
+        <div id="opSimResult">${renderOpSimResultBox()}</div>
+      </div>
+    `;
+  }
+
+  function renderOpTabEquipe() {
+    const team = [
+      { role: 'Gerente de Área', name: 'Kássio Estivalli Altafini' },
+      { role: 'Analista / Especialista PL', name: 'Beatriz Karine Oliveira' },
+      { role: 'Analista / Especialista JR', name: 'Gabriel Oliveira Rodrigues' }
+    ];
+    return `
+      <div class="apoio-section-card mb-3">
+        <h5 class="fw-bold mb-2"><i class="fa-solid fa-people-group me-2" style="color:#6d28d9;"></i>Trajeto Oficial &amp; Equipe Responsável</h5>
+        <div class="row g-2 mb-3">
+          <div class="col-md-4"><div class="p-3 rounded-3 border bg-body-tertiary text-center"><div class="badge bg-dark mb-1">1. INDICAÇÃO</div><div class="small">Validação dos requisitos de elegibilidade e estrutura pelo time comercial.</div></div></div>
+          <div class="col-md-4"><div class="p-3 rounded-3 border bg-body-tertiary text-center"><div class="badge bg-dark mb-1">2. ENVIO AO INSS</div><div class="small">Submissão formal da movimentação (Cadastro ou Substituição) para análise INSS.</div></div></div>
+          <div class="col-md-4"><div class="p-3 rounded-3 border bg-body-tertiary text-center"><div class="badge bg-success mb-1">3. RETORNO &amp; CADASTRO</div><div class="small">Devolutiva aprovada pelo INSS e ativação dos 7 serviços no Corban.</div></div></div>
+        </div>
+        <h6 class="fw-bold mb-2">Equipe de Órgãos Pagadores</h6>
+        <div class="apoio-support-grid">
+          ${team.map((m) => `
+            <div class="apoio-support-card">
+              <div class="small fw-bold" style="color:#6d28d9;">${escHtml(m.role)}</div>
+              <div class="fw-bold small">${escHtml(m.name)}</div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  function renderOpTabQuiz() {
+    return renderGenericQuizPanel(OP_QUIZ, state.opQuizAnswers, 'answerOpQuiz', 'resetOpQuiz', 'opQuiz');
+  }
+
+  function renderPvTabGeral() {
+    return `
+      <div class="apoio-section-card mb-3">
+        <h5 class="fw-bold mb-1"><i class="fa-solid fa-user-check me-2" style="color:#0f766e;"></i>Prova de Vida INSS Bradesco · Informações Gerais</h5>
+        <p class="small mb-3" style="color:var(--mol-ink-muted);">
+          Serviço realizado presencialmente nos Correspondentes habilitados como <strong>Órgãos Pagadores</strong> para beneficiários INSS Bradesco, usando validação por <strong>biometria facial</strong>.
+        </p>
+        <div class="apoio-kpi-row mb-3">
+          <div class="apoio-kpi-box"><div class="apoio-kpi-val">Até 1 dia útil</div><div class="apoio-kpi-lbl">Prazo de envio automático ao INSS</div></div>
+          <div class="apoio-kpi-box"><div class="apoio-kpi-val">Meu INSS</div><div class="apoio-kpi-lbl">App onde o cliente confirma a conclusão</div></div>
+          <div class="apoio-kpi-box"><div class="apoio-kpi-val">E-mail / Impresso</div><div class="apoio-kpi-lbl">Comprovante emitido ao finalizar</div></div>
+        </div>
+        <div class="p-3 rounded-3 border bg-body-tertiary small">
+          <strong>Regras de Atendimento:</strong> Somente titular, procurador ou representante legal cadastrado; validar documento oficial; realizar captura facial em <strong>local iluminado</strong>, sem boné, óculos ou acessórios no rosto e câmera posicionada na altura do rosto.
+        </div>
+      </div>
+    `;
+  }
+
+  function renderPvTabJornada() {
+    const steps = [
+      { n: '01', t: 'Menu Serviços -> Prova de vida', d: 'No portal Bradesco Expresso (Corban Órgão Pagador), acessar Serviços e clicar em Prova de vida.' },
+      { n: '02', t: 'Informar CPF do Beneficiário', d: 'Digitar o CPF do cliente INSS Bradesco com conferência do documento oficial de identificação.' },
+      { n: '03', t: 'Executar Biometria Facial', d: 'Orientar local bem iluminado, retirar óculos escuros/boné/acessórios e posicionar o rosto centralizado na câmera.' },
+      { n: '04', t: 'Finalizar & Entregar Comprovante', d: 'Emitir comprovante impresso ou por e-mail; reforçar envio ao INSS em até 1 dia útil e acompanhamento no app Meu INSS.' }
+    ];
+    return `
+      <div class="apoio-section-card mb-3">
+        <h5 class="fw-bold mb-2"><i class="fa-solid fa-camera me-2" style="color:#0f766e;"></i>Jornada Operacional em 4 Passos</h5>
+        <div class="apoio-client-steps">
+          ${steps.map((s) => `
+            <div class="apoio-client-step">
+              <span class="apoio-client-num">${escHtml(s.n)}</span>
+              <div>
+                <div class="fw-bold small">${escHtml(s.t)}</div>
+                <div class="small" style="color:var(--mol-ink-muted);">${escHtml(s.d)}</div>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  function renderPvTabQuiz() {
+    return `
+      <div class="apoio-section-card mb-3">
+        <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap mb-2">
+          <div>
+            <h5 class="fw-bold mb-0"><i class="fa-brands fa-whatsapp text-success me-2"></i>Convite / Orientação de Prova de Vida para o Beneficiário</h5>
+            <div class="small" style="color:var(--mol-ink-muted);">Pronto para enviar ao cliente ou equipe da loja com seu nome e WhatsApp.</div>
+          </div>
+          <div class="d-flex gap-2 flex-wrap">
+            <button type="button" id="pvCopyScriptBtn" class="btn btn-sm ${state.pvCopiedFeedback ? 'btn-success' : 'btn-dark'}" onclick="SamTraining.copyPvScript()">
+              <i class="fa-solid ${state.pvCopiedFeedback ? 'fa-check' : 'fa-copy'} me-1"></i>${state.pvCopiedFeedback ? 'Roteiro Copiado!' : 'Copiar Roteiro'}
+            </button>
+            <button type="button" class="btn btn-sm btn-success" onclick="SamTraining.openPvWhatsapp()"><i class="fa-brands fa-whatsapp me-1"></i>Enviar no WhatsApp</button>
+          </div>
+        </div>
+        <pre class="apoio-script-pre mb-0">${escHtml(buildPvWhatsappScript())}</pre>
+      </div>
+      ${renderGenericQuizPanel(PROVA_VIDA_QUIZ, state.pvQuizAnswers, 'answerPvQuiz', 'resetPvQuiz', 'pvQuiz')}
+    `;
+  }
+
   function renderLessonView(topic) {
     const activeTab = getActiveTab(topic.id);
     const tabs = TOPIC_TABS[topic.id] || TOPIC_TABS.tutorial_nova_plataforma;
     let tabHtml = '';
-    if (topic.id === 'consorcio') {
+    if (topic.id === 'negocios') {
+      if (activeTab === 'neg_visao') tabHtml = renderNegTabVisao();
+      else if (activeTab === 'neg_estrategia') tabHtml = renderNegTabEstrategia();
+      else if (activeTab === 'neg_consignados') tabHtml = renderNegTabConsignados();
+      else if (activeTab === 'neg_abordagem') tabHtml = renderNegTabAbordagem();
+      else if (activeTab === 'neg_contas') tabHtml = renderNegTabContas();
+      else tabHtml = renderNegTabQuiz();
+    } else if (topic.id === 'consorcio') {
       if (activeTab === 'cons_produto') tabHtml = renderConsTabProduto();
       else if (activeTab === 'cons_condicoes') tabHtml = renderConsTabCondicoes();
       else if (activeTab === 'cons_argumentos') tabHtml = renderConsTabArgumentos();
       else if (activeTab === 'cons_venda') tabHtml = renderConsTabVenda();
       else if (activeTab === 'cons_suporte') tabHtml = renderConsTabSuporte();
       else tabHtml = renderConsTabChecklistQuiz();
+    } else if (topic.id === 'consignado_privado') {
+      if (activeTab === 'cp_produto') tabHtml = renderCpTabProduto();
+      else if (activeTab === 'cp_condicoes') tabHtml = renderCpTabCondicoes();
+      else if (activeTab === 'cp_jornada') tabHtml = renderCpTabJornada();
+      else if (activeTab === 'cp_excecoes') tabHtml = renderCpTabExcecoes();
+      else tabHtml = renderCpTabQuiz();
+    } else if (topic.id === 'contabil') {
+      if (activeTab === 'ct_inauguracao') tabHtml = renderCtTabInauguracao();
+      else if (activeTab === 'ct_contas') tabHtml = renderCtTabContas();
+      else if (activeTab === 'ct_risco') tabHtml = renderCtTabRisco();
+      else if (activeTab === 'ct_antifraude') tabHtml = renderCtTabAntifraude();
+      else tabHtml = renderCtTabQuiz();
+    } else if (topic.id === 'orgaos_pagadores') {
+      if (activeTab === 'op_servicos') tabHtml = renderOpTabServicos();
+      else if (activeTab === 'op_movimentos') tabHtml = renderOpTabMovimentos();
+      else if (activeTab === 'op_equipe') tabHtml = renderOpTabEquipe();
+      else tabHtml = renderOpTabQuiz();
+    } else if (topic.id === 'prova_de_vida') {
+      if (activeTab === 'pv_geral') tabHtml = renderPvTabGeral();
+      else if (activeTab === 'pv_jornada') tabHtml = renderPvTabJornada();
+      else tabHtml = renderPvTabQuiz();
     } else {
       if (activeTab === 'resumo') tabHtml = renderTabResumo();
       else if (activeTab === 'elegibilidade') tabHtml = renderTabElegibilidade();
@@ -9430,13 +11126,14 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
       else tabHtml = renderTabApoioQuiz();
     }
 
+    const headerBadge = topic.featured ? 'TEMA CENTRAL · MULTIPLICADORES' : `ASSUNTO ${escHtml(topic.order)} · MULTIPLICADORES`;
     return `
       <div class="apoio-lesson-header mb-3">
         <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap mb-2">
           <button type="button" id="apoioBackToTopicsBtn" class="btn btn-sm btn-outline-light" onclick="SamTraining.closeTopic()">
             <i class="fa-solid fa-arrow-left me-1"></i>Voltar aos Assuntos
           </button>
-          <span class="badge bg-warning text-dark">ASSUNTO ${escHtml(topic.order)} · MULTIPLICADORES</span>
+          <span class="badge bg-warning text-dark">${headerBadge}</span>
         </div>
         <h3 class="dash-title mb-1" style="color:#ffffff;">${escHtml(topic.buttonLabel)}</h3>
         <div class="small" style="color:rgba(241,237,228,.8);">${escHtml(topic.subtitle)}</div>
@@ -9474,6 +11171,13 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
     CONSORCIO_COMMERCIAL_CHECKLIST,
     CONSORCIO_QUIZ,
     CONS_CALC_PRESETS,
+    NEGOCIOS_QUIZ,
+    CONSIGNADO_PRIVADO_STEPS,
+    CONSIGNADO_PRIVADO_QUIZ,
+    CONTABIL_QUIZ,
+    OP_SERVICOS,
+    OP_QUIZ,
+    PROVA_VIDA_QUIZ,
     getTopics,
     getTopicCount,
     hasOpenTopic,
@@ -9501,6 +11205,33 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
     copyConsClientScript,
     openConsClientWhatsapp,
     buildConsWhatsappScript,
+    onNegApproachChange,
+    answerNegQuiz,
+    resetNegQuiz,
+    copyNegScript,
+    openNegWhatsapp,
+    buildNegWhatsappScript,
+    onCpSimChange,
+    toggleCpStep,
+    resetCpSteps,
+    answerCpQuiz,
+    resetCpQuiz,
+    copyCpScript,
+    openCpWhatsapp,
+    buildCpWhatsappScript,
+    answerCtQuiz,
+    resetCtQuiz,
+    copyCtScript,
+    openCtWhatsapp,
+    buildCtWhatsappScript,
+    onOpSimChange,
+    answerOpQuiz,
+    resetOpQuiz,
+    answerPvQuiz,
+    resetPvQuiz,
+    copyPvScript,
+    openPvWhatsapp,
+    buildPvWhatsappScript,
     openExternalLink,
     renderPage
   };
