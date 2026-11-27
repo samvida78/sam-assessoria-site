@@ -3467,6 +3467,15 @@ tr.corban-row-tier-10p > td:first-child {
   font-weight: 800;
   color: var(--mol-crimson);
 }
+.apoio-topic-btn.accent-gold {
+  border-left-color: var(--mol-gold);
+}
+.apoio-topic-btn.accent-gold .apoio-topic-num {
+  background: linear-gradient(135deg, #9a6d1f, #c69b42);
+}
+.apoio-topic-btn.accent-gold .apoio-topic-cta {
+  color: var(--mol-gold-dark);
+}
 
 .apoio-topic-placeholder {
   border: 1.5px dashed var(--mol-border-strong);
@@ -4380,7 +4389,7 @@ html, body {
             <div class="sam-logo-pill-hero sm"><img data-sam-logo="full" alt="SAM Assessoria e Treinamento" /></div>
             <div>
               <div class="auth-brand-title">RECUPERAÇÃO SEGURA</div>
-              <div class="auth-brand-sub">Validação Cadastral Obrigatória · SAM 4.5</div>
+              <div class="auth-brand-sub">Validação Cadastral Obrigatória · SAM 4.6</div>
             </div>
           </div>
           <h2 class="auth-hero-headline" style="font-size:21px;">Valide sua <em>identidade</em> para redefinir.</h2>
@@ -4457,7 +4466,7 @@ html, body {
         <div class="mol-sidebar-top">
           <div class="mol-brand-inline">
             <div class="sam-logo-pill-sidebar"><img data-sam-logo="full" alt="SAM Assessoria e Treinamento" /></div>
-            <span class="brand-exec-pill">4.5</span>
+            <span class="brand-exec-pill">4.6</span>
           </div>
           <button class="btn btn-sm text-white-50 border-0 p-1" onclick="toggleSidebar()" title="Recolher menu"><i class="fa-solid fa-angles-left"></i></button>
         </div>
@@ -4513,7 +4522,7 @@ html, body {
           </button>
           <button class="mol-nav-link" data-page="apoio" onclick="navigate('apoio')">
             <span class="mol-nav-left"><i class="fa-solid fa-graduation-cap"></i><span>Material de Apoio</span></span>
-            <span id="navApoioCount" class="nav-badge-pill">1</span>
+            <span id="navApoioCount" class="nav-badge-pill">2</span>
           </button>
           <button class="mol-nav-link" data-page="recursos" onclick="navigate('recursos')">
             <span class="mol-nav-left"><i class="fa-solid fa-book-open"></i><span>Recursos · Junho/25</span></span>
@@ -7595,7 +7604,7 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
 
   </script>
   <script data-inline="training-hub">
-/* SAM Assessoria e Treinamentos — Central de Material de Apoio para Multiplicadores (v4.5)
+/* SAM Assessoria e Treinamentos — Central de Material de Apoio para Multiplicadores (v4.6)
  * Arquitetura modular por botões de assunto: cada tema enviado entra como um botão próprio,
  * mantendo as aulas organizadas, simplificadas, interativas e sem mistura de conteúdos.
  */
@@ -7617,6 +7626,20 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
       sources: [
         'Maratona do Saber: Prospecção (Nova Plataforma Expresso)',
         'Tutorial: Primeiro Acesso Plataforma Expresso (Lead / Comerciante)'
+      ]
+    },
+    {
+      id: 'consorcio',
+      order: '02',
+      buttonLabel: 'Consórcio',
+      category: 'Bradesco Consórcios · Oferta & Venda Balcão',
+      subtitle: 'Aula completa para multiplicadores: dados de mercado, campanhas exclusivas Corban, calculadora de parcela, argumentação, passo a passo Venda Balcão e canais de apoio.',
+      duration: '6 módulos · Calc + QUIZ',
+      icon: 'fa-solid fa-car-side',
+      accent: 'gold',
+      sources: [
+        'Consórcio: Mais que uma oferta. Um novo negócio para o CORBAN! (24 slides)',
+        'Consórcio: Passo a Passo para Comercialização (22 slides)'
       ]
     }
   ];
@@ -7842,18 +7865,126 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
     }
   ];
 
-  const LESSON_TABS = [
-    { id: 'resumo', label: 'Resumo & DE→PARA', icon: 'fa-solid fa-wand-magic-sparkles' },
-    { id: 'elegibilidade', label: 'Quem Pode? (Simulador)', icon: 'fa-solid fa-calculator' },
-    { id: 'jornada', label: 'Jornada (13 Passos)', icon: 'fa-solid fa-route' },
-    { id: 'cliente', label: '1º Acesso & 3 Contratos', icon: 'fa-solid fa-file-signature' },
-    { id: 'excecoes', label: 'Exceções (8 Cenários)', icon: 'fa-solid fa-triangle-exclamation' },
-    { id: 'apoio_quiz', label: 'Apoio & Quiz', icon: 'fa-solid fa-circle-check' }
+  const TOPIC_TABS = {
+    tutorial_nova_plataforma: [
+      { id: 'resumo', label: 'Resumo & DE→PARA', icon: 'fa-solid fa-wand-magic-sparkles' },
+      { id: 'elegibilidade', label: 'Quem Pode? (Simulador)', icon: 'fa-solid fa-calculator' },
+      { id: 'jornada', label: 'Jornada (13 Passos)', icon: 'fa-solid fa-route' },
+      { id: 'cliente', label: '1º Acesso & 3 Contratos', icon: 'fa-solid fa-file-signature' },
+      { id: 'excecoes', label: 'Exceções (8 Cenários)', icon: 'fa-solid fa-triangle-exclamation' },
+      { id: 'apoio_quiz', label: 'Apoio & Quiz', icon: 'fa-solid fa-circle-check' }
+    ],
+    consorcio: [
+      { id: 'cons_produto', label: 'Produto & Mercado', icon: 'fa-solid fa-chart-pie' },
+      { id: 'cons_condicoes', label: 'Cartas & Condições', icon: 'fa-solid fa-list-check' },
+      { id: 'cons_argumentos', label: 'Parcela & Argumentos', icon: 'fa-solid fa-calculator' },
+      { id: 'cons_venda', label: 'Passo a Passo Venda', icon: 'fa-solid fa-laptop-file' },
+      { id: 'cons_suporte', label: 'Ferramentas & Suporte', icon: 'fa-solid fa-headset' },
+      { id: 'cons_quiz', label: 'Checklist & Quiz', icon: 'fa-solid fa-circle-check' }
+    ]
+  };
+
+  const CONSORCIO_VENDA_STEPS = [
+    { id: 'cv1', phase: 'Etapa 1 · Acesso & Início', num: '01', title: 'Login com CPF e Senha (Validade 30 dias)', desc: 'Acessar o portal informando CPF e senha. No 1º acesso, desbloquear o código P000XXXX em até 24h pelo link do e-mail (ou em "Desbloqueio o código de acesso").' },
+    { id: 'cv2', phase: 'Etapa 1 · Acesso & Início', num: '02', title: 'Clicar em "Venda Balcão"', desc: 'Na tela inicial "Simular e contratar", selecione Venda Balcão (fluxo otimizado para PF ou PJ).' },
+    { id: 'cv3', phase: 'Etapa 1 · Acesso & Início', num: '03', title: 'Preencher Dados Iniciais e Privacidade', desc: 'Informar CPF ou CNPJ (sem pontos/traços), celular, e-mail e selecionar Segmento do bem (Carro ou Moto). Compartilhar o QR Code ou link de privacidade com o cliente.' },
+    { id: 'cv4', phase: 'Etapa 2 · Carta & Detalhes', num: '04', title: 'Escolher a Carta (+ Parcelas com seguro)', desc: 'Comparar grupo, prazo, parcela, taxa adm e taxa FR nas ofertas sugeridas. Se o cliente escolher Seguro Proteção Financeira, manter ativa a chave "Parcelas com seguro".' },
+    { id: 'cv5', phase: 'Etapa 2 · Carta & Detalhes', num: '05', title: 'Conferir Resumo ("Poder de compra garantido!")', desc: 'Validar valor do crédito, parcela, prazo, bem de referência e regra de reajuste (pode clicar em Exportar proposta) e avançar em Continuar.' },
+    { id: 'cv6', phase: 'Etapa 2 · Carta & Detalhes', num: '06', title: 'Dados Pessoais & Local de Nascimento', desc: 'Preencher nome completo, estado civil, se é emancipado, país, estado, cidade de nascimento e indicar se possui NIF.' },
+    { id: 'cv7', phase: 'Etapa 3 · Cadastro Completo', num: '07', title: 'Endereço & Documento de Identificação', desc: 'Consultar CEP, confirmar rua, número, complemento e bairro. Selecionar tipo de documento, número, emissão, órgão e UF.' },
+    { id: 'cv8', phase: 'Etapa 3 · Cadastro Completo', num: '08', title: 'Dados Profissionais & Conferência Final', desc: 'Informar categoria profissional, profissão, empresa, admissão e renda média mensal. Conferir rigorosamente Telefone e E-mail (onde chegam cobranças e demonstrativos) → Finalizar.' },
+    { id: 'cv9', phase: 'Etapa 3 · Cadastro Completo', num: '09', title: 'Aprovação & Forma de Pagamento', desc: 'Na tela "Deu tudo certo! Cadastro e análise de crédito aprovados!", escolher Boleto ou Débito em conta Bradesco (estimule Débito em conta para correntistas!).' },
+    { id: 'cv10', phase: 'Etapa 4 · Finalização & Prazos', num: '10', title: 'Devolução do Fundo de Reserva', desc: 'Indicar onde o cliente prefere receber eventual devolução ao final do grupo: conta Bradesco, outro banco ou informar depois.' },
+    { id: 'cv11', phase: 'Etapa 4 · Finalização & Prazos', num: '11', title: 'Iniciar "Ir para validação Biométrica"', desc: 'Cliente recebe e-mail/SMS em até 15 minutos e deve concluir biometria facial e assinatura eletrônica em até 24 horas.' },
+    { id: 'cv12', phase: 'Etapa 4 · Finalização & Prazos', num: '12', title: 'Acompanhar Boleto da 1ª Parcela (Até 23h)', desc: 'Após biometria e assinatura, o boleto chega no e-mail e precisa ser pago no MESMO DIA do recebimento, até as 23h — senão o contrato é cancelado automaticamente!' }
+  ];
+
+  const CONSORCIO_COMMERCIAL_CHECKLIST = [
+    { id: 'cc1', title: 'Estude o perfil potencial do seu cliente' },
+    { id: 'cc2', title: 'Revise as cartas disponíveis e condições do portfólio exclusivo' },
+    { id: 'cc3', title: 'Leve material comercial, material de MKT e simulações simples' },
+    { id: 'cc4', title: 'Posicione o consórcio como nova oportunidade de rentabilização da loja' },
+    { id: 'cc5', title: 'Conecte a oferta ao perfil dos clientes que já frequentam o Correspondente' },
+    { id: 'cc6', title: 'Garanta que o parceiro entendeu qual será o próximo passo para iniciar a comercialização' }
+  ];
+
+  const CONSORCIO_QUIZ = [
+    {
+      id: 'cq1',
+      question: 'Após receber o usuário de acesso ao portal de Consórcios, qual é o prazo para desbloqueio inicial e a validade da senha?',
+      options: [
+        '48h para desbloquear e validade permanente',
+        'Até 24h para desbloquear e validade de 30 dias',
+        '7 dias para desbloquear e validade de 90 dias',
+        'Não há prazo de expiração para a senha'
+      ],
+      correctIndex: 1,
+      explanation: 'No 1º acesso há até 24h para desbloquear o código (P000XXXX), e a senha possui validade de 30 dias.'
+    },
+    {
+      id: 'cq2',
+      question: 'Depois da biometria e assinatura eletrônica na Venda Balcão, até quando o cliente precisa pagar o boleto da 1ª parcela?',
+      options: [
+        'Em até 5 dias úteis',
+        'Até o dia 15 do mês seguinte',
+        'No mesmo dia do recebimento do boleto por e-mail, até às 23h',
+        'Em até 72 horas após a assinatura'
+      ],
+      correctIndex: 2,
+      explanation: 'Prazos críticos (Slide 21): e-mail/SMS chega em até 15 min → 24h para biometria/assinatura → pagamento do boleto no mesmo dia do recebimento até às 23h (senão cancela automaticamente).'
+    },
+    {
+      id: 'cq3',
+      question: 'Qual é a regra oficial de tempo máximo de uso para cotas de Automóvel e Motocicleta?',
+      options: [
+        'Automóveis até 10 anos (ano modelo); Motos a partir de 125 CC 0 km, 400 CC até 3 anos e acima de 600 CC até 5 anos',
+        'Apenas veículos 0 km para ambas as categorias',
+        'Automóveis até 5 anos e motos até 10 anos sem limite de cilindrada',
+        'Sem restrição de ano para veículos leves e pesados'
+      ],
+      correctIndex: 0,
+      explanation: 'Condições oficiais (Slide 10): Automóveis leves e pesados até 10 anos de uso (ano modelo); Motos: 125 CC+ 0 km, 400 CC até 3 anos, >600 CC até 5 anos.'
+    },
+    {
+      id: 'cq4',
+      question: 'Na hora de argumentar com o cliente (Slide 14), o que você NUNCA deve fazer?',
+      options: [
+        'Fazer perguntas abertas para entender o objetivo do cliente',
+        'Explicar a composição da parcela com transparência',
+        'Prometer contemplação/prazo, começar pela parcela ou tratar consórcio como financiamento',
+        'Divulgar que a loja possui cartas exclusivas'
+      ],
+      correctIndex: 2,
+      explanation: 'Regra de ouro de argumentação: nunca prometer contemplação ou prazo, não tratar como financiamento, não começar pela parcela e sempre informar que há cartas exclusivas na loja.'
+    },
+    {
+      id: 'cq5',
+      question: 'Como é composta a parcela mensal do consórcio e o que acontece com o saldo do Fundo de Reserva no fim do grupo?',
+      options: [
+        'Taxa Selic + IOF + Seguro; o fundo fica retido na administradora',
+        'Fundo comum + Taxa de administração + Fundo de Reserva; se houver saldo de fundo reserva no encerramento, é devolvido proporcionalmente aos consorciados ativos',
+        'Somente Valor da carta ÷ prazo; sem taxas adicionais',
+        'Entrada de 20% + parcelas fixas sem reajuste'
+      ],
+      correctIndex: 1,
+      explanation: 'Parcela = (Fundo Comum + Taxa de Administração + Fundo de Reserva) ÷ Prazo. Eventual saldo do Fundo de Reserva é devolvido proporcionalmente aos ativos ao final.'
+    }
+  ];
+
+  const CONS_CALC_PRESETS = [
+    { id: 'moto44', label: 'Moto 44m (R$ 16.840)', carta: 16840, adm: 20.5, fr: 5, prazo: 44 },
+    { id: 'auto84', label: 'Auto 84m (R$ 22.353)', carta: 22353, adm: 24.9, fr: 5, prazo: 84 },
+    { id: 'auto48', label: 'Auto 48m (R$ 45.534)', carta: 45534, adm: 19.9, fr: 5, prazo: 48 },
+    { id: 'corban_mov', label: 'Corban Móvel (16%)', carta: 50000, adm: 16, fr: 3, prazo: 84 },
+    { id: 'corban_imo', label: 'Corban Imóvel (18,9%)', carta: 150108, adm: 18.9, fr: 3, prazo: 145 }
   ];
 
   let state = {
     activeTopicId: null,
-    activeTab: 'resumo',
+    activeTabByTopic: {
+      tutorial_nova_plataforma: 'resumo',
+      consorcio: 'cons_produto'
+    },
     branchSearch: '',
     sim: {
       popBand: '30k_plus',
@@ -7862,10 +7993,28 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
       hasPj: 'sim',
       restOk: 'sim'
     },
+    consCalc: {
+      carta: 16840,
+      adm: 20.5,
+      fr: 5,
+      prazo: 44
+    },
     checkedSteps: {},
     quizAnswers: {},
-    copiedFeedback: false
+    consVendaSteps: {},
+    consVisitChecklist: {},
+    consQuizAnswers: {},
+    copiedFeedback: false,
+    consCopiedFeedback: false
   };
+
+  function getActiveTab(topicId) {
+    const id = topicId || state.activeTopicId || 'tutorial_nova_plataforma';
+    const tabs = TOPIC_TABS[id] || TOPIC_TABS.tutorial_nova_plataforma;
+    const saved = state.activeTabByTopic[id];
+    if (saved && tabs.some((t) => t.id === saved)) return saved;
+    return tabs[0].id;
+  }
 
   function loadProgress() {
     try {
@@ -7875,6 +8024,9 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
       if (parsed && typeof parsed === 'object') {
         if (parsed.checkedSteps && typeof parsed.checkedSteps === 'object') state.checkedSteps = parsed.checkedSteps;
         if (parsed.quizAnswers && typeof parsed.quizAnswers === 'object') state.quizAnswers = parsed.quizAnswers;
+        if (parsed.consVendaSteps && typeof parsed.consVendaSteps === 'object') state.consVendaSteps = parsed.consVendaSteps;
+        if (parsed.consVisitChecklist && typeof parsed.consVisitChecklist === 'object') state.consVisitChecklist = parsed.consVisitChecklist;
+        if (parsed.consQuizAnswers && typeof parsed.consQuizAnswers === 'object') state.consQuizAnswers = parsed.consQuizAnswers;
       }
     } catch {}
   }
@@ -7883,7 +8035,10 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify({
         checkedSteps: state.checkedSteps,
-        quizAnswers: state.quizAnswers
+        quizAnswers: state.quizAnswers,
+        consVendaSteps: state.consVendaSteps,
+        consVisitChecklist: state.consVisitChecklist,
+        consQuizAnswers: state.consQuizAnswers
       }));
     } catch {}
   }
@@ -7927,7 +8082,7 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
     const t = findTopic(topicId);
     if (!t) return;
     state.activeTopicId = t.id;
-    if (!state.activeTab) state.activeTab = 'resumo';
+    state.activeTabByTopic[t.id] = getActiveTab(t.id);
     if (shouldRender) {
       rerenderRoot();
       try { window.scrollTo(0, 0); } catch {}
@@ -7943,8 +8098,10 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
   }
 
   function setTab(tabId) {
-    if (!LESSON_TABS.some((t) => t.id === tabId)) return;
-    state.activeTab = tabId;
+    const topicId = state.activeTopicId || 'tutorial_nova_plataforma';
+    const tabs = TOPIC_TABS[topicId] || TOPIC_TABS.tutorial_nova_plataforma;
+    if (!tabs.some((t) => t.id === tabId)) return;
+    state.activeTabByTopic[topicId] = tabId;
     rerenderRoot();
   }
 
@@ -8085,8 +8242,99 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
     return lines.join('\n');
   }
 
-  async function copyClientScript() {
-    const text = buildClientWhatsappScript();
+  function formatBRL(v) {
+    return Number(v || 0).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  function evaluateConsCalc() {
+    const carta = Math.max(0, Number(state.consCalc.carta) || 0);
+    const admPct = Math.max(0, Number(state.consCalc.adm) || 0);
+    const frPct = Math.max(0, Number(state.consCalc.fr) || 0);
+    const prazo = Math.max(1, Number(state.consCalc.prazo) || 1);
+    const admVal = carta * (admPct / 100);
+    const frVal = carta * (frPct / 100);
+    const total = carta + admVal + frVal;
+    const parcelaSemSeguro = total / prazo;
+    const isOfficialExample = Math.abs(carta - 16840) < 0.01 && Math.abs(admPct - 20.5) < 0.01 && Math.abs(frPct - 5) < 0.01 && prazo === 44;
+    return { carta, admPct, frPct, prazo, admVal, frVal, total, parcelaSemSeguro, isOfficialExample };
+  }
+
+  function renderConsCalcResultBox() {
+    const c = evaluateConsCalc();
+    return `
+      <div class="apoio-sim-result is-ok">
+        <div class="row g-2 align-items-center">
+          <div class="col-md-7">
+            <div class="small fw-bold mb-1" style="color:var(--mol-ink-muted);">Composição Total do Grupo</div>
+            <div class="d-flex flex-wrap gap-2 small">
+              <span class="badge bg-light text-dark border">Fundo Comum: R$ ${formatBRL(c.carta)}</span>
+              <span class="badge bg-light text-dark border">Taxa Adm (${c.admPct.toString().replace('.', ',')}%): R$ ${formatBRL(c.admVal)}</span>
+              <span class="badge bg-light text-dark border">Fundo Reserva (${c.frPct.toString().replace('.', ',')}%): R$ ${formatBRL(c.frVal)}</span>
+            </div>
+            <div class="small mt-2" style="color:var(--mol-ink-muted);">
+              Total do plano: <strong>R$ ${formatBRL(c.total)}</strong> ÷ <strong>${c.prazo} meses</strong>
+            </div>
+          </div>
+          <div class="col-md-5 text-md-end">
+            <div class="small fw-bold" style="color:var(--mol-ink-muted);">Parcela Mensal Sem Seguro</div>
+            <div id="consCalcParcelaVal" class="fw-bold" style="font-size:24px;color:var(--mol-crimson);font-family:var(--mol-font-mono);">R$ ${formatBRL(c.parcelaSemSeguro)}</div>
+            ${c.isOfficialExample ? '<div class="small fw-semibold text-success">Parcela Com Seguro Prestamista: R$ 493,00**</div>' : '<div class="small" style="color:var(--mol-ink-muted);">*Seguro prestamista varia conforme carta e idade.</div>'}
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function onConsCalcChange(field, value) {
+    state.consCalc[field] = Number(value) || 0;
+    const box = document.getElementById('consCalcResult');
+    if (box) box.innerHTML = renderConsCalcResultBox();
+  }
+
+  function applyConsPreset(presetId) {
+    const p = CONS_CALC_PRESETS.find((x) => x.id === presetId);
+    if (!p) return;
+    state.consCalc = { carta: p.carta, adm: p.adm, fr: p.fr, prazo: p.prazo };
+    rerenderRoot();
+  }
+
+  function toggleConsStep(stepId) {
+    state.consVendaSteps[stepId] = !state.consVendaSteps[stepId];
+    saveProgress();
+    rerenderRoot();
+  }
+
+  function resetConsSteps() {
+    state.consVendaSteps = {};
+    saveProgress();
+    rerenderRoot();
+  }
+
+  function toggleConsChecklist(itemId) {
+    state.consVisitChecklist[itemId] = !state.consVisitChecklist[itemId];
+    saveProgress();
+    rerenderRoot();
+  }
+
+  function resetConsChecklist() {
+    state.consVisitChecklist = {};
+    saveProgress();
+    rerenderRoot();
+  }
+
+  function answerConsQuiz(qId, optIdx) {
+    state.consQuizAnswers[qId] = Number(optIdx);
+    saveProgress();
+    rerenderRoot();
+  }
+
+  function resetConsQuiz() {
+    state.consQuizAnswers = {};
+    saveProgress();
+    rerenderRoot();
+  }
+
+  async function copyTextToClipboard(text, btnId, stateFlag, toastMsg) {
     try {
       if (navigator.clipboard?.writeText) {
         await navigator.clipboard.writeText(text);
@@ -8100,35 +8348,84 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
         document.execCommand('copy');
         document.body.removeChild(ta);
       }
-      state.copiedFeedback = true;
-      const btn = document.getElementById('apoioCopyScriptBtn');
+      if (stateFlag) state[stateFlag] = true;
+      const btn = document.getElementById(btnId);
       if (btn) {
         btn.innerHTML = '<i class="fa-solid fa-check me-1"></i>Roteiro Copiado!';
         btn.classList.remove('btn-dark');
         btn.classList.add('btn-success');
       }
       if (typeof global.showToast === 'function') {
-        global.showToast('Roteiro copiado', 'Passo a passo do 1º acesso pronto para colar no WhatsApp do cliente.', 'success');
+        global.showToast('Roteiro copiado', toastMsg, 'success');
       }
     } catch {}
   }
 
-  function openClientWhatsapp() {
-    const url = 'https://wa.me/?text=' + encodeURIComponent(buildClientWhatsappScript());
+  function buildConsWhatsappScript() {
+    const contact = String(global.SamCards?.getSenderContact?.() || '').trim();
+    const lines = [
+      'Parabéns pela aquisição do seu Consórcio Bradesco! Seu cadastro e análise de crédito foram aprovados.',
+      '',
+      'Fique atento aos 3 passos e prazos finais para ativar sua cota sem cancelamento:',
+      '1) Em até 15 minutos você receberá um e-mail e/ou SMS para realizar a biometria facial e a assinatura eletrônica.',
+      '2) Conclua a validação e a assinatura em até 24 horas após receber a mensagem.',
+      '3) Assim que assinar, o boleto da 1ª parcela será enviado para o seu e-mail e deverá ser pago NO MESMO DIA do recebimento, até às 23h.',
+      '4) Atenção: se a validação, assinatura ou pagamento passar do prazo, o contrato é cancelado automaticamente.',
+      '',
+      'Canal do Consorciado (após ativação): https://canalconsorciado.bradesco.com.br/',
+      'Qualquer dúvida, conte comigo!'
+    ];
+    if (contact) {
+      lines.push('');
+      lines.push(contact);
+    }
+    return lines.join('\n');
+  }
+
+  function copyConsClientScript() {
+    return copyTextToClipboard(
+      buildConsWhatsappScript(),
+      'consCopyScriptBtn',
+      'consCopiedFeedback',
+      'Orientações pós-venda de Consórcio prontas para colar no WhatsApp do cliente.'
+    );
+  }
+
+  function openConsClientWhatsapp() {
+    openExternalLink('https://wa.me/?text=' + encodeURIComponent(buildConsWhatsappScript()));
+  }
+
+  function openExternalLink(url) {
     if (typeof global.openExternalSafe === 'function') global.openExternalSafe(url);
     else window.open(url, '_blank');
+  }
+
+  function copyClientScript() {
+    return copyTextToClipboard(
+      buildClientWhatsappScript(),
+      'apoioCopyScriptBtn',
+      'copiedFeedback',
+      'Passo a passo do 1º acesso pronto para colar no WhatsApp do cliente.'
+    );
+  }
+
+  function openClientWhatsapp() {
+    openExternalLink('https://wa.me/?text=' + encodeURIComponent(buildClientWhatsappScript()));
   }
 
   function openSupportWhatsapp(waPhone, name) {
     const msg = `Olá ${name}, sou Multiplicador e preciso de apoio sobre uma prospecção na Nova Plataforma Expresso.`;
-    const url = `https://wa.me/${waPhone}?text=${encodeURIComponent(msg)}`;
-    if (typeof global.openExternalSafe === 'function') global.openExternalSafe(url);
-    else window.open(url, '_blank');
+    openExternalLink(`https://wa.me/${waPhone}?text=${encodeURIComponent(msg)}`);
   }
 
   function renderHubView() {
-    const doneSteps = MULTIPLIER_STEPS.filter((s) => !!state.checkedSteps[s.id]).length;
-    const quizCorrect = QUIZ_QUESTIONS.filter((q) => state.quizAnswers[q.id] === q.correctIndex).length;
+    const doneSteps = MULTIPLIER_STEPS.filter((s) => !!state.checkedSteps[s.id]).length
+      + CONSORCIO_VENDA_STEPS.filter((s) => !!state.consVendaSteps[s.id]).length;
+    const totalSteps = MULTIPLIER_STEPS.length + CONSORCIO_VENDA_STEPS.length;
+    const quizCorrect = QUIZ_QUESTIONS.filter((q) => state.quizAnswers[q.id] === q.correctIndex).length
+      + CONSORCIO_QUIZ.filter((q) => state.consQuizAnswers[q.id] === q.correctIndex).length;
+    const totalQuiz = QUIZ_QUESTIONS.length + CONSORCIO_QUIZ.length;
+    const topicCount = getTopicCount();
 
     return `
       <div class="apoio-hero">
@@ -8141,9 +8438,9 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
             </p>
           </div>
           <div class="apoio-hero-stats">
-            <span class="apoio-stat-chip"><i class="fa-solid fa-layer-group me-1"></i>${getTopicCount()} assunto disponível</span>
-            <span class="apoio-stat-chip"><i class="fa-solid fa-list-check me-1"></i>${doneSteps}/13 passos</span>
-            <span class="apoio-stat-chip"><i class="fa-solid fa-award me-1"></i>Quiz ${quizCorrect}/5</span>
+            <span class="apoio-stat-chip"><i class="fa-solid fa-layer-group me-1"></i>${topicCount} ${topicCount === 1 ? 'assunto disponível' : 'assuntos disponíveis'}</span>
+            <span class="apoio-stat-chip"><i class="fa-solid fa-list-check me-1"></i>${doneSteps}/${totalSteps} passos</span>
+            <span class="apoio-stat-chip"><i class="fa-solid fa-award me-1"></i>Quiz ${quizCorrect}/${totalQuiz}</span>
           </div>
         </div>
       </div>
@@ -8622,14 +8919,516 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
     `;
   }
 
+  // ==================== ASSUNTO 02: CONSÓRCIO ====================
+  function renderConsTabProduto() {
+    const bacenShares = [
+      ['Bradesco Consórcios (Líder)', '16,5%', '#dc2626'],
+      ['Banco do Brasil', '16,0%', '#eab308'],
+      ['Caixa / 3ª Colocada', '7,4%', '#111827'],
+      ['Itaú', '6,9%', '#ea580c'],
+      ['Porto Seguro', '5,8%', '#2563eb'],
+      ['Demais Administradoras', '47,4%', '#64748b']
+    ];
+    return `
+      <div class="row g-3 mb-3">
+        <div class="col-md-6">
+          <div class="apoio-gold-rule-card h-100">
+            <div class="apoio-rule-num">DADO DE MERCADO · ABAC B3 (JAN–MAI/2026)</div>
+            <div class="fw-bold" style="font-size:28px;color:var(--mol-crimson);font-family:var(--mol-font-mono);">27,6%</div>
+            <div class="small fw-semibold" style="color:var(--mol-ink);">das aquisições totais de motocicletas (novas + usadas) tiveram participação do <strong>CONSÓRCIO</strong>.</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="apoio-gold-rule-card h-100">
+            <div class="apoio-rule-num">DADO DE MERCADO · MOTOS 0KM (ABAC B3)</div>
+            <div class="fw-bold" style="font-size:28px;color:var(--mol-crimson);font-family:var(--mol-font-mono);">35,5%</div>
+            <div class="small fw-semibold" style="color:var(--mol-ink);">das <strong>motos 0km</strong> vendidas no país foram adquiridas com créditos de <strong>CONSÓRCIOS</strong>.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mol-panel mb-3">
+        <div class="mol-panel-head">
+          <span><i class="fa-solid fa-layer-group me-2 text-danger"></i>O que é Consórcio &amp; Como Funciona</span>
+          <span class="badge bg-danger">AUTOFINANCIAMENTO</span>
+        </div>
+        <div class="mol-panel-body">
+          <blockquote class="apoio-quote mb-3">
+            “É uma modalidade de autofinanciamento que reúne pessoas físicas e/ou jurídicas com o objetivo de formar recursos para a aquisição planejada de bens.”
+          </blockquote>
+          <div class="row g-2 mb-3">
+            <div class="col-md-4"><div class="apoio-step-card h-100"><span class="apoio-step-num">1. ESCOLHA</span><div class="small fw-semibold">Informa tipo de bem, valor e prazo para localizar grupos com vagas disponíveis (em formação ou andamento).</div></div></div>
+            <div class="col-md-4"><div class="apoio-step-card h-100"><span class="apoio-step-num">2. ASSEMBLEIA</span><div class="small fw-semibold">Integrantes realizam pagamentos mensais, participam das assembleias e concorrem à contemplação.</div></div></div>
+            <div class="col-md-4"><div class="apoio-step-card h-100"><span class="apoio-step-num">3. CONQUISTA</span><div class="small fw-semibold">Após contemplado, o cliente solicita a compra do bem ou pode utilizar a carta posteriormente.</div></div></div>
+          </div>
+          <div class="d-flex flex-wrap gap-2 small">
+            <span class="badge bg-light text-dark border p-2"><i class="fa-solid fa-clover text-success me-1"></i><strong>Sorteio:</strong> Realizado pela Loteria Federal</span>
+            <span class="badge bg-light text-dark border p-2"><i class="fa-solid fa-gavel text-primary me-1"></i><strong>Lance:</strong> Contempla quem ofertar o maior lance</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mol-panel mb-3">
+        <div class="mol-panel-head">
+          <span><i class="fa-solid fa-trophy me-2 text-warning"></i>Força Bradesco Consórcios (BACEN · JUL/2026)</span>
+          <span class="badge bg-dark">LÍDER EM COTAS: 16,5%</span>
+        </div>
+        <div class="mol-panel-body">
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <span class="badge bg-light text-dark border">Know-how de 23 anos</span>
+            <span class="badge bg-light text-dark border">1,7 MM de cotas ativas</span>
+            <span class="badge bg-light text-dark border">3 mil grupos ativos</span>
+            <span class="badge bg-light text-dark border">Média de 1 novo grupo/dia</span>
+            <span class="badge bg-light text-dark border">Amplo portfólio de produtos</span>
+            <span class="badge bg-success">Administradora que mais contempla</span>
+          </div>
+          <div class="row g-2">
+            ${bacenShares.map(([inst, pct, color]) => `
+              <div class="col-md-4 col-sm-6">
+                <div class="apoio-branch-pill d-flex align-items-center justify-content-between">
+                  <span class="small fw-bold">${escHtml(inst)}</span>
+                  <span class="badge" style="background:${color};color:#fff;">${escHtml(pct)}</span>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      </div>
+
+      <h6 class="fw-bold mb-2" style="color:var(--mol-ink);"><i class="fa-solid fa-star me-2 text-warning"></i>Condições Especiais para o CORBAN (Campanha 01/10 → 30/10)</h6>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="mol-panel h-100 mb-0">
+            <div class="mol-panel-head"><span><i class="fa-solid fa-car me-2 text-primary"></i>BENS MÓVEIS · Mobilidade &amp; Expansão</span><span class="badge bg-primary">TX ADM 16%</span></div>
+            <div class="mol-panel-body small">
+              <div class="mb-2"><strong>Possibilidades de uso:</strong> Uso Pessoal (aquisição ou troca) · Uso Empresarial (visitas e entregas) · Expansão (ampliação de frota).</div>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge bg-light text-dark border p-2">Crédito: <strong>R$ 45.311 a R$ 80.563</strong></span>
+                <span class="badge bg-light text-dark border p-2">Prazo: <strong>84 a 100 meses</strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="mol-panel h-100 mb-0">
+            <div class="mol-panel-head"><span><i class="fa-solid fa-building me-2 text-success"></i>BENS IMÓVEIS · Valorização Patrimonial</span><span class="badge bg-success">TX ADM 18,9%</span></div>
+            <div class="mol-panel-body small">
+              <div class="mb-2"><strong>Possibilidades de uso:</strong> Compra (residencial ou comercial) · Reforma / Retrofit (modernização) · Ampliação (residência ou empresa).</div>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge bg-light text-dark border p-2">Crédito: <strong>R$ 150.108 a R$ 237.976</strong></span>
+                <span class="badge bg-light text-dark border p-2">Prazo: <strong>145 a 178 meses</strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderConsTabCondicoes() {
+    const cards = [
+      ['Auto – Formação', '48 meses', '19,90%', 'R$ 45.534', 'R$ 1.139'],
+      ['Auto – Formação', '72 meses', '20,90%', 'R$ 45.309', 'R$ 811'],
+      ['Auto – Formação', '84 meses', '24,90%', 'R$ 22.353', 'R$ 356'],
+      ['Auto – Formação', '100 meses', '24,50%', 'R$ 51.329', 'R$ 693'],
+      ['Auto – Andamento', '61 meses', '20,90%', 'R$ 45.534', 'R$ 962'],
+      ['Moto – Andamento (Baixa cil.)', '44 meses', '20,50%', 'R$ 16.840', 'R$ 493']
+    ];
+    const rules = [
+      '1. Não precisa ser correntista. Idade entre 18 e 75 anos ou maior de 16 anos emancipado.',
+      '2. Sujeito à análise de crédito tanto na aquisição quanto na contemplação.',
+      '3. Formas de pagamento: Não correntista (boleto bancário) · Correntista (boleto ou débito em conta).',
+      '4. Cálculo da parcela: Fundo comum + Taxa de administração + Fundo de Reserva.',
+      '5. Pagamentos: 1ª parcela sempre por boleto bancário. Reajuste de bens móveis pela tabela do fabricante.',
+      '6. Motocicletas: a partir de 125 CC (0 km), 400 CC (até 3 anos de uso) e superior a 600 CC (até 5 anos de uso).',
+      '7. Automóveis (leves e pesados): até 10 anos de uso (ano modelo).'
+    ];
+    const cycle = [
+      ['01', 'Cliente adquire uma cota.'],
+      ['02', 'Acessa o Canal do Consorciado (antecipação, extrato, 2ª via, assembleia, lance).'],
+      ['03', 'Mensalmente participa do sorteio ou registra oferta de lance e acompanha a assembleia.'],
+      ['04', 'Sorteada vai ao passo 6; por lance, paga o lance ofertado e vai ao passo 5.'],
+      ['05', 'Na contemplação por lance, escolhe reduzir o valor da parcela ou o prazo.'],
+      ['06', 'Indica o bem e o fornecedor à Bradesco Consórcios.'],
+      ['07', 'Após análise de crédito (sujeito à aprovação), o bem é pago diretamente ao fornecedor.']
+    ];
+
+    return `
+      <div class="mol-panel mb-3">
+        <div class="mol-panel-head">
+          <span><i class="fa-solid fa-table-list me-2 text-danger"></i>Oportunidades e Condições Vigentes (Auto &amp; Moto)</span>
+          <span class="badge bg-danger">CARTAS EXEMPLO</span>
+        </div>
+        <div class="mol-panel-body p-0">
+          <div class="table-responsive">
+            <table class="table table-sm mb-0 align-middle">
+              <thead><tr><th>Modalidade</th><th>Prazo</th><th>Taxa Adm</th><th>Carta de Crédito</th><th>Parcela</th></tr></thead>
+              <tbody>
+                ${cards.map(([m, p, t, c, v]) => `
+                  <tr>
+                    <td class="fw-bold">${escHtml(m)}</td>
+                    <td>${escHtml(p)}</td>
+                    <td><span class="badge bg-light text-dark border">${escHtml(t)}</span></td>
+                    <td class="fw-semibold font-monospace">${escHtml(c)}</td>
+                    <td class="fw-bold text-danger font-monospace">${escHtml(v)}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-lg-6">
+          <div class="mol-panel h-100 mb-0">
+            <div class="mol-panel-head"><span><i class="fa-solid fa-shield-halved me-2 text-primary"></i>7 Regras e Condições Gerais</span></div>
+            <div class="mol-panel-body">
+              <div class="d-grid gap-2 small">
+                ${rules.map((r) => `<div class="apoio-branch-pill">${escHtml(r)}</div>`).join('')}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="mol-panel h-100 mb-0">
+            <div class="mol-panel-head"><span><i class="fa-solid fa-arrows-spin me-2 text-success"></i>Ciclo do Consórcio em 7 Passos</span></div>
+            <div class="mol-panel-body">
+              <div class="d-grid gap-2 small">
+                ${cycle.map(([n, txt]) => `
+                  <div class="apoio-branch-pill d-flex gap-2 align-items-start">
+                    <span class="badge bg-dark">${n}</span>
+                    <span>${escHtml(txt)}</span>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderConsTabArgumentos() {
+    const dos = [
+      'Perguntar antes de ofertar;',
+      'Entender objetivo, prazo e faixa de valor;',
+      'Explicar a solução com clareza;',
+      'Adequar a carta ao perfil;',
+      'Tratar objeções com transparência;',
+      'Registrar oportunidade e fazer acompanhamento.'
+    ];
+    const donts = [
+      'Começar pela parcela;',
+      'Falar como se todo cliente fosse igual;',
+      'Prometer contemplação ou prazo de contemplação;',
+      'Tratar consórcio como financiamento;',
+      'Oferecer a maior carta sem entender a necessidade;',
+      'Não falar que tem carta exclusiva na loja.'
+    ];
+    const questions = [
+      '“Você usa a moto apenas para se locomover ou ela também faz parte do seu trabalho?”',
+      '“Você tem algum plano de comprar ou trocar seu carro ou moto?”',
+      '“Pensa fazer isso agora ou consegue se planejar?”',
+      '“Já tem uma faixa de valor em mente?”',
+      '“Será para uso pessoal ou profissional?”',
+      '“Entendi. Temos uma alternativa de consórcio que pode fazer sentido para esse objetivo. Posso te apresentar?”'
+    ];
+
+    return `
+      <div class="row g-3 mb-3">
+        <div class="col-md-4"><div class="apoio-gold-rule-card h-100"><div class="apoio-rule-num">COMPONENTE 1</div><div class="fw-bold mb-1">Valor da Carta (Fundo Comum)</div><div class="small" style="color:var(--mol-ink-muted);">Valor pago pelos consorciados para formar o capital do grupo usado pelo contemplado na compra do bem.</div></div></div>
+        <div class="col-md-4"><div class="apoio-gold-rule-card h-100"><div class="apoio-rule-num">COMPONENTE 2</div><div class="fw-bold mb-1">Taxa de Administração</div><div class="small" style="color:var(--mol-ink-muted);">Remuneração paga à Administradora pela gestão completa do grupo até o encerramento.</div></div></div>
+        <div class="col-md-4"><div class="apoio-gold-rule-card h-100"><div class="apoio-rule-num">COMPONENTE 3</div><div class="fw-bold mb-1">Fundo de Reserva</div><div class="small" style="color:var(--mol-ink-muted);">Proteção contra inadimplência. Se houver saldo no encerramento do grupo, é <strong>devolvido proporcionalmente</strong> aos consorciados ativos!</div></div></div>
+      </div>
+
+      <div class="mol-panel mb-3">
+        <div class="mol-panel-head">
+          <span><i class="fa-solid fa-calculator me-2 text-primary"></i>Calculadora da Parcela Mensal (Dominando a Composição)</span>
+          <span class="badge bg-primary">SIMULADOR DE AULA</span>
+        </div>
+        <div class="mol-panel-body">
+          <div class="d-flex flex-wrap gap-1 mb-3">
+            ${CONS_CALC_PRESETS.map((p) => `
+              <button type="button" id="consPreset_${escHtml(p.id)}" class="btn btn-xs btn-outline-secondary" style="font-size:11px;padding:3px 9px;" onclick="SamTraining.applyConsPreset('${escHtml(p.id)}')">${escHtml(p.label)}</button>
+            `).join('')}
+          </div>
+          <div class="apoio-sim-grid mb-3">
+            <div>
+              <label class="form-label small fw-bold mb-1">Valor da Carta (R$)</label>
+              <input id="consCalcCarta" type="number" min="1000" step="100" class="form-control form-control-sm" value="${escHtml(state.consCalc.carta)}" oninput="SamTraining.onConsCalcChange('carta', this.value)" />
+            </div>
+            <div>
+              <label class="form-label small fw-bold mb-1">Taxa Adm (%)</label>
+              <input id="consCalcAdm" type="number" min="0" step="0.1" class="form-control form-control-sm" value="${escHtml(state.consCalc.adm)}" oninput="SamTraining.onConsCalcChange('adm', this.value)" />
+            </div>
+            <div>
+              <label class="form-label small fw-bold mb-1">Fundo de Reserva (%)</label>
+              <input id="consCalcFr" type="number" min="0" step="0.5" class="form-control form-control-sm" value="${escHtml(state.consCalc.fr)}" oninput="SamTraining.onConsCalcChange('fr', this.value)" />
+            </div>
+            <div>
+              <label class="form-label small fw-bold mb-1">Prazo (Meses)</label>
+              <input id="consCalcPrazo" type="number" min="1" step="1" class="form-control form-control-sm" value="${escHtml(state.consCalc.prazo)}" oninput="SamTraining.onConsCalcChange('prazo', this.value)" />
+            </div>
+          </div>
+          <div id="consCalcResult">${renderConsCalcResultBox()}</div>
+        </div>
+      </div>
+
+      <div class="row g-3 mb-3">
+        <div class="col-md-6">
+          <div class="mol-panel h-100 mb-0">
+            <div class="mol-panel-head"><span><i class="fa-solid fa-circle-check me-2 text-success"></i>O Poder da Argumentação · O Que Fazer</span></div>
+            <div class="mol-panel-body">
+              <ul class="apoio-benefit-list mb-0">${dos.map((d) => `<li>${escHtml(d)}</li>`).join('')}</ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="mol-panel h-100 mb-0">
+            <div class="mol-panel-head"><span><i class="fa-solid fa-ban me-2 text-danger"></i>Erros Graves · O Que NÃO Fazer</span></div>
+            <div class="mol-panel-body">
+              <ul class="apoio-benefit-list mb-0">${donts.map((d) => `<li class="fw-semibold text-danger">${escHtml(d)}</li>`).join('')}</ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mol-panel mb-0">
+        <div class="mol-panel-head"><span><i class="fa-solid fa-comments me-2 text-warning"></i>Gere Gatilhos com Perguntas Abertas</span></div>
+        <div class="mol-panel-body">
+          <div class="apoio-branch-grid mb-2" style="max-height:none;">
+            ${questions.map((q) => `<div class="apoio-branch-pill small fst-italic">${escHtml(q)}</div>`).join('')}
+          </div>
+          <div class="small fw-bold text-center pt-1" style="color:var(--mol-crimson);">
+            “O cliente não compra uma carta. Ele planeja conquista. E a sua loja pode ser parte dessa conquista!”
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderConsTabVenda() {
+    const doneCount = CONSORCIO_VENDA_STEPS.filter((s) => !!state.consVendaSteps[s.id]).length;
+    const pct = Math.round((doneCount / CONSORCIO_VENDA_STEPS.length) * 100);
+    const phases = ['Etapa 1 · Acesso & Início', 'Etapa 2 · Carta & Detalhes', 'Etapa 3 · Cadastro Completo', 'Etapa 4 · Finalização & Prazos'];
+    const scriptText = buildConsWhatsappScript();
+
+    return `
+      <div class="alert alert-danger small mb-3">
+        <div class="fw-bold mb-1"><i class="fa-solid fa-clock me-1"></i>ATENÇÃO AOS PRAZOS CRÍTICOS (CANCELA AUTOMATICAMENTE SE PERDER!)</div>
+        <ul class="mb-0 ps-3">
+          <li><strong>Em até 15 minutos:</strong> cliente recebe e-mail e/ou SMS para validação por biometria e assinatura eletrônica.</li>
+          <li><strong>Em até 24 horas:</strong> prazo máximo após o recebimento para concluir biometria e assinatura.</li>
+          <li><strong>Boleto da 1ª parcela:</strong> enviado ao e-mail após assinatura e deve ser pago <strong>no mesmo dia do recebimento, até às 23h</strong> (fora do prazo, cancelamento automático!).</li>
+        </ul>
+      </div>
+
+      <div class="row g-2 mb-3 small">
+        <div class="col-md-4"><div class="apoio-branch-pill h-100"><strong>1º Acesso (24h / 30 dias):</strong> Desbloquear código P000XXXX em até 24h; senha expira a cada <strong>30 dias</strong>.</div></div>
+        <div class="col-md-4"><div class="apoio-branch-pill h-100"><strong>Desligamento de Funcionário:</strong> Comunicar imediatamente para <span class="font-monospace">acesso.p.consorcio@bradesco.com.br</span> (assunto <em>Desativar usuário</em>: Nome, CPF, Corretora e CNPJ).</div></div>
+        <div class="col-md-4"><div class="apoio-branch-pill h-100"><strong>Comissão via NF:</strong> Códigos de serviço <strong>10.1, 10.2, 10.5 ou 10.9</strong> · Dúvidas: <span class="font-monospace">consorcio.parcerias@bradesco.com.br</span>.</div></div>
+      </div>
+
+      <div class="mol-panel mb-3">
+        <div class="mol-panel-body d-flex align-items-center justify-content-between gap-3 flex-wrap">
+          <div style="flex:1;min-width:220px;">
+            <div class="d-flex justify-content-between small fw-bold mb-1">
+              <span>Progresso · Passo a Passo Venda Balcão</span>
+              <span>${doneCount} / ${CONSORCIO_VENDA_STEPS.length} passos (${pct}%)</span>
+            </div>
+            <div class="progress" style="height:8px;"><div class="progress-bar bg-success" style="width:${pct}%;"></div></div>
+          </div>
+          <button type="button" class="btn btn-sm btn-outline-secondary" onclick="SamTraining.resetConsSteps()"><i class="fa-solid fa-rotate-left me-1"></i>Limpar Marcações</button>
+        </div>
+      </div>
+
+      ${phases.map((pName) => `
+        <div class="mb-3">
+          <h6 class="fw-bold mb-2" style="color:var(--mol-ink);">${escHtml(pName)}</h6>
+          <div class="apoio-steps-grid">
+            ${CONSORCIO_VENDA_STEPS.filter((s) => s.phase === pName).map((s) => {
+              const checked = !!state.consVendaSteps[s.id];
+              return `
+                <div class="apoio-step-card ${checked ? 'is-done' : ''}">
+                  <div class="d-flex align-items-start justify-content-between gap-2 mb-1">
+                    <span class="apoio-step-num">PASSO ${escHtml(s.num)}</span>
+                    <button type="button" class="btn btn-xs ${checked ? 'btn-success' : 'btn-outline-secondary'}" style="font-size:11px;padding:2px 8px;" onclick="SamTraining.toggleConsStep('${escHtml(s.id)}')">
+                      <i class="fa-solid ${checked ? 'fa-check-double' : 'fa-check'} me-1"></i>${checked ? 'Revisado' : 'Marcar'}
+                    </button>
+                  </div>
+                  <div class="fw-bold small mb-1" style="color:var(--mol-ink);">${escHtml(s.title)}</div>
+                  <div class="small" style="color:var(--mol-ink-muted);">${escHtml(s.desc)}</div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+      `).join('')}
+
+      <div class="mol-panel mb-0">
+        <div class="mol-panel-head">
+          <span><i class="fa-brands fa-whatsapp me-2 text-success"></i>Roteiro Pós-Venda (Lembrar Biometria &amp; Boleto até 23h)</span>
+          <div class="d-flex gap-2">
+            <button id="consCopyScriptBtn" type="button" class="btn btn-sm ${state.consCopiedFeedback ? 'btn-success' : 'btn-dark'}" onclick="SamTraining.copyConsClientScript()">
+              <i class="fa-regular fa-copy me-1"></i>${state.consCopiedFeedback ? 'Roteiro Copiado!' : 'Copiar Roteiro'}
+            </button>
+            <button type="button" class="btn btn-sm btn-success" onclick="SamTraining.openConsClientWhatsapp()">
+              <i class="fa-brands fa-whatsapp me-1"></i>Enviar WhatsApp
+            </button>
+          </div>
+        </div>
+        <div class="mol-panel-body">
+          <pre id="consClientScriptPreview" class="apoio-script-pre mb-0">${escHtml(scriptText)}</pre>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderConsTabSuporte() {
+    return `
+      <div class="row g-3 mb-3">
+        <div class="col-md-6">
+          <div class="mol-panel h-100 mb-0">
+            <div class="mol-panel-head"><span><i class="fa-solid fa-cart-shopping me-2 text-danger"></i>Plataforma de Vendas &amp; Pós-Vendas (NCWI)</span></div>
+            <div class="mol-panel-body small d-grid gap-2">
+              <div><strong>Plataforma de Vendas:</strong> Simulação · Consulta de crédito · Venda · Seguro prestamista · Geração de propostas · Assinatura digital · Gerenciar vendas (Reenvio de assinatura, Cancelamento de cota, Histórico).</div>
+              <div><strong>Plataforma Pós-Vendas (NCWI):</strong> 2ª via Boleto · Oferta de Lance · Relatórios de vendas e comissão · Consulta Extrato.</div>
+              <div>
+                <button type="button" class="btn btn-sm btn-danger" onclick="SamTraining.openExternalLink('https://bradesco.parceiroconsorcio.com.br/login')">
+                  <i class="fa-solid fa-arrow-up-right-from-square me-1"></i>Abrir Portal Parceiro Consórcio
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="mol-panel h-100 mb-0">
+            <div class="mol-panel-head"><span><i class="fa-solid fa-user-check me-2 text-primary"></i>Canal do Consorciado (+ de 30 Serviços)</span></div>
+            <div class="mol-panel-body small d-grid gap-2">
+              <div><strong>Autoatendimento do cliente:</strong> Antecipação de Parcelas · Ofertar Lance · Dados Cadastrais · Calendário &amp; Resultado de Assembleia · Extrato · 2ª via de Boleto · IR Anual.</div>
+              <div><strong>Central do Consorciado (08h às 20h):</strong> Capitais <span class="font-monospace fw-bold">4004 4436</span> | Demais regiões <span class="font-monospace fw-bold">0800 722 4436</span>.</div>
+              <div>
+                <button type="button" class="btn btn-sm btn-primary" onclick="SamTraining.openExternalLink('https://canalconsorciado.bradesco.com.br/')">
+                  <i class="fa-solid fa-arrow-up-right-from-square me-1"></i>Abrir Canal do Consorciado
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="mol-panel h-100 mb-0">
+            <div class="mol-panel-head"><span><i class="fa-solid fa-headset me-2 text-warning"></i>Central do Parceiro / Suporte Corban</span><span class="badge bg-dark">OPÇÃO 2 DA URA</span></div>
+            <div class="mol-panel-body small">
+              <div class="fw-bold mb-1" style="font-size:16px;font-family:var(--mol-font-mono);color:var(--mol-crimson);">(11) 4084-6170</div>
+              <div class="mb-2" style="color:var(--mol-ink-muted);">Atendimento: 2ª a 6ª feira, das <strong>09h às 18h</strong> (Horário Brasília, exceto feriados nacionais).</div>
+              <div><strong>Atende:</strong> Dúvidas de Produtos e Garantias · Navegação Sistêmica · Acesso · Atualização Cadastral · 2ª via Boleto · Acompanhamento de Solicitações · Resultado de Assembleias.</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="mol-panel h-100 mb-0">
+            <div class="mol-panel-head"><span><i class="fa-solid fa-building-shield me-2 text-success"></i>Suporte Contemplação Digital (BPO Funchal)</span></div>
+            <div class="mol-panel-body small d-grid gap-2">
+              <div class="apoio-branch-pill d-flex justify-content-between align-items-center"><strong>Funchal Auto:</strong><span class="font-monospace fw-bold">(11) 3508-4790</span></div>
+              <div class="apoio-branch-pill d-flex justify-content-between align-items-center"><strong>Funchal Imóvel (Fone):</strong><span class="font-monospace fw-bold">(11) 3508-3083</span></div>
+              <div class="apoio-branch-pill d-flex justify-content-between align-items-center gap-2 flex-wrap">
+                <div><strong>Funchal Imóvel (WhatsApp):</strong> <span class="font-monospace fw-bold">(11) 97337-3780</span></div>
+                <button type="button" class="btn btn-xs btn-success" onclick="SamTraining.openExternalLink('https://wa.me/5511973373780')"><i class="fa-brands fa-whatsapp me-1"></i>Abrir</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderConsTabChecklistQuiz() {
+    const chkDone = CONSORCIO_COMMERCIAL_CHECKLIST.filter((i) => !!state.consVisitChecklist[i.id]).length;
+    const score = CONSORCIO_QUIZ.filter((q) => state.consQuizAnswers[q.id] === q.correctIndex).length;
+    const answered = CONSORCIO_QUIZ.filter((q) => state.consQuizAnswers[q.id] !== undefined).length;
+
+    return `
+      <div class="mol-panel mb-3">
+        <div class="mol-panel-head">
+          <span><i class="fa-solid fa-clipboard-check me-2 text-success"></i>Checklist Comercial da Visita ao Corban (${chkDone}/${CONSORCIO_COMMERCIAL_CHECKLIST.length})</span>
+          <button type="button" class="btn btn-sm btn-outline-secondary" onclick="SamTraining.resetConsChecklist()">Limpar</button>
+        </div>
+        <div class="mol-panel-body">
+          <div class="apoio-steps-grid">
+            ${CONSORCIO_COMMERCIAL_CHECKLIST.map((item, idx) => {
+              const checked = !!state.consVisitChecklist[item.id];
+              return `
+                <button type="button" id="consChk_${escHtml(item.id)}" class="apoio-step-card text-start ${checked ? 'is-done' : ''}" onclick="SamTraining.toggleConsChecklist('${escHtml(item.id)}')">
+                  <div class="d-flex align-items-center justify-content-between gap-2">
+                    <span class="small fw-semibold" style="color:var(--mol-ink);">${idx + 1}. ${escHtml(item.title)}</span>
+                    <i class="fa-solid ${checked ? 'fa-square-check text-success' : 'fa-regular fa-square text-muted'}" style="font-size:16px;"></i>
+                  </div>
+                </button>
+              `;
+            }).join('')}
+          </div>
+        </div>
+      </div>
+
+      <div class="mol-panel mb-0">
+        <div class="mol-panel-head">
+          <span><i class="fa-solid fa-graduation-cap me-2 text-warning"></i>Quiz de Fixação — Consórcio (${score}/${CONSORCIO_QUIZ.length} acertos · ${answered} respondidas)</span>
+          <button type="button" class="btn btn-sm btn-outline-secondary" onclick="SamTraining.resetConsQuiz()">Refazer Quiz</button>
+        </div>
+        <div class="mol-panel-body d-grid gap-3">
+          ${CONSORCIO_QUIZ.map((q, idx) => {
+            const chosen = state.consQuizAnswers[q.id];
+            const hasChosen = chosen !== undefined;
+            const isCorrect = hasChosen && chosen === q.correctIndex;
+            return `
+              <div id="quizCard_${escHtml(q.id)}" class="apoio-quiz-card">
+                <div class="fw-bold small mb-2" style="color:var(--mol-ink);">${idx + 1}. ${escHtml(q.question)}</div>
+                <div class="d-grid gap-1">
+                  ${q.options.map((opt, optIdx) => {
+                    let cls = 'apoio-quiz-opt';
+                    if (hasChosen) {
+                      if (optIdx === q.correctIndex) cls += ' is-correct';
+                      else if (optIdx === chosen) cls += ' is-wrong';
+                    }
+                    return `<button type="button" class="${cls}" onclick="SamTraining.answerConsQuiz('${escHtml(q.id)}', ${optIdx})"><span>${escHtml(opt)}</span></button>`;
+                  }).join('')}
+                </div>
+                ${hasChosen ? `
+                  <div class="small mt-2 p-2 rounded ${isCorrect ? 'bg-success-subtle text-success-emphasis' : 'bg-danger-subtle text-danger-emphasis'}">
+                    <strong>${isCorrect ? 'Correto!' : 'Revise esta regra:'}</strong> ${escHtml(q.explanation)}
+                  </div>
+                ` : ''}
+              </div>
+            `;
+          }).join('')}
+        </div>
+      </div>
+    `;
+  }
+
   function renderLessonView(topic) {
+    const activeTab = getActiveTab(topic.id);
+    const tabs = TOPIC_TABS[topic.id] || TOPIC_TABS.tutorial_nova_plataforma;
     let tabHtml = '';
-    if (state.activeTab === 'resumo') tabHtml = renderTabResumo();
-    else if (state.activeTab === 'elegibilidade') tabHtml = renderTabElegibilidade();
-    else if (state.activeTab === 'jornada') tabHtml = renderTabJornada();
-    else if (state.activeTab === 'cliente') tabHtml = renderTabCliente();
-    else if (state.activeTab === 'excecoes') tabHtml = renderTabExcecoes();
-    else tabHtml = renderTabApoioQuiz();
+    if (topic.id === 'consorcio') {
+      if (activeTab === 'cons_produto') tabHtml = renderConsTabProduto();
+      else if (activeTab === 'cons_condicoes') tabHtml = renderConsTabCondicoes();
+      else if (activeTab === 'cons_argumentos') tabHtml = renderConsTabArgumentos();
+      else if (activeTab === 'cons_venda') tabHtml = renderConsTabVenda();
+      else if (activeTab === 'cons_suporte') tabHtml = renderConsTabSuporte();
+      else tabHtml = renderConsTabChecklistQuiz();
+    } else {
+      if (activeTab === 'resumo') tabHtml = renderTabResumo();
+      else if (activeTab === 'elegibilidade') tabHtml = renderTabElegibilidade();
+      else if (activeTab === 'jornada') tabHtml = renderTabJornada();
+      else if (activeTab === 'cliente') tabHtml = renderTabCliente();
+      else if (activeTab === 'excecoes') tabHtml = renderTabExcecoes();
+      else tabHtml = renderTabApoioQuiz();
+    }
 
     return `
       <div class="apoio-lesson-header mb-3">
@@ -8644,8 +9443,8 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
       </div>
 
       <div class="apoio-tabs-bar mb-3" role="tablist">
-        ${LESSON_TABS.map((tb) => `
-          <button type="button" id="apoioTab_${escHtml(tb.id)}" class="apoio-tab-btn ${state.activeTab === tb.id ? 'active' : ''}" onclick="SamTraining.setTab('${escHtml(tb.id)}')">
+        ${tabs.map((tb) => `
+          <button type="button" id="apoioTab_${escHtml(tb.id)}" class="apoio-tab-btn ${activeTab === tb.id ? 'active' : ''}" onclick="SamTraining.setTab('${escHtml(tb.id)}')">
             <i class="${escHtml(tb.icon)}"></i><span>${escHtml(tb.label)}</span>
           </button>
         `).join('')}
@@ -8666,10 +9465,15 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
 
   global.SamTraining = {
     TRAINING_TOPICS,
+    TOPIC_TABS,
     ELEGIBLE_BRANCHES,
     MULTIPLIER_STEPS,
     EXCEPTION_SCENARIOS,
     QUIZ_QUESTIONS,
+    CONSORCIO_VENDA_STEPS,
+    CONSORCIO_COMMERCIAL_CHECKLIST,
+    CONSORCIO_QUIZ,
+    CONS_CALC_PRESETS,
     getTopics,
     getTopicCount,
     hasOpenTopic,
@@ -8686,6 +9490,18 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
     openClientWhatsapp,
     openSupportWhatsapp,
     buildClientWhatsappScript,
+    onConsCalcChange,
+    applyConsPreset,
+    toggleConsStep,
+    resetConsSteps,
+    toggleConsChecklist,
+    resetConsChecklist,
+    answerConsQuiz,
+    resetConsQuiz,
+    copyConsClientScript,
+    openConsClientWhatsapp,
+    buildConsWhatsappScript,
+    openExternalLink,
     renderPage
   };
 })(window);
