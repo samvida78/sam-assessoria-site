@@ -3155,15 +3155,76 @@ tr.corban-row-tier-10p > td:first-child {
 
 .card-canvas-frame {
   width: 100%;
-  max-width: 390px;
-  aspect-ratio: 4 / 5;
+  max-width: 410px;
+  aspect-ratio: 1080 / 1540;
   height: auto;
   border-radius: 14px;
   border: 1px solid var(--mol-border-strong);
   box-shadow: var(--mol-shadow-md);
-  background: #f3f5f9;
+  background: #f7f5f0;
   display: block;
   margin: 0 auto;
+}
+
+/* 4-Group Separate Batch Download Panel */
+.dash-group-dl-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+}
+@media (max-width: 640px) {
+  .dash-group-dl-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.card-group-dl-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+@media (max-width: 980px) {
+  .card-group-dl-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  .card-group-dl-grid { grid-template-columns: 1fr; }
+}
+
+.card-group-dl-btn {
+  border-radius: 12px;
+  padding: 11px 13px;
+  text-align: left;
+  cursor: pointer;
+  border: 1px solid rgba(226, 192, 110, 0.42);
+  color: #ffffff;
+  transition: transform 0.14s ease, box-shadow 0.14s ease, opacity 0.14s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.card-group-dl-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(9, 12, 19, 0.22); }
+.card-group-dl-btn:disabled { opacity: 0.48; cursor: not-allowed; transform: none; }
+.card-group-dl-btn.group-0 { background: linear-gradient(135deg, #09132e 0%, #1d4ed8 100%); }
+.card-group-dl-btn.group-1-5 { background: linear-gradient(135deg, #451a03 0%, #d97706 100%); }
+.card-group-dl-btn.group-6-9 { background: linear-gradient(135deg, #450a18 0%, #dc2626 100%); }
+.card-group-dl-btn.group-10p { background: linear-gradient(135deg, #022c22 0%, #0d9488 100%); }
+
+.card-group-dl-btn.compact {
+  padding: 7px 9px;
+  border-radius: 9px;
+  font-size: 11px;
+  gap: 2px;
+}
+.card-group-dl-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10.5px;
+  font-weight: 800;
+  color: #f3d078;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .card-tpl-pills {
@@ -5606,6 +5667,13 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
     }
   ];
 
+  const CARD_GROUP_SPECS = [
+    { tier: '0', num: 1, title: 'Grupo 1 · 0 Pontos', shortLabel: '0 pts', slug: 'Grupo-1-Sem-Pontuacao-0pts', desc: 'Sem pontuação no mês', btnCls: 'group-0', pillIcon: 'fa-eye' },
+    { tier: '1-5', num: 2, title: 'Grupo 2 · 1 a 5 Pontos', shortLabel: '1–5 pts', slug: 'Grupo-2-Primeira-Margem-1a5pts', desc: '1ª margem de pontuação', btnCls: 'group-1-5', pillIcon: 'fa-bolt' },
+    { tier: '6-9', num: 3, title: 'Grupo 3 · 6 a 9 Pontos', shortLabel: '6–9 pts · Alerta', slug: 'Grupo-3-Segunda-Margem-6a9pts-ALERTA', desc: '2ª margem · Alerta Vermelho', btnCls: 'group-6-9', pillIcon: 'fa-triangle-exclamation' },
+    { tier: '10+', num: 4, title: 'Grupo 4 · 10+ Pontos', shortLabel: '10+ pts', slug: 'Grupo-4-Acima-de-10pts-DESTAQUE', desc: 'Acima de 10 pontos', btnCls: 'group-10p', pillIcon: 'fa-trophy' }
+  ];
+
   function getScoreTier(pts) {
     const p = Number(pts) || 0;
     if (p <= 0) return '0';
@@ -6026,8 +6094,12 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
 
     if (templateId === 'consorcio_ganhos') {
       return {
-        gradStart: '#7f1d1d',
+        gradStart: '#2e0713',
+        gradMid: '#7f1d1d',
         gradEnd: '#b91c1c',
+        footStart: '#200610',
+        footEnd: '#4f0d1b',
+        footAccent: '#f5d37a',
         accent: '#fde68a',
         tag: 'BRADESCO CONSÓRCIOS · OPORTUNIDADE DE ALTOS GANHOS',
         headline: 'Multiplique suas receitas com Consórcio no seu ponto!',
@@ -6054,9 +6126,13 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
 
     if (templateId === 'consorcio_venda') {
       return {
-        gradStart: '#0f172a',
+        gradStart: '#0b1120',
+        gradMid: '#3b0d1f',
         gradEnd: '#991b1b',
-        accent: '#e7c87d',
+        footStart: '#0b1120',
+        footEnd: '#320b1c',
+        footAccent: '#e7c87d',
+        accent: '#f5d37a',
         tag: 'TREINAMENTO PRÁTICO · PORTAL DE VENDAS BALCÃO',
         headline: 'Como vender Consórcio em poucos minutos no balcão',
         subline: `${nome} · Chave ${chave} · Ag. ${agCod}${agNome ? ' (' + agNome + ')' : ''}`,
@@ -6082,8 +6158,12 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
 
     if (templateId === 'leque_negocios') {
       return {
-        gradStart: '#064e3b',
+        gradStart: '#022c22',
+        gradMid: '#0f4c5c',
         gradEnd: '#1e3a8a',
+        footStart: '#042126',
+        footEnd: '#0f2e5e',
+        footAccent: '#f5d37a',
         accent: '#fde68a',
         tag: 'ESTRATÉGIA DE ALTA RENTABILIDADE · EXPRESSO & CONSÓRCIO',
         headline: 'Leque completo para multiplicar receita no seu ponto',
@@ -6111,8 +6191,12 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
     // Default: 'pontuacao' — tier-adaptive
     if (meta.tier === '6-9') {
       return {
-        gradStart: '#7f1d1d',
+        gradStart: '#450a18',
+        gradMid: '#991b1b',
         gradEnd: '#dc2626',
+        footStart: '#2d0610',
+        footEnd: '#6b0f1a',
+        footAccent: '#f6d06f',
         accent: '#fde047',
         tag: `MODO ALERTA · QUASE NOS 10 PTS · ${countdown.daysLeft} DIA(S) P/ FIM DO MÊS`,
         headline: `Falta muito pouco! Faltam só ${faltam} ponto(s) para 10!`,
@@ -6139,8 +6223,12 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
 
     if (meta.tier === '1-5') {
       return {
-        gradStart: '#78350f',
+        gradStart: '#451a03',
+        gradMid: '#9a3412',
         gradEnd: '#d97706',
+        footStart: '#2c1104',
+        footEnd: '#632508',
+        footAccent: '#f4c768',
         accent: '#fef08a',
         tag: `1º PASSO DADO · RUMO AOS 10 PTS · ${countdown.daysLeft} DIA(S) NO MÊS`,
         headline: `Você já iniciou com ${ptsStr} pt(s)! Rumo aos 10 pontos no mês`,
@@ -6167,9 +6255,13 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
 
     if (meta.tier === '0') {
       return {
-        gradStart: '#1e293b',
-        gradEnd: '#475569',
-        accent: '#fde68a',
+        gradStart: '#09132e',
+        gradMid: '#162d66',
+        gradEnd: '#1d4ed8',
+        footStart: '#09132e',
+        footEnd: '#142654',
+        footAccent: '#e7c268',
+        accent: '#f5d37a',
         tag: `ATIVAR PONTUAÇÃO · ABRA OS OLHOS · ${countdown.daysLeft} DIA(S) NO MÊS`,
         headline: `Hora de transformar seus ${trx} atendimentos em pontuação e dinheiro!`,
         subline: `${nome} · Chave ${chave} · Ag. ${agCod}${agNome ? ' (' + agNome + ')' : ''}`,
@@ -6195,9 +6287,13 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
 
     // tier === '10+'
     return {
-      gradStart: '#064e3b',
+      gradStart: '#022c22',
+      gradMid: '#065f46',
       gradEnd: '#0d9488',
-      accent: '#e7c87d',
+      footStart: '#03221b',
+      footEnd: '#074537',
+      footAccent: '#f3d078',
+      accent: '#f3d078',
       tag: 'PARABÉNS! META DE 10+ PONTOS ATINGIDA · VÁ MUITO ALÉM!',
       headline: `Parabéns pelos ${ptsStr} pontos! Amplie seus ganhos no leque completo`,
       subline: `${nome} · Chave ${chave} · Ag. ${agCod}${agNome ? ' (' + agNome + ')' : ''}`,
@@ -6221,10 +6317,48 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
     };
   }
 
+  function drawSamEmblem(ctx, x, y, size) {
+    ctx.save();
+    const bgGrad = ctx.createLinearGradient(x, y, x + size, y + size);
+    bgGrad.addColorStop(0, '#090c13');
+    bgGrad.addColorStop(1, '#1d273b');
+    ctx.fillStyle = bgGrad;
+    roundRectPath(ctx, x, y, size, size, Math.round(size * 0.24));
+    ctx.fill();
+    ctx.strokeStyle = '#f3d078';
+    ctx.lineWidth = Math.max(1.8, size * 0.045);
+    ctx.stroke();
+
+    const s = size / 24;
+    ctx.fillStyle = '#f3d078';
+    ctx.beginPath();
+    ctx.moveTo(x + 12 * s, y + 2.2 * s);
+    ctx.lineTo(x + 13.7 * s, y + 4.0 * s);
+    ctx.lineTo(x + 12 * s, y + 5.8 * s);
+    ctx.lineTo(x + 10.3 * s, y + 4.0 * s);
+    ctx.closePath();
+    ctx.fill();
+
+    ctx.fillStyle = '#f8f6f0';
+    ctx.font = `900 ${Math.round(size * 0.50)}px "Segoe UI", Georgia, serif`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('S', x + size / 2, y + size * 0.56);
+
+    ctx.strokeStyle = '#f3d078';
+    ctx.lineWidth = Math.max(2, size * 0.075);
+    ctx.lineCap = 'round';
+    ctx.beginPath();
+    ctx.moveTo(x + 5 * s, y + 20.6 * s);
+    ctx.lineTo(x + 19 * s, y + 20.6 * s);
+    ctx.stroke();
+    ctx.restore();
+  }
+
   function renderCardToCanvas(canvas, c, agObj, templateId, refDateStr, senderContact) {
     if (!canvas) return null;
     const W = 1080;
-    const H = 1350;
+    const H = 1540;
     if (canvas.width !== W) canvas.width = W;
     if (canvas.height !== H) canvas.height = H;
     const ctx = canvas.getContext('2d');
@@ -6234,185 +6368,248 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
     const pts = Number(c?.pts) || 0;
     const pctMeta = Math.min(100, Math.round((pts / 10) * 100));
 
-    // Background
-    ctx.fillStyle = '#f3f5f9';
+    // Warm Executive Ivory Canvas
+    ctx.fillStyle = '#f7f5f0';
     ctx.fillRect(0, 0, W, H);
 
-    // Header gradient
-    const hGrad = ctx.createLinearGradient(0, 0, W, 248);
+    // Rich 3-stop Luxury Header Gradient (Y=0..286)
+    const hGrad = ctx.createLinearGradient(0, 0, W, 286);
     hGrad.addColorStop(0, spec.gradStart);
+    hGrad.addColorStop(0.54, spec.gradMid || spec.gradStart);
     hGrad.addColorStop(1, spec.gradEnd);
     ctx.fillStyle = hGrad;
-    ctx.fillRect(0, 0, W, 248);
+    ctx.fillRect(0, 0, W, 286);
 
-    // Subtle geometric accent circles in header
+    // Stylized geometric sheen & architectural circles in header
     ctx.save();
+    ctx.fillStyle = 'rgba(255,255,255,0.05)';
+    ctx.beginPath();
+    ctx.moveTo(W - 360, 0);
+    ctx.lineTo(W, 0);
+    ctx.lineTo(W, 286);
+    ctx.lineTo(W - 500, 286);
+    ctx.closePath();
+    ctx.fill();
     ctx.fillStyle = 'rgba(255,255,255,0.06)';
     ctx.beginPath();
-    ctx.arc(W - 95, 55, 130, 0, Math.PI * 2);
+    ctx.arc(W - 95, 58, 145, 0, Math.PI * 2);
     ctx.fill();
     ctx.beginPath();
-    ctx.arc(W - 210, 210, 75, 0, Math.PI * 2);
+    ctx.arc(W - 230, 232, 82, 0, Math.PI * 2);
     ctx.fill();
     ctx.restore();
 
-    // Header top badge pill
-    ctx.fillStyle = 'rgba(0,0,0,0.26)';
-    roundRectPath(ctx, 44, 28, W - 88, 38, 19);
-    ctx.fill();
-    ctx.fillStyle = spec.accent;
-    ctx.font = '700 17px "Segoe UI", Arial, sans-serif';
-    ctx.fillText(spec.tag.slice(0, 76), 62, 53);
+    // Metallic champagne gold top & bottom header trim
+    const goldGradTop = ctx.createLinearGradient(0, 0, W, 0);
+    goldGradTop.addColorStop(0, '#b4832c');
+    goldGradTop.addColorStop(0.35, '#fae5a5');
+    goldGradTop.addColorStop(0.7, '#d9a441');
+    goldGradTop.addColorStop(1, '#f3d078');
+    ctx.fillStyle = goldGradTop;
+    ctx.fillRect(0, 0, W, 6);
+    ctx.fillRect(0, 280, W, 6);
 
-    // Header main headline
+    // Header SAM Emblem + Top Badge Pill
+    drawSamEmblem(ctx, 44, 24, 52);
+    ctx.fillStyle = 'rgba(0,0,0,0.30)';
+    roundRectPath(ctx, 110, 28, W - 154, 44, 22);
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(243,208,120,0.45)';
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+
+    ctx.fillStyle = spec.accent;
+    ctx.font = '800 18.5px "Segoe UI", Arial, sans-serif';
+    ctx.fillText(spec.tag, 128, 56, W - 190);
+
+    // Header Main Headline (Larger & bolder)
     ctx.fillStyle = '#ffffff';
-    ctx.font = '800 32px "Segoe UI", Arial, sans-serif';
-    const nextY = drawWrappedText(ctx, spec.headline, 44, 108, W - 88, 40, 2);
+    ctx.font = '800 38px "Segoe UI", Arial, sans-serif';
+    const nextY = drawWrappedText(ctx, spec.headline, 44, 122, W - 88, 46, 2);
 
     // Subline (Corban + Chave + Agência)
-    ctx.fillStyle = 'rgba(255,255,255,0.88)';
-    ctx.font = '600 19px "Segoe UI", Arial, sans-serif';
-    drawWrappedText(ctx, spec.subline, 44, Math.max(nextY + 8, 198), W - 88, 26, 2);
+    ctx.fillStyle = 'rgba(255,255,255,0.93)';
+    ctx.font = '700 22.5px "Segoe UI", Arial, sans-serif';
+    drawWrappedText(ctx, spec.subline, 44, Math.max(nextY + 8, 214), W - 88, 29, 2);
 
-    // 3 KPI boxes (Y=272, H=112)
+    // 3 KPI boxes (Y=308, H=128)
     const kpiW = 312;
-    const kpiH = 112;
+    const kpiH = 128;
     const kpiGap = 28;
-    const kpiY = 272;
+    const kpiY = 308;
     for (let i = 0; i < 3; i++) {
       const k = spec.kpis[i];
       const kx = 44 + i * (kpiW + kpiGap);
       ctx.fillStyle = '#ffffff';
-      roundRectPath(ctx, kx, kpiY, kpiW, kpiH, 16);
+      roundRectPath(ctx, kx, kpiY, kpiW, kpiH, 18);
       ctx.fill();
-      ctx.strokeStyle = '#dde3ee';
+      ctx.strokeStyle = '#d7dfec';
       ctx.lineWidth = 2;
       ctx.stroke();
 
-      ctx.fillStyle = '#64748b';
-      ctx.font = '700 15px "Segoe UI", Arial, sans-serif';
-      ctx.fillText(k.lbl, kx + 20, kpiY + 34);
+      ctx.fillStyle = '#475569';
+      ctx.font = '800 17px "Segoe UI", Arial, sans-serif';
+      ctx.fillText(k.lbl, kx + 20, kpiY + 38, kpiW - 40);
 
       ctx.fillStyle = k.color;
-      ctx.font = '800 31px "Segoe UI", Arial, sans-serif';
-      ctx.fillText(String(k.val).slice(0, 18), kx + 20, kpiY + 82);
+      let valFs = 37;
+      const valStr = String(k.val);
+      while (valFs > 25) {
+        ctx.font = `800 ${valFs}px "Segoe UI", Arial, sans-serif`;
+        if (ctx.measureText(valStr).width <= kpiW - 40) break;
+        valFs -= 1;
+      }
+      ctx.fillText(valStr, kx + 20, kpiY + 93, kpiW - 40);
     }
 
-    // Progress Bar toward 10 points (Y=404, H=44)
+    // Progress Bar toward 10 points (Y=456, H=52)
     const pbX = 44;
-    const pbY = 404;
+    const pbY = 456;
     const pbW = W - 88;
-    const pbH = 42;
+    const pbH = 52;
     ctx.fillStyle = '#e2e8f0';
-    roundRectPath(ctx, pbX, pbY, pbW, pbH, 21);
+    roundRectPath(ctx, pbX, pbY, pbW, pbH, 26);
     ctx.fill();
 
     if (pctMeta > 0) {
-      const fillW = Math.max(46, Math.round((pbW * pctMeta) / 100));
+      const fillW = Math.max(54, Math.round((pbW * pctMeta) / 100));
       ctx.fillStyle = pts >= 10 ? '#059669' : pts >= 6 ? '#dc2626' : '#d97706';
-      roundRectPath(ctx, pbX, pbY, fillW, pbH, 21);
+      roundRectPath(ctx, pbX, pbY, fillW, pbH, 26);
       ctx.fill();
     }
-    ctx.font = '800 18px "Segoe UI", Arial, sans-serif';
+    ctx.font = '800 21px "Segoe UI", Arial, sans-serif';
     const pbText = `PROGRESSO META MÍNIMA (10 PTS): ${Number.isInteger(pts) ? pts : pts.toFixed(1)} pts (${pctMeta}%)`;
     const pbTextW = ctx.measureText(pbText).width;
     const pbTextX = pbX + Math.max(20, (pbW - pbTextW) / 2);
     ctx.fillStyle = '#0f172a';
-    ctx.fillText(pbText, pbTextX, pbY + 27);
+    ctx.fillText(pbText, pbTextX, pbY + 33);
     if (pctMeta > 0) {
-      const fillW = Math.max(46, Math.round((pbW * pctMeta) / 100));
+      const fillW = Math.max(54, Math.round((pbW * pctMeta) / 100));
       ctx.save();
       ctx.beginPath();
       ctx.rect(pbX, pbY, fillW, pbH);
       ctx.clip();
       ctx.fillStyle = '#ffffff';
-      ctx.fillText(pbText, pbTextX, pbY + 27);
+      ctx.fillText(pbText, pbTextX, pbY + 33);
       ctx.restore();
     }
 
-    // Banner box (Y=466, H=134)
+    // Banner box (Y=528, H=164)
     const bX = 44;
-    const bY = 466;
+    const bY = 528;
     const bW = W - 88;
-    const bH = 136;
+    const bH = 164;
     ctx.fillStyle = spec.bannerBg;
-    roundRectPath(ctx, bX, bY, bW, bH, 16);
+    roundRectPath(ctx, bX, bY, bW, bH, 18);
     ctx.fill();
     ctx.strokeStyle = spec.bannerBorder;
     ctx.lineWidth = 2.5;
     ctx.stroke();
 
     ctx.fillStyle = spec.bannerColor;
-    ctx.font = '800 21px "Segoe UI", Arial, sans-serif';
-    drawWrappedText(ctx, spec.bannerTitle, bX + 24, bY + 36, bW - 48, 26, 2);
+    ctx.font = '800 24px "Segoe UI", Arial, sans-serif';
+    const bannerNextY = drawWrappedText(ctx, spec.bannerTitle, bX + 26, bY + 39, bW - 52, 31, 2);
 
     ctx.fillStyle = '#1e293b';
-    ctx.font = '500 18.5px "Segoe UI", Arial, sans-serif';
-    drawWrappedText(ctx, spec.bannerBody, bX + 24, bY + 78, bW - 48, 25, 2);
+    ctx.font = '600 21px "Segoe UI", Arial, sans-serif';
+    drawWrappedText(ctx, spec.bannerBody, bX + 26, Math.max(bannerNextY + 8, bY + 90), bW - 52, 27.5, 2);
 
-    // Section Header
+    // Section Header (Y=726)
+    ctx.fillStyle = '#d9a441';
+    roundRectPath(ctx, 44, 708, 8, 22, 4);
+    ctx.fill();
     ctx.fillStyle = '#0f172a';
-    ctx.font = '800 18px "Segoe UI", Arial, sans-serif';
-    ctx.fillText(spec.bulletsTitle, 44, 638);
+    ctx.font = '800 21px "Segoe UI", Arial, sans-serif';
+    ctx.fillText(spec.bulletsTitle, 62, 727, W - 106);
 
-    // 4 Actionable Cards (Y starts at 656, each H=140, gap=12 -> ends at 1252, clean margin above footer 1272)
-    let curY = 656;
-    const rowH = 140;
-    const rowGap = 12;
+    // 4 Actionable Cards (Y=746..1396, H=152, gap=14 -> 22px clean margin above footer 1418)
+    let curY = 746;
+    const rowH = 152;
+    const rowGap = 14;
     for (let i = 0; i < spec.bullets.length; i++) {
       const b = spec.bullets[i];
       ctx.fillStyle = '#ffffff';
-      roundRectPath(ctx, 44, curY, W - 88, rowH, 16);
+      roundRectPath(ctx, 44, curY, W - 88, rowH, 18);
       ctx.fill();
-      ctx.strokeStyle = '#dde3ee';
-      ctx.lineWidth = 1.8;
+      ctx.strokeStyle = '#d7dfec';
+      ctx.lineWidth = 2;
       ctx.stroke();
 
-      // Left accent bar
-      ctx.fillStyle = i === 0 ? spec.gradEnd : (i === 1 ? '#059669' : '#b45309');
-      roundRectPath(ctx, 44, curY + 14, 10, rowH - 28, 5);
+      // Left bold accent bar
+      ctx.fillStyle = i === 0 ? spec.gradEnd : (i === 1 ? '#059669' : (i === 2 ? '#b45309' : '#1d4ed8'));
+      roundRectPath(ctx, 44, curY + 14, 12, rowH - 28, 6);
       ctx.fill();
 
       ctx.fillStyle = '#0f172a';
-      ctx.font = '800 20px "Segoe UI", Arial, sans-serif';
-      ctx.fillText(b.title, 74, curY + 38);
+      ctx.font = '800 23.5px "Segoe UI", Arial, sans-serif';
+      ctx.fillText(b.title, 76, curY + 39, W - 144);
 
-      ctx.fillStyle = '#334155';
-      ctx.font = '500 18px "Segoe UI", Arial, sans-serif';
-      drawWrappedText(ctx, b.text, 74, curY + 70, W - 142, 25, 3);
+      ctx.fillStyle = '#1e293b';
+      ctx.font = '600 20.5px "Segoe UI", Arial, sans-serif';
+      drawWrappedText(ctx, b.text, 76, curY + 73, W - 144, 27.5, 3);
 
       curY += rowH + rowGap;
     }
 
-    // Footer bar (Y=1272, H=78) — Contact only (never display website URL)
-    ctx.fillStyle = '#090c13';
-    ctx.fillRect(0, H - 78, W, 78);
-    ctx.fillStyle = '#e2c06e';
-    ctx.fillRect(0, H - 78, W, 4);
+    // Stylized Executive Footer Bar (Y=1418..1540, H=122) — Contact only (zero website URL)
+    const footY = H - 122;
+    const fGrad = ctx.createLinearGradient(0, footY, W, H);
+    fGrad.addColorStop(0, spec.footStart || '#090c13');
+    fGrad.addColorStop(1, spec.footEnd || '#172034');
+    ctx.fillStyle = fGrad;
+    ctx.fillRect(0, footY, W, 122);
 
-    ctx.fillStyle = '#f5f3ee';
-    ctx.font = '800 18px "Segoe UI", Arial, sans-serif';
-    ctx.fillText('SAM ASSESSORIA', 44, H - 44);
-    ctx.fillStyle = '#e2c06e';
-    ctx.font = '700 12px "Segoe UI", Arial, sans-serif';
-    ctx.fillText('BRADESCO EXPRESSO', 44, H - 22);
+    ctx.save();
+    ctx.fillStyle = 'rgba(255,255,255,0.04)';
+    ctx.beginPath();
+    ctx.arc(W - 80, H - 18, 120, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+
+    const goldGradFoot = ctx.createLinearGradient(0, 0, W, 0);
+    goldGradFoot.addColorStop(0, '#a67c2e');
+    goldGradFoot.addColorStop(0.5, '#fae5a5');
+    goldGradFoot.addColorStop(1, '#c99838');
+    ctx.fillStyle = goldGradFoot;
+    ctx.fillRect(0, footY, W, 5);
+
+    drawSamEmblem(ctx, 44, H - 90, 58);
+
+    ctx.fillStyle = '#f8f6f0';
+    ctx.font = '800 23.5px "Segoe UI", Arial, sans-serif';
+    ctx.fillText('SAM ASSESSORIA', 118, H - 62);
+    ctx.fillStyle = spec.footAccent || '#f3d078';
+    ctx.font = '800 13.5px "Segoe UI", Arial, sans-serif';
+    ctx.fillText('ASSESSORIA & TREINAMENTOS · EXPRESSO', 118, H - 35);
+
+    // Gold-framed glass Contact Pill on right
+    const pillW = 530;
+    const pillH = 78;
+    const pillX = W - 44 - pillW;
+    const pillY = H - 99;
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.08)';
+    roundRectPath(ctx, pillX, pillY, pillW, pillH, 16);
+    ctx.fill();
+    ctx.strokeStyle = spec.footAccent || '#e2c06e';
+    ctx.lineWidth = 2;
+    ctx.stroke();
 
     const rawContact = String(senderContact ?? getSenderContact()).trim();
-    const contactText = rawContact || 'Espaço reservado para seu Contato (preencha no painel)';
+    const contactText = rawContact || 'Espaço para seu Contato (preencha no painel)';
 
     ctx.textAlign = 'right';
-    ctx.fillStyle = '#e2c06e';
-    ctx.font = '800 11.5px "Segoe UI", Arial, sans-serif';
-    ctx.fillText('CONTATO PARA NEGÓCIOS', W - 44, H - 48);
+    ctx.fillStyle = spec.footAccent || '#f3d078';
+    ctx.font = '800 13px "Segoe UI", Arial, sans-serif';
+    ctx.fillText('CONTATO DIRETO', W - 68, pillY + 26);
 
-    ctx.fillStyle = rawContact ? '#ffffff' : '#94a3b8';
-    let cFontSize = 19;
-    while (cFontSize > 13) {
+    ctx.fillStyle = rawContact ? '#ffffff' : '#cbd5e1';
+    let cFontSize = 24;
+    while (cFontSize > 15) {
       ctx.font = `800 ${cFontSize}px "Segoe UI", Arial, sans-serif`;
-      if (ctx.measureText(contactText).width <= 680) break;
+      if (ctx.measureText(contactText).width <= pillW - 48) break;
       cFontSize -= 1;
     }
-    ctx.fillText(contactText, W - 44, H - 22, 680);
+    ctx.fillText(contactText, W - 68, pillY + 59, pillW - 48);
     ctx.textAlign = 'left';
 
     return spec;
@@ -6560,7 +6757,7 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
 
           <div class="card-studio-grid">
             <div class="text-center">
-              <canvas id="${canvasId}" class="card-canvas-frame" width="1080" height="1350"></canvas>
+              <canvas id="${canvasId}" class="card-canvas-frame" width="1080" height="1540"></canvas>
               <div class="d-flex justify-content-center flex-wrap gap-2 mt-2 no-print">
                 <button type="button" class="btn btn-sm btn-outline-primary fw-semibold" onclick="downloadCardPng('${mode}','${canvasId}')">
                   <i class="fa-solid fa-download me-1"></i>Baixar Card PNG (1)
@@ -6692,6 +6889,7 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
     SCORE_RULES,
     CONSORCIO_KB,
     CARD_TEMPLATES,
+    CARD_GROUP_SPECS,
     getSenderContact,
     setSenderContact,
     sanitizeCardFileName,
@@ -8327,6 +8525,27 @@ function renderDashnova() {
                 <div class="tier-action-hint" style="color:var(--mol-green-dark);"><i class="fa-brands fa-whatsapp"></i>Card · Consórcio &amp; Leque</div>
               </div>
             </div>
+
+            <div class="small fw-bold text-uppercase mt-2 pt-2 border-top mb-1 d-flex justify-content-between align-items-center" style="font-size:10px;letter-spacing:.07em;color:var(--mol-ink-muted);">
+              <span><i class="fa-solid fa-layer-group me-1 text-primary"></i>Baixar Cards em Bloco por Grupo (PNGs separados)</span>
+            </div>
+            <div class="dash-group-dl-strip no-print">
+              ${(window.SamCards?.CARD_GROUP_SPECS || []).map((g) => {
+                const cnt = g.tier === '0' ? s.pontos0 : g.tier === '1-5' ? s.pontos1a5 : g.tier === '6-9' ? s.pontos6a9 : s.pontos10mais;
+                const btnId = g.tier === '0' ? 'dashGroupDl0Btn' : g.tier === '1-5' ? 'dashGroupDl1a5Btn' : g.tier === '6-9' ? 'dashGroupDl6a9Btn' : 'dashGroupDl10pBtn';
+                return `
+                  <button type="button" id="${btnId}" class="card-group-dl-btn compact ${g.btnCls}" ${cnt <= 0 ? 'disabled' : ''} onclick="downloadTierGroupCardsBatch('${g.tier}','dash')" title="Baixar todos os ${cnt} cards do ${esc(g.title)} separadamente">
+                    <span class="card-group-dl-badge"><i class="fa-solid ${g.pillIcon}"></i>Grupo ${g.num}</span>
+                    <span class="fw-bold d-flex justify-content-between align-items-center gap-1" style="font-size:11px;">
+                      <span>${esc(g.shortLabel)}</span>
+                      <span class="badge bg-dark bg-opacity-50 font-monospace">${cnt}</span>
+                    </span>
+                    <span style="font-size:9.5px;opacity:.92;"><i class="fa-solid fa-download me-1"></i>Baixar bloco</span>
+                  </button>
+                `;
+              }).join('')}
+            </div>
+            <div id="batchProgress_dash" class="d-none mt-2 p-2 rounded border bg-light small no-print"></div>
           </div>
         </div>
       </div>
@@ -9734,17 +9953,22 @@ function toggleCorbanTask(chave, idx) {
 }
 
 // ==================== CENTRAL DE CARDS (WHATSAPP, ALERTA 6-9 & CONSÓRCIO) ====================
-function getCardsFilteredCorbans(vis) {
+function getCardsScopeCorbans(vis, { ignoreTier = false, excludeEncerrado = false } = {}) {
   const q = String(cardHubState.q || '').trim().toLowerCase();
   return (vis?.corbans || []).filter((c) => {
+    if (excludeEncerrado && c.status === 'ENCERRADO') return false;
     if (q && !(c.chave + ' ' + c.nome + ' ' + c.ag + ' ' + c.reg + ' ' + c.cons + ' ' + (c.cidade || '')).toLowerCase().includes(q)) return false;
     if (cardHubState.ag && String(c.ag) !== String(cardHubState.ag)) return false;
     if (cardHubState.cons && String(c.cons) !== String(cardHubState.cons)) return false;
-    if (cardHubState.tier && window.SamCards) {
+    if (!ignoreTier && cardHubState.tier && window.SamCards) {
       if (window.SamCards.getScoreTier(c.pts) !== cardHubState.tier) return false;
     }
     return true;
   });
+}
+
+function getCardsFilteredCorbans(vis) {
+  return getCardsScopeCorbans(vis, { ignoreTier: false, excludeEncerrado: false });
 }
 
 function getStudioRawState(mode) {
@@ -9807,6 +10031,12 @@ function renderCardsHub() {
   const cnt0 = allPool.filter((c) => SC.getScoreTier(c.pts) === '0').length;
   const cnt10p = allPool.filter((c) => SC.getScoreTier(c.pts) === '10+').length;
 
+  const scopeNonEnc = getCardsScopeCorbans(vis, { ignoreTier: true, excludeEncerrado: true });
+  const gCnt0 = scopeNonEnc.filter((c) => SC.getScoreTier(c.pts) === '0').length;
+  const gCnt1a5 = scopeNonEnc.filter((c) => SC.getScoreTier(c.pts) === '1-5').length;
+  const gCnt6a9 = scopeNonEnc.filter((c) => SC.getScoreTier(c.pts) === '6-9').length;
+  const gCnt10p = scopeNonEnc.filter((c) => SC.getScoreTier(c.pts) === '10+').length;
+
   const filtered = sortByCol(getCardsFilteredCorbans(vis), 'chave', 'asc');
   const perPage = 20;
   const totalPages = Math.max(1, Math.ceil(filtered.length / perPage));
@@ -9847,6 +10077,32 @@ function renderCardsHub() {
         ${filtered.length > 0 ? `<button type="button" class="btn btn-sm btn-outline-primary fw-semibold" onclick="openHubFilteredModal()"><i class="fa-brands fa-whatsapp me-1"></i>Abrir Fila (${filtered.length})</button>` : ''}
         <button type="button" class="btn btn-sm btn-danger fw-bold" onclick="openTierAutoCardModal('6-9')"><i class="fa-solid fa-triangle-exclamation me-1"></i>Alerta 6–9 (${cnt6a9})</button>
         <button type="button" class="btn btn-sm btn-outline-secondary" onclick="navigate('pontos')"><i class="fa-solid fa-briefcase me-1"></i>Voltar p/ Gestão</button>
+      </div>
+    </div>
+
+    <div class="mol-panel mb-3 no-print">
+      <div class="mol-panel-head">
+        <span><i class="fa-solid fa-layer-group me-2 text-primary"></i>Baixar Cards Separadamente por Grupo de Pontuação (${scopeNonEnc.length} ativos na seleção)</span>
+        <span class="small text-muted">Cada grupo gera seu próprio pacote com PNGs individuais</span>
+      </div>
+      <div class="mol-panel-body py-3">
+        <div class="card-group-dl-grid">
+          ${(SC.CARD_GROUP_SPECS || []).map((g) => {
+            const cnt = g.tier === '0' ? gCnt0 : g.tier === '1-5' ? gCnt1a5 : g.tier === '6-9' ? gCnt6a9 : gCnt10p;
+            const btnId = g.tier === '0' ? 'hubGroupDl0Btn' : g.tier === '1-5' ? 'hubGroupDl1a5Btn' : g.tier === '6-9' ? 'hubGroupDl6a9Btn' : 'hubGroupDl10pBtn';
+            return `
+              <button type="button" id="${btnId}" class="card-group-dl-btn ${g.btnCls}" ${cnt <= 0 ? 'disabled' : ''} onclick="downloadTierGroupCardsBatch('${g.tier}','hub')">
+                <div class="d-flex justify-content-between align-items-center gap-2">
+                  <span class="card-group-dl-badge"><i class="fa-solid ${g.pillIcon}"></i>${esc(g.title)}</span>
+                  <span class="badge bg-dark bg-opacity-50 font-monospace">${cnt}</span>
+                </div>
+                <div class="small" style="opacity:.92;">${esc(g.desc)}</div>
+                <div class="fw-bold small mt-1"><i class="fa-solid fa-file-arrow-down me-1"></i>Baixar Grupo (${cnt} PNGs)</div>
+              </button>
+            `;
+          }).join('')}
+        </div>
+        <div id="batchProgress_hubGroup" class="d-none mt-2 p-2 rounded border bg-light small"></div>
       </div>
     </div>
 
@@ -10061,7 +10317,47 @@ async function blobToBase64Str(blob) {
   });
 }
 
-async function downloadSessionCardsBatch(mode, explicitChaves) {
+function getGroupBatchSpec(tierKey, source = 'hub') {
+  if (!window.SamCards) return null;
+  const SC = window.SamCards;
+  const vis = getVisibleData();
+  const spec = (SC.CARD_GROUP_SPECS || []).find((g) => g.tier === tierKey);
+  if (!spec) return null;
+
+  const pool = source === 'dash'
+    ? (vis?.corbans || []).filter((c) => c.tipo === 'E' && c.status === 'ATIVO')
+    : getCardsScopeCorbans(vis, { ignoreTier: true, excludeEncerrado: true });
+
+  const list = sortByCol(pool.filter((c) => SC.getScoreTier(c.pts) === tierKey), 'chave', 'asc');
+  const dateSlug = String(vis?.summary?.referenceDate || new Date().toLocaleDateString('pt-BR')).replace(/\//g, '-');
+  const folderName = `SAM-Cards-${spec.slug}-${dateSlug}`;
+  const progressMode = source === 'dash' ? 'dash' : 'hubGroup';
+  const suffix = tierKey === '0' ? '0Btn' : tierKey === '1-5' ? '1a5Btn' : tierKey === '6-9' ? '6a9Btn' : '10pBtn';
+  const btnId = `${source === 'dash' ? 'dashGroupDl' : 'hubGroupDl'}${suffix}`;
+
+  return { tierKey, source, spec, list, count: list.length, folderName, progressMode, templateId: 'pontuacao', btnId };
+}
+
+async function downloadTierGroupCardsBatch(tierKey, source = 'hub') {
+  const gs = getGroupBatchSpec(tierKey, source);
+  if (!gs || !gs.list.length) {
+    showToast('Grupo vazio', 'Nenhum correspondente encontrado neste grupo para baixar.', 'info');
+    return;
+  }
+  await downloadSessionCardsBatch(
+    source,
+    gs.list.map((c) => String(c.chave)),
+    {
+      templateId: gs.templateId,
+      folderName: gs.folderName,
+      progressMode: gs.progressMode,
+      btnId: gs.btnId,
+      groupTitle: gs.spec.title
+    }
+  );
+}
+
+async function downloadSessionCardsBatch(mode, explicitChaves, opts = {}) {
   if (!window.SamCards) return;
   const vis = getVisibleData();
   const pool = vis?.corbans || db?.corbans || [];
@@ -10083,15 +10379,15 @@ async function downloadSessionCardsBatch(mode, explicitChaves) {
     return;
   }
 
-  const st = mode === 'pontos' ? { templateId: 'pontuacao' } : getStudioRawState(mode);
-  const tplId = st.templateId || 'pontuacao';
+  const st = (mode === 'pontos' || mode === 'dash') ? { templateId: 'pontuacao' } : getStudioRawState(mode);
+  const tplId = opts.templateId || st.templateId || 'pontuacao';
   const refDateStr = vis?.summary?.referenceDate || '';
   const senderContact = getEffectiveSenderContact();
   const dateSlug = String(refDateStr || new Date().toLocaleDateString('pt-BR')).replace(/\//g, '-');
   const tierTag = mode === 'hub' && cardHubState.tier
     ? `faixa-${cardHubState.tier}`
     : (corbanFilters.tier ? `faixa-${corbanFilters.tier}` : 'sessao');
-  const folderName = `SAM-Cards-${tierTag}-${dateSlug}`;
+  const folderName = opts.folderName || `SAM-Cards-${tierTag}-${dateSlug}`;
 
   const useDesktopDir = !!(window.molDesktop?.pickCardsExportDir && window.molDesktop?.savePngToDir);
   let targetDirPath = null;
@@ -10101,18 +10397,20 @@ async function downloadSessionCardsBatch(mode, explicitChaves) {
     targetDirPath = pick.dirPath;
   }
 
-  const progEl = document.getElementById(`batchProgress_${mode}`) || document.getElementById('batchProgress_hub') || document.getElementById('batchProgress_modal');
-  const btnEl = document.getElementById(`btnBatchDownload_${mode}`);
+  const progMode = opts.progressMode || mode;
+  const progEl = document.getElementById(`batchProgress_${progMode}`) || document.getElementById(`batchProgress_${mode}`) || document.getElementById('batchProgress_hub') || document.getElementById('batchProgress_modal');
+  const btnEl = document.getElementById(opts.btnId || `btnBatchDownload_${mode}`);
   if (btnEl) btnEl.disabled = true;
   cardBatchCancelled = false;
 
+  const progLabel = opts.groupTitle ? `${esc(opts.groupTitle)} — imagens separadas` : 'Gerando imagens separadas';
   const updateProgressUi = (done, total, extraHtml = '') => {
     if (!progEl) return;
     progEl.classList.remove('d-none');
     const pctDone = total > 0 ? Math.round((done / total) * 100) : 0;
     progEl.innerHTML = `
       <div class="d-flex justify-content-between align-items-center mb-1">
-        <strong><i class="fa-solid fa-images me-1 text-primary"></i>Gerando imagens separadas (${done}/${total})</strong>
+        <strong><i class="fa-solid fa-images me-1 text-primary"></i>${progLabel} (${done}/${total})</strong>
         ${done < total ? `<button type="button" class="btn btn-link btn-sm p-0 text-danger text-decoration-none" onclick="cancelCardsBatch()">Cancelar</button>` : '<span class="badge bg-success">Concluído</span>'}
       </div>
       <div class="progress" style="height:6px;"><div class="progress-bar bg-primary" style="width:${pctDone}%"></div></div>
@@ -10123,7 +10421,7 @@ async function downloadSessionCardsBatch(mode, explicitChaves) {
   try {
     const offCanvas = document.createElement('canvas');
     offCanvas.width = 1080;
-    offCanvas.height = 1350;
+    offCanvas.height = 1540;
     const entries = [];
     let savedCount = 0;
 
