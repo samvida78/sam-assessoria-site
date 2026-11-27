@@ -3345,6 +3345,414 @@ tr.corban-row-tier-10p > td:first-child {
   border-color: var(--mol-gold);
 }
 
+/* ==================== SAM v4.5 · MATERIAL DE APOIO (ACADEMIA MULTIPLICADORES) ==================== */
+.apoio-hero {
+  background: linear-gradient(135deg, #090c13 0%, #141c2d 65%, #3d0f18 100%);
+  border: 1px solid rgba(226, 192, 110, 0.35);
+  border-radius: 18px;
+  padding: 22px 24px;
+  margin-bottom: 18px;
+  box-shadow: var(--mol-shadow-md);
+}
+.apoio-hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.apoio-stat-chip {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(226, 192, 110, 0.35);
+  color: #f5e6bf;
+  border-radius: 999px;
+  padding: 5px 11px;
+  font-size: 11.5px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.apoio-topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 14px;
+}
+.apoio-topic-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  text-align: left;
+  background: var(--mol-surface);
+  border: 1.5px solid var(--mol-border-strong);
+  border-left: 5px solid #dc2626;
+  border-radius: 16px;
+  padding: 18px;
+  cursor: pointer;
+  box-shadow: var(--mol-shadow-sm);
+  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+  min-width: 0;
+}
+.apoio-topic-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--mol-gold);
+  box-shadow: var(--mol-shadow-md);
+}
+.apoio-topic-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+}
+.apoio-topic-num {
+  background: linear-gradient(135deg, #b91c1c, #dc2626);
+  color: #ffffff;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 3px 9px;
+  border-radius: 999px;
+}
+.apoio-topic-dur {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--mol-ink-muted);
+}
+.apoio-topic-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  width: 100%;
+}
+.apoio-topic-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #090c13, #1f2a42);
+  border: 1px solid rgba(226, 192, 110, 0.45);
+  color: #f3d078;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  flex-shrink: 0;
+}
+.apoio-topic-cat {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--mol-gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 2px;
+}
+.apoio-topic-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--mol-ink);
+  line-height: 1.25;
+  margin-bottom: 5px;
+}
+.apoio-topic-sub {
+  font-size: 12.5px;
+  color: var(--mol-ink-muted);
+  line-height: 1.45;
+}
+.apoio-topic-cta {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 11px;
+  border-top: 1px solid var(--mol-border);
+  font-size: 12.5px;
+  font-weight: 800;
+  color: var(--mol-crimson);
+}
+
+.apoio-topic-placeholder {
+  border: 1.5px dashed var(--mol-border-strong);
+  border-radius: 16px;
+  padding: 20px 18px;
+  background: var(--mol-surface-2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 7px;
+  min-height: 160px;
+}
+.apoio-placeholder-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  background: var(--mol-surface);
+  border: 1px solid var(--mol-border);
+  color: var(--mol-ink-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.apoio-lesson-header {
+  background: linear-gradient(135deg, #090c13 0%, #172034 72%, #3d0f18 100%);
+  border: 1px solid rgba(226, 192, 110, 0.35);
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: var(--mol-shadow-sm);
+}
+
+.apoio-tabs-bar {
+  display: flex;
+  gap: 7px;
+  overflow-x: auto;
+  max-width: 100%;
+  padding-bottom: 4px;
+  scrollbar-width: thin;
+}
+@media (min-width: 992px) {
+  .apoio-tabs-bar {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+}
+.apoio-tab-btn {
+  border: 1px solid var(--mol-border-strong);
+  background: var(--mol-surface);
+  color: var(--mol-ink-2);
+  border-radius: 11px;
+  padding: 7px 11px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.14s ease;
+}
+.apoio-tab-btn:hover {
+  border-color: var(--mol-gold);
+  color: var(--mol-ink);
+}
+.apoio-tab-btn.active {
+  background: linear-gradient(135deg, #090c13, #172034);
+  color: #f3d078;
+  border-color: var(--mol-gold);
+  box-shadow: 0 4px 12px rgba(9, 12, 19, 0.18);
+}
+
+.apoio-quote {
+  margin: 0;
+  padding: 12px 15px;
+  border-left: 4px solid var(--mol-gold);
+  background: var(--mol-surface-2);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--mol-ink);
+  line-height: 1.5;
+}
+.apoio-benefit-list {
+  padding-left: 18px;
+  font-size: 13px;
+  color: var(--mol-ink-2);
+  display: grid;
+  gap: 6px;
+}
+
+.apoio-gold-rules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+.apoio-gold-rule-card {
+  background: var(--mol-surface);
+  border: 1px solid var(--mol-border);
+  border-top: 3.5px solid var(--mol-gold);
+  border-radius: 12px;
+  padding: 13px 14px;
+}
+.apoio-rule-num {
+  font-family: var(--mol-font-mono);
+  font-size: 10.5px;
+  font-weight: 800;
+  color: var(--mol-gold-dark);
+  letter-spacing: 0.06em;
+  margin-bottom: 3px;
+}
+
+.apoio-sim-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  gap: 10px;
+}
+.apoio-sim-result {
+  border-radius: 12px;
+  padding: 13px 15px;
+  border: 1.5px solid var(--mol-border);
+  background: var(--mol-surface-2);
+}
+.apoio-sim-result.is-ok {
+  border-color: rgba(5, 150, 105, 0.45);
+  background: rgba(5, 150, 105, 0.08);
+}
+.apoio-sim-result.is-warn {
+  border-color: rgba(217, 119, 6, 0.45);
+  background: rgba(217, 119, 6, 0.09);
+}
+.apoio-sim-result.is-bad {
+  border-color: rgba(220, 38, 38, 0.45);
+  background: rgba(220, 38, 38, 0.08);
+}
+
+.apoio-branch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 7px;
+  max-height: 290px;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+.apoio-branch-pill {
+  background: var(--mol-surface-2);
+  border: 1px solid var(--mol-border);
+  border-radius: 9px;
+  padding: 7px 10px;
+  color: var(--mol-ink);
+}
+.apoio-branch-pill.has-note {
+  border-color: rgba(220, 38, 38, 0.45);
+  background: rgba(220, 38, 38, 0.06);
+}
+
+.apoio-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px;
+}
+.apoio-client-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
+  gap: 10px;
+}
+.apoio-step-card {
+  background: var(--mol-surface);
+  border: 1px solid var(--mol-border);
+  border-left: 4px solid var(--mol-slate);
+  border-radius: 12px;
+  padding: 12px 14px;
+  min-width: 0;
+}
+.apoio-step-card.is-done {
+  border-left-color: #059669;
+  background: rgba(5, 150, 105, 0.05);
+}
+.apoio-step-card.is-highlight {
+  border-left-color: #dc2626;
+  background: rgba(220, 38, 38, 0.05);
+}
+.apoio-step-num {
+  display: inline-block;
+  font-family: var(--mol-font-mono);
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--mol-gold-dark);
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.apoio-script-pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  font-family: var(--mol-font-sans);
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--mol-ink);
+  background: var(--mol-surface-2);
+  border: 1px solid var(--mol-border);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.apoio-exc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+.apoio-exc-card {
+  background: var(--mol-surface);
+  border: 1px solid var(--mol-border);
+  border-left: 4px solid #64748b;
+  border-radius: 12px;
+  padding: 13px 14px;
+}
+.apoio-exc-card.tone-danger { border-left-color: #dc2626; }
+.apoio-exc-card.tone-warning { border-left-color: #d97706; }
+.apoio-exc-card.tone-info { border-left-color: #2563eb; }
+.apoio-exc-card.tone-gold { border-left-color: #c69b42; }
+.apoio-exc-action {
+  background: var(--mol-surface-2);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 12px;
+  color: var(--mol-ink);
+}
+
+.apoio-support-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));
+  gap: 10px;
+}
+.apoio-support-card {
+  background: var(--mol-surface-2);
+  border: 1px solid var(--mol-border);
+  border-radius: 12px;
+  padding: 12px 13px;
+}
+
+.apoio-quiz-card {
+  background: var(--mol-surface-2);
+  border: 1px solid var(--mol-border);
+  border-radius: 12px;
+  padding: 13px 14px;
+}
+.apoio-quiz-opt {
+  text-align: left;
+  border: 1px solid var(--mol-border-strong);
+  background: var(--mol-surface);
+  color: var(--mol-ink);
+  border-radius: 9px;
+  padding: 8px 12px;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.14s ease, background 0.14s ease;
+}
+.apoio-quiz-opt:hover {
+  border-color: var(--mol-gold);
+}
+.apoio-quiz-opt.is-correct {
+  border-color: #059669;
+  background: rgba(5, 150, 105, 0.14);
+  color: #065f46;
+}
+.apoio-quiz-opt.is-wrong {
+  border-color: #dc2626;
+  background: rgba(220, 38, 38, 0.12);
+  color: #991b1b;
+}
+[data-theme="dark"] .apoio-quiz-opt.is-correct { color: #6ee7b7; }
+[data-theme="dark"] .apoio-quiz-opt.is-wrong { color: #fca5a5; }
+
+@media (max-width: 767.98px) {
+  .apoio-hero, .apoio-lesson-header { padding: 15px 15px; border-radius: 14px; }
+  .apoio-topic-grid, .apoio-steps-grid, .apoio-client-steps, .apoio-exc-grid, .apoio-support-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 </style>
 <style data-inline="mobile">
 /* ==========================================================================
@@ -3972,7 +4380,7 @@ html, body {
             <div class="sam-logo-pill-hero sm"><img data-sam-logo="full" alt="SAM Assessoria e Treinamento" /></div>
             <div>
               <div class="auth-brand-title">RECUPERAÇÃO SEGURA</div>
-              <div class="auth-brand-sub">Validação Cadastral Obrigatória · SAM 4.4</div>
+              <div class="auth-brand-sub">Validação Cadastral Obrigatória · SAM 4.5</div>
             </div>
           </div>
           <h2 class="auth-hero-headline" style="font-size:21px;">Valide sua <em>identidade</em> para redefinir.</h2>
@@ -4049,7 +4457,7 @@ html, body {
         <div class="mol-sidebar-top">
           <div class="mol-brand-inline">
             <div class="sam-logo-pill-sidebar"><img data-sam-logo="full" alt="SAM Assessoria e Treinamento" /></div>
-            <span class="brand-exec-pill">4.4</span>
+            <span class="brand-exec-pill">4.5</span>
           </div>
           <button class="btn btn-sm text-white-50 border-0 p-1" onclick="toggleSidebar()" title="Recolher menu"><i class="fa-solid fa-angles-left"></i></button>
         </div>
@@ -4102,6 +4510,10 @@ html, body {
           </button>
           <button id="navUsersBtn" class="mol-nav-link" data-page="user" onclick="navigate('user')">
             <span class="mol-nav-left"><i class="fa-solid fa-users-gear"></i><span>Usuários e Acessos</span></span>
+          </button>
+          <button class="mol-nav-link" data-page="apoio" onclick="navigate('apoio')">
+            <span class="mol-nav-left"><i class="fa-solid fa-graduation-cap"></i><span>Material de Apoio</span></span>
+            <span id="navApoioCount" class="nav-badge-pill">1</span>
           </button>
           <button class="mol-nav-link" data-page="recursos" onclick="navigate('recursos')">
             <span class="mol-nav-left"><i class="fa-solid fa-book-open"></i><span>Recursos · Junho/25</span></span>
@@ -4256,6 +4668,10 @@ html, body {
       <button class="sheet-action-tile" onclick="closeMobileSheets();navigate('cards')">
         <span class="sheet-tile-icon text-danger" style="background:var(--mol-crimson-soft);"><i class="fa-brands fa-whatsapp"></i></span>
         <div><div class="fw-bold small">Central de Cards (<span id="sheetAlert6a9Count">0</span>)</div><div style="font-size:10.5px;color:var(--mol-ink-muted);">Alerta 6–9 &amp; Consórcio</div></div>
+      </button>
+      <button id="sheetApoioTile" class="sheet-action-tile" onclick="closeMobileSheets();navigate('apoio')">
+        <span class="sheet-tile-icon" style="background:var(--mol-gold-soft);color:var(--mol-gold-dark);"><i class="fa-solid fa-graduation-cap"></i></span>
+        <div><div class="fw-bold small">Material de Apoio</div><div style="font-size:10.5px;color:var(--mol-ink-muted);">Treinamentos por assunto</div></div>
       </button>
       <button class="sheet-action-tile" onclick="closeMobileSheets();navigate('upload')">
         <span class="sheet-tile-icon text-success" style="background:var(--mol-green-soft);"><i class="fa-solid fa-cloud-arrow-up"></i></span>
@@ -7178,6 +7594,1103 @@ var o=[];var l=Array.isArray(e);for(f=n.s.c;f<=n.e.c;++f)s[f]=ya(f);for(var c=n.
 })(window);
 
   </script>
+  <script data-inline="training-hub">
+/* SAM Assessoria e Treinamentos — Central de Material de Apoio para Multiplicadores (v4.5)
+ * Arquitetura modular por botões de assunto: cada tema enviado entra como um botão próprio,
+ * mantendo as aulas organizadas, simplificadas, interativas e sem mistura de conteúdos.
+ */
+(function (global) {
+  'use strict';
+
+  const STORAGE_KEY = 'sam_apoio_progress_v1';
+
+  const TRAINING_TOPICS = [
+    {
+      id: 'tutorial_nova_plataforma',
+      order: '01',
+      buttonLabel: 'Tutorial Nova Plataforma',
+      category: 'Prospecção & 1º Acesso · Bradesco Expresso',
+      subtitle: 'Aula simplificada e interativa: nova jornada 100% digital, regras de elegibilidade, 13 passos do multiplicador, 1º acesso do cliente e assinatura dos 3 contratos.',
+      duration: '6 módulos práticos · QUIZ',
+      icon: 'fa-solid fa-rocket',
+      accent: 'crimson',
+      sources: [
+        'Maratona do Saber: Prospecção (Nova Plataforma Expresso)',
+        'Tutorial: Primeiro Acesso Plataforma Expresso (Lead / Comerciante)'
+      ]
+    }
+  ];
+
+  const ELEGIBLE_BRANCHES = [
+    { name: 'Açougues', note: '' },
+    { name: 'Armarinhos', note: '' },
+    { name: 'Artigos de Festas', note: '' },
+    { name: 'Bazar', note: '' },
+    { name: 'Camping e Pesca', note: '' },
+    { name: 'Cartório*', note: 'Vedado em SP por legislação estadual da categoria.' },
+    { name: 'Doceria', note: '' },
+    { name: 'Embalagens e Descartáveis', note: '' },
+    { name: 'Farmácias', note: '' },
+    { name: 'Fotográfico', note: '' },
+    { name: 'Livraria', note: '' },
+    { name: 'Lojas de bijuterias', note: '' },
+    { name: 'Lojas de brinquedos', note: '' },
+    { name: 'Lojas de calçados', note: '' },
+    { name: 'Lojas de conveniência', note: '' },
+    { name: 'Lojas de departamento', note: '' },
+    { name: 'Lojas de ferragens e ferramentas', note: '' },
+    { name: 'Lojas de material elétrico', note: '' },
+    { name: 'Lojas de produtos agropecuários', note: '' },
+    { name: 'Lojas de tintas', note: '' },
+    { name: 'Lojas de vestuário e confecções', note: '' },
+    { name: 'Magazines', note: '' },
+    { name: 'Materiais de construção', note: '' },
+    { name: 'Materiais Esportivos', note: '' },
+    { name: 'Minimercados', note: '' },
+    { name: 'Móveis e eletrodomésticos', note: '' },
+    { name: 'Óticas', note: '' },
+    { name: 'Padarias', note: '' },
+    { name: 'Papelarias', note: '' },
+    { name: 'Pet Shop', note: '' },
+    { name: 'Produtos de Limpeza', note: '' },
+    { name: 'Produtos de perfumaria e cosméticos', note: '' },
+    { name: 'Produtos Veterinários', note: '' },
+    { name: 'Sacolão / hortifrutigranjeiras', note: '' },
+    { name: 'Supermercados', note: '' },
+    { name: 'Utilidades Domésticas', note: '' }
+  ];
+
+  const MULTIPLIER_STEPS = [
+    {
+      id: 's1', phase: 'Etapa 1 · Acesso', num: '01',
+      title: 'Acessar com CPF e Senha Provisória',
+      desc: 'No link recebido de no-reply@expressocorban.com.br, informe seu CPF para receber a senha provisória por e-mail e realize o 1º login.'
+    },
+    {
+      id: 's2', phase: 'Etapa 1 · Acesso', num: '02',
+      title: 'Acessos Seguintes',
+      desc: 'Nos próximos acessos à Plataforma Expresso, informe seu CPF, digite sua senha pessoal e clique em Continuar.'
+    },
+    {
+      id: 's3', phase: 'Etapa 1 · Acesso', num: '03',
+      title: 'Validar Identidade (Biometria Facial ou SMS)',
+      desc: 'Escolha Biometria facial (local iluminado, sem boné, óculos ou acessórios, câmera na altura do rosto) ou receba código por SMS.'
+    },
+    {
+      id: 's4', phase: 'Etapa 2 · Prospecção', num: '04',
+      title: 'Abrir "Nova prospecção" no Painel de Serviços',
+      desc: 'No menu principal da Plataforma Expresso, acesse o Painel de Serviços e selecione o card Nova prospecção.'
+    },
+    {
+      id: 's5', phase: 'Etapa 2 · Prospecção', num: '05',
+      title: 'Consultar CNPJ na Lupa',
+      desc: 'Digite o CNPJ do estabelecimento e clique na lupa para consultar em tempo real elegibilidade, pendências e Conta PJ.'
+    },
+    {
+      id: 's6', phase: 'Etapa 2 · Prospecção', num: '06',
+      title: 'Conferir Aptidão e "Salvar CNPJ"',
+      desc: 'Confirme "Tem conta pessoa jurídica: Sim" e "Esse CNPJ pode ser prospectado". Clique em Salvar CNPJ para reservar na sua carteira.'
+    },
+    {
+      id: 's7', phase: 'Etapa 2 · Prospecção', num: '07',
+      title: 'Preparar Visita Presencial com o Máster',
+      desc: 'Leve notebook ou tablet, converse com o sócio máster, fotografe os espaços internos e externos da loja e clique em "Ir para Gestão de prospecção".'
+    },
+    {
+      id: 's8', phase: 'Etapa 3 · Cadastro & Contrato', num: '08',
+      title: 'Localizar na aba "Salvas" (Dica de Ouro)',
+      desc: 'Use os filtros Cidade e Detalhe do status para achar rápido. Na coluna Ação, clique nos três pontos (...).'
+    },
+    {
+      id: 's9', phase: 'Etapa 3 · Cadastro & Contrato', num: '09',
+      title: 'Selecionar "Cadastrar dados" e Confirmar',
+      desc: 'No menu de ações (...), clique em Cadastrar dados e confirme o início do preenchimento no estabelecimento.'
+    },
+    {
+      id: 's10', phase: 'Etapa 3 · Cadastro & Contrato', num: '10',
+      title: 'Apresentar Proposta de Serviços + 2 Termos',
+      desc: 'Mostre ao máster os ganhos por transação/produto (Bradesco Expresso e Bradesco Seguros) e marque os 2 termos de consentimento.'
+    },
+    {
+      id: 's11', phase: 'Etapa 3 · Cadastro & Contrato', num: '11',
+      title: 'Preencher os 5 Blocos da Loja Matriz',
+      desc: 'Complete: (1) Dados da loja matriz, (2) Endereço, (3) Dados bancários, (4) Representante legal e (5) Infraestrutura (ou Salvar e continuar depois).'
+    },
+    {
+      id: 's12', phase: 'Etapa 3 · Cadastro & Contrato', num: '12',
+      title: 'Cadastrar Filiais (Se Houver)',
+      desc: 'Se a rede tiver mais pontos de atendimento, clique em "Cadastrar outra loja"; caso contrário, avance clicando em Continuar.'
+    },
+    {
+      id: 's13', phase: 'Etapa 3 · Cadastro & Contrato', num: '13',
+      title: 'Concluir e Validar o E-mail do Máster!',
+      desc: 'ATENÇÃO: o contrato digital vai para o e-mail cadastrado do máster. Confirme se ele recebeu — a prospecção só vai para análise após a assinatura.'
+    }
+  ];
+
+  const EXCEPTION_SCENARIOS = [
+    {
+      code: 'EXC-01',
+      tone: 'danger',
+      screenTitle: 'Máximo de 10 prospecções atingido',
+      cause: 'A carteira já possui 10 contratos simultâneos parados na fase de cadastro.',
+      action: 'Conclua o envio de algum contrato para "Em análise" ou cancele uma proposta parada na aba Salvas para liberar vaga imediata.'
+    },
+    {
+      code: 'EXC-02',
+      tone: 'warning',
+      screenTitle: 'Estabelecimento não quer se tornar correspondente',
+      cause: 'CNPJ já possui recusa registrada em prospecção recente.',
+      action: 'Respeite a carência de 07 dias e revise os benefícios financeiros antes de nova abordagem consultiva.'
+    },
+    {
+      code: 'EXC-03',
+      tone: 'info',
+      screenTitle: 'CNPJ não atende aos requisitos',
+      cause: 'Algum critério automático (tempo, porte, faturamento ou alerta) apresentou apontamento.',
+      action: 'O sistema permite "Salvar CNPJ mesmo assim", porém exigirá registro de DEFESA/CONTESTAÇÃO na etapa de contratação.'
+    },
+    {
+      code: 'EXC-04',
+      tone: 'danger',
+      screenTitle: 'No momento, esse CNPJ não pode ser prospectado',
+      cause: 'CNPJ inapto ou restrição impeditiva vigente no retorno da consulta.',
+      action: 'Não é possível avançar agora. Verificar regularização cadastral do cliente antes de nova tentativa.'
+    },
+    {
+      code: 'EXC-05',
+      tone: 'neutral',
+      screenTitle: 'Não há resultados para esse CNPJ',
+      cause: 'Número digitado incorretamente ou base cadastral sem retorno para o CNPJ informado.',
+      action: 'Conferir os 14 dígitos no cartão CNPJ da Receita Federal e repetir a consulta na lupa.'
+    },
+    {
+      code: 'EXC-06',
+      tone: 'warning',
+      screenTitle: 'Município não elegível para novas contratações',
+      cause: 'Praça fora do critério populacional/estratégico vigente (ex.: abaixo de 30 mil habitantes sem exceção liberada).',
+      action: 'Validar com a Gestão de Terceiros se há campanha regional ou focar estabelecimentos em praças elegíveis.'
+    },
+    {
+      code: 'EXC-07',
+      tone: 'gold',
+      screenTitle: 'Ainda não tem conta PJ no Bradesco',
+      cause: 'Comerciante cumpre os demais requisitos, mas ainda não possui Conta Corrente PJ Bradesco ativa.',
+      action: 'Clique em "Salvar CNPJ mesmo assim", oriente o máster a baixar o app Bradesco Net Empresa → Abra aqui e reconsulte após 15 dias.'
+    },
+    {
+      code: 'EXC-08',
+      tone: 'neutral',
+      screenTitle: 'Esse CNPJ já está em prospecção',
+      cause: 'Já existe uma jornada ativa ou em andamento para este mesmo CNPJ.',
+      action: 'Conferir em Gestão de prospecção (Salvas / Em análise / Histórico) ou aguardar finalização.'
+    }
+  ];
+
+  const SUPPORT_TEAM = [
+    { name: 'Jamily Nunes', region: 'Nordeste 1 e 2', phoneDisplay: '(11) 93089-1615', waPhone: '5511930891615' },
+    { name: 'Katheelyn Reis', region: 'Sudeste', phoneDisplay: '(11) 91752-8736', waPhone: '5511917528736' },
+    { name: 'Andressa Sousa', region: 'Centro-Oeste, Norte e Sul', phoneDisplay: '(11) 93218-3160', waPhone: '5511932183160' },
+    { name: 'Emily Felix', region: 'São Paulo', phoneDisplay: '(11) 94238-3594', waPhone: '5511942383594' }
+  ];
+
+  const QUIZ_QUESTIONS = [
+    {
+      id: 'q1',
+      question: 'Quantos contratos simultâneos você pode manter em fase de cadastro antes que avancem para análise?',
+      options: ['Até 5 contratos', 'Até 10 contratos simultâneos', 'Ilimitado', 'Até 15 contratos por cidade'],
+      correctIndex: 1,
+      explanation: 'Regra de Ouro 1: é permitido manter até 10 contratos simultaneamente em cadastro. Quando um contrato avança para análise, a vaga é liberada.'
+    },
+    {
+      id: 'q2',
+      question: 'Para um município com 25.000 habitantes (a partir de 20.001 hab.), qual é o faturamento mensal mínimo exigido?',
+      options: ['R$ 10.000,00 / mês', 'R$ 15.000,00 / mês', 'R$ 20.000,00 / mês', 'R$ 30.000,00 / mês'],
+      correctIndex: 3,
+      explanation: 'Faixas oficiais: até 5k hab. = R$ 10 mil; 5k–10k = R$ 15 mil; 10k–20k = R$ 20 mil; a partir de 20.001 hab. = R$ 30.000,00/mês.'
+    },
+    {
+      id: 'q3',
+      question: 'O comerciante ainda não tem Conta PJ no Bradesco. O que o Multiplicador deve fazer?',
+      options: [
+        'Descartar o estabelecimento imediatamente',
+        'Salvar CNPJ mesmo assim, orientar abertura pelo app Bradesco Net Empresa → Abra aqui e reconsultar após 15 dias',
+        'Pedir para usar a conta Pessoa Física do sócio no cadastro',
+        'Aguardar 90 dias antes de salvar'
+      ],
+      correctIndex: 1,
+      explanation: 'Na tela de exceção "Ainda não tem conta PJ", o sistema permite Salvar CNPJ mesmo assim; oriente o app Bradesco Net Empresa → Abra aqui e reconsulte após 15 dias.'
+    },
+    {
+      id: 'q4',
+      question: 'Após uma prospecção anterior do mesmo CNPJ, qual é a carência mínima para nova prospecção?',
+      options: ['24 horas', '03 dias', '07 dias', '30 dias'],
+      correctIndex: 2,
+      explanation: 'Regra de Ouro 3: se um CNPJ já foi prospectado anteriormente, deve-se aguardar 07 dias para re-prospecção.'
+    },
+    {
+      id: 'q5',
+      question: 'No 1º acesso do comerciante (Lead), o que é obrigatório para concluir a assinatura digital (pdsign_)?',
+      options: [
+        'Imprimir e enviar com 2 testemunhas pelo correio',
+        'Assinar apenas o primeiro termo; os outros dois são opcionais',
+        'Ler e rolar até o final de cada um dos 3 contratos, marcar "Li e concordo com o contrato" e assinar até surgir "Todos os contratos foram assinados!"',
+        'Enviar foto da CNH por e-mail para liberar análise'
+      ],
+      correctIndex: 2,
+      explanation: 'Sem testemunhas e 100% digital: o sócio precisa rolar até o fim dos 3 contratos (Adesão Expresso, Representante de Seguros e Parceria Expresso + Odontológico) e assiná-los.'
+    }
+  ];
+
+  const LESSON_TABS = [
+    { id: 'resumo', label: 'Resumo & DE→PARA', icon: 'fa-solid fa-wand-magic-sparkles' },
+    { id: 'elegibilidade', label: 'Quem Pode? (Simulador)', icon: 'fa-solid fa-calculator' },
+    { id: 'jornada', label: 'Jornada (13 Passos)', icon: 'fa-solid fa-route' },
+    { id: 'cliente', label: '1º Acesso & 3 Contratos', icon: 'fa-solid fa-file-signature' },
+    { id: 'excecoes', label: 'Exceções (8 Cenários)', icon: 'fa-solid fa-triangle-exclamation' },
+    { id: 'apoio_quiz', label: 'Apoio & Quiz', icon: 'fa-solid fa-circle-check' }
+  ];
+
+  let state = {
+    activeTopicId: null,
+    activeTab: 'resumo',
+    branchSearch: '',
+    sim: {
+      popBand: '30k_plus',
+      rev: 35000,
+      years: 4,
+      hasPj: 'sim',
+      restOk: 'sim'
+    },
+    checkedSteps: {},
+    quizAnswers: {},
+    copiedFeedback: false
+  };
+
+  function loadProgress() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return;
+      const parsed = JSON.parse(raw);
+      if (parsed && typeof parsed === 'object') {
+        if (parsed.checkedSteps && typeof parsed.checkedSteps === 'object') state.checkedSteps = parsed.checkedSteps;
+        if (parsed.quizAnswers && typeof parsed.quizAnswers === 'object') state.quizAnswers = parsed.quizAnswers;
+      }
+    } catch {}
+  }
+
+  function saveProgress() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({
+        checkedSteps: state.checkedSteps,
+        quizAnswers: state.quizAnswers
+      }));
+    } catch {}
+  }
+
+  loadProgress();
+
+  function escHtml(v) {
+    return String(v ?? '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function getTopics() {
+    return TRAINING_TOPICS.slice();
+  }
+
+  function getTopicCount() {
+    return TRAINING_TOPICS.length;
+  }
+
+  function hasOpenTopic() {
+    return !!state.activeTopicId;
+  }
+
+  function findTopic(id) {
+    return TRAINING_TOPICS.find((t) => t.id === id) || null;
+  }
+
+  function rerenderRoot() {
+    const root = document.getElementById('samApoioRoot');
+    if (root) {
+      root.innerHTML = renderInnerHtml();
+    } else if (typeof global.render === 'function') {
+      global.render();
+    }
+  }
+
+  function openTopic(topicId, shouldRender = true) {
+    const t = findTopic(topicId);
+    if (!t) return;
+    state.activeTopicId = t.id;
+    if (!state.activeTab) state.activeTab = 'resumo';
+    if (shouldRender) {
+      rerenderRoot();
+      try { window.scrollTo(0, 0); } catch {}
+    }
+  }
+
+  function closeTopic(shouldRender = true) {
+    state.activeTopicId = null;
+    if (shouldRender) {
+      rerenderRoot();
+      try { window.scrollTo(0, 0); } catch {}
+    }
+  }
+
+  function setTab(tabId) {
+    if (!LESSON_TABS.some((t) => t.id === tabId)) return;
+    state.activeTab = tabId;
+    rerenderRoot();
+  }
+
+  function getMinRevenueForBand(band) {
+    if (band === 'up5k') return 10000;
+    if (band === '5k_10k') return 15000;
+    if (band === '10k_20k') return 20000;
+    return 30000;
+  }
+
+  function evaluateSim() {
+    const minRev = getMinRevenueForBand(state.sim.popBand);
+    const revOk = Number(state.sim.rev || 0) >= minRev;
+    const yearsOk = Number(state.sim.years || 0) >= 3;
+    const popOk = state.sim.popBand === '30k_plus';
+    const pjOk = state.sim.hasPj === 'sim';
+    const restOk = state.sim.restOk === 'sim';
+
+    const issues = [];
+    const warnings = [];
+    if (!restOk) issues.push('Possui restrição na consulta REST (exige sem restrição).');
+    if (!yearsOk) issues.push('Tempo de atividade inferior a 3 anos mínimos de fundação.');
+    if (!revOk) issues.push(`Faturamento abaixo do piso de R$ ${minRev.toLocaleString('pt-BR')},00/mês para este porte populacional.`);
+    if (!popOk) warnings.push('Município abaixo de 30 mil habitantes (regra geral exige 30k+ para novas contratações ou defesa/liberação regional).');
+    if (!pjOk) warnings.push('Sem Conta PJ Bradesco: pode "Salvar CNPJ mesmo assim", orientar app Bradesco Net Empresa → Abra aqui e reconsultar após 15 dias.');
+
+    let status = 'apto';
+    let badge = 'CNPJ APTO PARA PROSPECÇÃO';
+    let summary = 'Todos os critérios oficiais do treinamento estão atendidos. Pode salvar o CNPJ e iniciar o cadastro.';
+    if (issues.length > 0) {
+      status = 'pendente';
+      badge = 'ATENÇÃO · EXIGE ANÁLISE / DEFESA';
+      summary = 'Há critérios abaixo do padrão oficial. Conferir viabilidade antes ou preparar defesa caso o sistema permita salvar.';
+    } else if (warnings.length > 0) {
+      status = 'postergar';
+      badge = !pjOk ? 'SALVAR E AGUARDAR 15 DIAS (CONTA PJ)' : 'VALIDAR PRAÇA (POPULAÇÃO < 30K)';
+      summary = 'Faturamento, tempo de atividade e REST OK, mas requer atenção ao ponto de atenção abaixo.';
+    }
+
+    return { status, badge, summary, minRev, issues, warnings };
+  }
+
+  function renderSimResultBox() {
+    const r = evaluateSim();
+    const toneClass = r.status === 'apto' ? 'is-ok' : (r.status === 'postergar' ? 'is-warn' : 'is-bad');
+    return `
+      <div class="apoio-sim-result ${toneClass}">
+        <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap mb-2">
+          <span class="badge ${r.status === 'apto' ? 'bg-success' : (r.status === 'postergar' ? 'bg-warning text-dark' : 'bg-danger')}">${escHtml(r.badge)}</span>
+          <span class="small fw-bold" style="color:var(--mol-ink-muted);">Piso exigido p/ esta faixa: R$ ${r.minRev.toLocaleString('pt-BR')},00/mês</span>
+        </div>
+        <p class="small fw-semibold mb-2" style="color:var(--mol-ink);">${escHtml(r.summary)}</p>
+        ${r.issues.map((m) => `<div class="small text-danger fw-semibold"><i class="fa-solid fa-circle-xmark me-1"></i>${escHtml(m)}</div>`).join('')}
+        ${r.warnings.map((m) => `<div class="small fw-semibold" style="color:var(--mol-amber-dark);"><i class="fa-solid fa-circle-exclamation me-1"></i>${escHtml(m)}</div>`).join('')}
+      </div>
+    `;
+  }
+
+  function onSimChange(field, value) {
+    if (field === 'rev' || field === 'years') {
+      state.sim[field] = Number(value) || 0;
+    } else {
+      state.sim[field] = String(value);
+    }
+    const box = document.getElementById('apoioSimResult');
+    if (box) box.innerHTML = renderSimResultBox();
+  }
+
+  function filterBranchesList() {
+    const q = String(state.branchSearch || '').trim().toLowerCase();
+    return ELEGIBLE_BRANCHES.filter((b) => !q || b.name.toLowerCase().includes(q) || b.note.toLowerCase().includes(q));
+  }
+
+  function renderBranchListHtml() {
+    const filtered = filterBranchesList();
+    if (!filtered.length) {
+      return '<div class="small text-muted py-2">Nenhum ramo encontrado para essa busca.</div>';
+    }
+    return filtered.map((b) => `
+      <div class="apoio-branch-pill ${b.note ? 'has-note' : ''}">
+        <div class="fw-bold small">${escHtml(b.name)}</div>
+        ${b.note ? `<div style="font-size:10.5px;color:var(--mol-crimson);font-weight:700;">${escHtml(b.note)}</div>` : ''}
+      </div>
+    `).join('');
+  }
+
+  function onBranchSearch(value) {
+    state.branchSearch = String(value || '');
+    const grid = document.getElementById('apoioBranchGrid');
+    const cnt = document.getElementById('apoioBranchCount');
+    if (grid) grid.innerHTML = renderBranchListHtml();
+    if (cnt) cnt.textContent = `${filterBranchesList().length} de 36 ramos`;
+  }
+
+  function toggleStep(stepId) {
+    state.checkedSteps[stepId] = !state.checkedSteps[stepId];
+    saveProgress();
+    rerenderRoot();
+  }
+
+  function resetSteps() {
+    state.checkedSteps = {};
+    saveProgress();
+    rerenderRoot();
+  }
+
+  function answerQuiz(qId, optIdx) {
+    state.quizAnswers[qId] = Number(optIdx);
+    saveProgress();
+    rerenderRoot();
+  }
+
+  function resetQuiz() {
+    state.quizAnswers = {};
+    saveProgress();
+    rerenderRoot();
+  }
+
+  function buildClientWhatsappScript() {
+    const contact = String(global.SamCards?.getSenderContact?.() || '').trim();
+    const lines = [
+      'Olá! Seu cadastro do Bradesco Expresso foi enviado para o seu e-mail.',
+      '',
+      'Siga este passo a passo rápido no celular para ativar e assinar os contratos:',
+      '1) Abra o e-mail de no-reply@expressocorban.com.br (confira também a caixa de Spam) — sua senha provisória vale por 24 horas.',
+      '2) Acesse o link informando seu CPF e valide por Biometria facial (local iluminado, sem boné/óculos) ou SMS.',
+      '3) Crie sua senha pessoal (8 a 16 caracteres com 1 letra maiúscula, 1 minúscula, 1 número e sem sequências simples).',
+      '4) Em "Assinatura de contratos", abra os 3 contratos (Adesão Expresso, Representante de Seguros e Parceria Expresso + Odontológico).',
+      '5) IMPORTANTE: Em cada contrato, role até o final da página, marque "Li e concordo com o contrato" e clique em "Assinar contrato".',
+      '6) Ao ver a mensagem verde "Todos os contratos foram assinados!", seu processo entra em análise.',
+      '',
+      'Qualquer dúvida durante a assinatura, me chame aqui!'
+    ];
+    if (contact) {
+      lines.push('');
+      lines.push(contact);
+    }
+    return lines.join('\n');
+  }
+
+  async function copyClientScript() {
+    const text = buildClientWhatsappScript();
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(text);
+      } else {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      }
+      state.copiedFeedback = true;
+      const btn = document.getElementById('apoioCopyScriptBtn');
+      if (btn) {
+        btn.innerHTML = '<i class="fa-solid fa-check me-1"></i>Roteiro Copiado!';
+        btn.classList.remove('btn-dark');
+        btn.classList.add('btn-success');
+      }
+      if (typeof global.showToast === 'function') {
+        global.showToast('Roteiro copiado', 'Passo a passo do 1º acesso pronto para colar no WhatsApp do cliente.', 'success');
+      }
+    } catch {}
+  }
+
+  function openClientWhatsapp() {
+    const url = 'https://wa.me/?text=' + encodeURIComponent(buildClientWhatsappScript());
+    if (typeof global.openExternalSafe === 'function') global.openExternalSafe(url);
+    else window.open(url, '_blank');
+  }
+
+  function openSupportWhatsapp(waPhone, name) {
+    const msg = `Olá ${name}, sou Multiplicador e preciso de apoio sobre uma prospecção na Nova Plataforma Expresso.`;
+    const url = `https://wa.me/${waPhone}?text=${encodeURIComponent(msg)}`;
+    if (typeof global.openExternalSafe === 'function') global.openExternalSafe(url);
+    else window.open(url, '_blank');
+  }
+
+  function renderHubView() {
+    const doneSteps = MULTIPLIER_STEPS.filter((s) => !!state.checkedSteps[s.id]).length;
+    const quizCorrect = QUIZ_QUESTIONS.filter((q) => state.quizAnswers[q.id] === q.correctIndex).length;
+
+    return `
+      <div class="apoio-hero">
+        <div class="d-flex align-items-start justify-content-between gap-3 flex-wrap">
+          <div>
+            <div class="dash-eyebrow mb-1" style="color:var(--mol-gold);">Academia de Multiplicadores · SAM Assessoria</div>
+            <h2 class="dash-title mb-1" style="color:#ffffff;">Material de Apoio &amp; Treinamentos</h2>
+            <p class="small mb-0" style="color:rgba(241,237,228,.82);max-width:720px;">
+              Conteúdo separado por assunto em botões dedicados para você estudar rápido, revisar regras oficiais e apresentar com segurança aos estabelecimentos comerciais.
+            </p>
+          </div>
+          <div class="apoio-hero-stats">
+            <span class="apoio-stat-chip"><i class="fa-solid fa-layer-group me-1"></i>${getTopicCount()} assunto disponível</span>
+            <span class="apoio-stat-chip"><i class="fa-solid fa-list-check me-1"></i>${doneSteps}/13 passos</span>
+            <span class="apoio-stat-chip"><i class="fa-solid fa-award me-1"></i>Quiz ${quizCorrect}/5</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap mb-3">
+        <div>
+          <h5 class="fw-bold mb-0" style="color:var(--mol-ink);"><i class="fa-solid fa-folder-open me-2" style="color:var(--mol-gold-dark);"></i>Selecione o Assunto para Estudar</h5>
+          <div class="small" style="color:var(--mol-ink-muted);">Novos treinamentos enviados ficarão organizados aqui como novos botões individuais.</div>
+        </div>
+      </div>
+
+      <div id="apoioTopicGrid" class="apoio-topic-grid">
+        ${TRAINING_TOPICS.map((t) => `
+          <button type="button" id="topicBtn_${escHtml(t.id)}" class="apoio-topic-btn accent-${escHtml(t.accent)}" onclick="SamTraining.openTopic('${escHtml(t.id)}')">
+            <div class="apoio-topic-top">
+              <span class="apoio-topic-num">ASSUNTO ${escHtml(t.order)}</span>
+              <span class="apoio-topic-dur"><i class="fa-regular fa-clock me-1"></i>${escHtml(t.duration)}</span>
+            </div>
+            <div class="apoio-topic-main">
+              <div class="apoio-topic-icon"><i class="${escHtml(t.icon)}"></i></div>
+              <div style="min-width:0;flex:1;">
+                <div class="apoio-topic-cat">${escHtml(t.category)}</div>
+                <div class="apoio-topic-title">${escHtml(t.buttonLabel)}</div>
+                <div class="apoio-topic-sub">${escHtml(t.subtitle)}</div>
+              </div>
+            </div>
+            <div class="apoio-topic-cta">
+              <span>Abrir Aula Intuitiva</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </button>
+        `).join('')}
+
+        <div class="apoio-topic-placeholder">
+          <div class="apoio-placeholder-icon"><i class="fa-solid fa-plus"></i></div>
+          <div class="fw-bold small" style="color:var(--mol-ink);">Próximos Assuntos</div>
+          <div class="small" style="color:var(--mol-ink-muted);">Espaço reservado para novos treinamentos que você enviar (cada tema terá seu próprio botão exclusivo aqui).</div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderTabResumo() {
+    const compareRows = [
+      ['Sistema', 'Antigo Portal Bradesco Expresso (computador)', 'Plataforma Expresso (100% digital: celular, tablet ou PC)'],
+      ['Assinaturas', 'Coleta de assinaturas físicas do comerciante + 2 testemunhas', 'Assinatura digital dos sócios, sem testemunhas'],
+      ['Documentos', 'Envio físico dos papéis (risco de perda ou extravio)', 'Envio direto na Plataforma + armazenamento digital seguro'],
+      ['Acompanhamento', 'Acompanhamento manual da proposta', 'Acompanhamento em tempo real pela Plataforma Expresso']
+    ];
+    const goldRules = [
+      ['01', 'Limite Simultâneo', 'Até 10 contratos simultâneos em fase de cadastro.', 'Ao avançar para análise, libera vaga na carteira.'],
+      ['02', 'Prazo de Conclusão', 'Até 30 dias após salvar o CNPJ para finalizar.', 'Telas na aba Salvas podem exibir alerta de até 45 dias; priorize concluir em até 30 dias.'],
+      ['03', 'Re-prospecção', 'Aguardar 07 dias se o CNPJ já foi prospectado.', 'Evita bloqueio automático por tentativa antecipada.'],
+      ['04', 'Defesa / Contestação', 'Contestar pendências do CNPJ ou contrato devolvido.', 'Quando a Contratação reprovar/devolver para correção, envie defesa ou ajuste os dados.']
+    ];
+
+    return `
+      <div class="mol-panel mb-3">
+        <div class="mol-panel-head">
+          <span><i class="fa-solid fa-bullseye me-2 text-danger"></i>O que é Prospecção na Nova Plataforma?</span>
+          <span class="badge bg-danger">CONCEITO OFICIAL</span>
+        </div>
+        <div class="mol-panel-body">
+          <blockquote class="apoio-quote mb-3">
+            “Prospecção é a busca ativa e contínua por novas oportunidades de negócio, identificando clientes potenciais, entendendo suas necessidades e conectando-os às soluções do banco.”
+          </blockquote>
+          <div class="alert alert-light border small mb-0 d-flex align-items-center justify-content-between gap-2 flex-wrap">
+            <span><i class="fa-solid fa-envelope-open-text me-2 text-primary"></i><strong>E-mail oficial de acesso:</strong> <span class="font-monospace fw-bold">no-reply@expressocorban.com.br</span> (envia o link e senha provisória ao informar o <strong>CPF</strong>).</span>
+            <span class="badge bg-dark">Menos papel, mais agilidade</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mol-panel mb-3">
+        <div class="mol-panel-head">
+          <span><i class="fa-solid fa-arrows-left-right me-2 text-warning"></i>O Que Mudou? (DE → PARA)</span>
+        </div>
+        <div class="mol-panel-body p-0">
+          <div class="table-responsive">
+            <table class="table table-sm mb-0 align-middle">
+              <thead><tr><th>Etapa</th><th>DE (Processo Anterior)</th><th>PARA (Nova Plataforma Expresso)</th></tr></thead>
+              <tbody>
+                ${compareRows.map(([k, de, para]) => `
+                  <tr>
+                    <td class="fw-bold">${escHtml(k)}</td>
+                    <td style="color:var(--mol-ink-muted);"><i class="fa-solid fa-circle-minus text-danger me-1"></i>${escHtml(de)}</td>
+                    <td class="fw-semibold"><i class="fa-solid fa-circle-check text-success me-1"></i>${escHtml(para)}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-3 mb-3">
+        <div class="col-md-6">
+          <div class="mol-panel h-100 mb-0">
+            <div class="mol-panel-head"><span><i class="fa-solid fa-user-tie me-2 text-primary"></i>Benefícios para Você (Multiplicador)</span></div>
+            <div class="mol-panel-body">
+              <ul class="apoio-benefit-list mb-0">
+                <li><strong>Mais autonomia</strong> durante a prospecção em campo;</li>
+                <li><strong>Menos deslocamentos</strong> (sem recolher e postar papelada física);</li>
+                <li><strong>Visibilidade em tempo real</strong> do status de cada proposta.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="mol-panel h-100 mb-0">
+            <div class="mol-panel-head"><span><i class="fa-solid fa-store me-2 text-success"></i>Argumentos de Valor para o Comerciante</span></div>
+            <div class="mol-panel-body">
+              <ul class="apoio-benefit-list mb-0">
+                <li><strong>Menos burocracia</strong> com jornada de contratação 100% digital;</li>
+                <li><strong>Maior rapidez</strong> na aprovação (sem necessidade de testemunhas);</li>
+                <li><strong>Melhor experiência</strong> com assinatura simples pelo celular ou e-mail.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h6 class="fw-bold mb-2" style="color:var(--mol-ink);"><i class="fa-solid fa-star me-2 text-warning"></i>As 4 Regras de Ouro da Prospecção</h6>
+      <div class="apoio-gold-rules-grid">
+        ${goldRules.map(([n, t, m, sub]) => `
+          <div class="apoio-gold-rule-card">
+            <div class="apoio-rule-num">REGRA ${n}</div>
+            <div class="fw-bold mb-1" style="color:var(--mol-ink);">${escHtml(t)}</div>
+            <div class="small fw-semibold mb-1" style="color:var(--mol-crimson);">${escHtml(m)}</div>
+            <div class="small" style="color:var(--mol-ink-muted);">${escHtml(sub)}</div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  }
+
+  function renderTabElegibilidade() {
+    const revTiers = [
+      ['Até 5.000 habitantes', 'R$ 10.000,00 / mês'],
+      ['De 5.001 a 10.000 habitantes', 'R$ 15.000,00 / mês'],
+      ['De 10.001 a 20.000 habitantes', 'R$ 20.000,00 / mês'],
+      ['A partir de 20.001 habitantes', 'R$ 30.000,00 / mês']
+    ];
+    const blockers = [
+      'Já está em Prospecção por outro ou pelo mesmo fluxo',
+      'Alguns municípios com menos de 30 mil habitantes',
+      'Possui Alertas ou Pendências no CNPJ',
+      'CNPJ Inapto ou Baixado na Receita Federal',
+      'Prospecção Cancelada recentemente (respeitar 07 dias)',
+      'Não possui Conta PJ no Bradesco'
+    ];
+
+    return `
+      <div class="mol-panel mb-3">
+        <div class="mol-panel-head">
+          <span><i class="fa-solid fa-calculator me-2 text-primary"></i>Simulador Rápido: Esse Cliente Pode Ser Expresso?</span>
+          <span class="badge bg-primary">TESTE ANTES DE VISITAR</span>
+        </div>
+        <div class="mol-panel-body">
+          <div class="apoio-sim-grid mb-3">
+            <div>
+              <label class="form-label small fw-bold mb-1">Porte do Município</label>
+              <select id="apoioSimPop" class="form-select form-select-sm" onchange="SamTraining.onSimChange('popBand', this.value)">
+                <option value="30k_plus" ${state.sim.popBand === '30k_plus' ? 'selected' : ''}>30.000+ hab. (Padrão)</option>
+                <option value="20k_30k" ${state.sim.popBand === '20k_30k' ? 'selected' : ''}>20.001 a 29.999 hab.</option>
+                <option value="10k_20k" ${state.sim.popBand === '10k_20k' ? 'selected' : ''}>10.001 a 20.000 hab.</option>
+                <option value="5k_10k" ${state.sim.popBand === '5k_10k' ? 'selected' : ''}>5.001 a 10.000 hab.</option>
+                <option value="up5k" ${state.sim.popBand === 'up5k' ? 'selected' : ''}>Até 5.000 hab.</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label small fw-bold mb-1">Faturamento Mensal (R$)</label>
+              <input id="apoioSimRev" type="number" min="0" step="1000" class="form-control form-control-sm" value="${escHtml(state.sim.rev)}" oninput="SamTraining.onSimChange('rev', this.value)" />
+            </div>
+            <div>
+              <label class="form-label small fw-bold mb-1">Tempo de Atividade (Anos)</label>
+              <input id="apoioSimYears" type="number" min="0" step="1" class="form-control form-control-sm" value="${escHtml(state.sim.years)}" oninput="SamTraining.onSimChange('years', this.value)" />
+            </div>
+            <div>
+              <label class="form-label small fw-bold mb-1">Conta PJ Bradesco?</label>
+              <select id="apoioSimPj" class="form-select form-select-sm" onchange="SamTraining.onSimChange('hasPj', this.value)">
+                <option value="sim" ${state.sim.hasPj === 'sim' ? 'selected' : ''}>Sim, possui Conta PJ</option>
+                <option value="nao" ${state.sim.hasPj === 'nao' ? 'selected' : ''}>Não possui ainda</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label small fw-bold mb-1">Consulta REST</label>
+              <select id="apoioSimRest" class="form-select form-select-sm" onchange="SamTraining.onSimChange('restOk', this.value)">
+                <option value="sim" ${state.sim.restOk === 'sim' ? 'selected' : ''}>REST OK (Sem restrição)</option>
+                <option value="nao" ${state.sim.restOk === 'nao' ? 'selected' : ''}>Possui restrição</option>
+              </select>
+            </div>
+          </div>
+          <div id="apoioSimResult">${renderSimResultBox()}</div>
+        </div>
+      </div>
+
+      <div class="row g-3 mb-3">
+        <div class="col-lg-6">
+          <div class="mol-panel h-100 mb-0">
+            <div class="mol-panel-head"><span><i class="fa-solid fa-coins me-2 text-warning"></i>Critérios Oficiais &amp; Faturamento Mínimo</span></div>
+            <div class="mol-panel-body">
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge bg-light text-dark border">REST: Sem restrição</span>
+                <span class="badge bg-light text-dark border">Fundação: Mín. 3 anos</span>
+                <span class="badge bg-light text-dark border">População padrão: 30 mil+ hab.</span>
+              </div>
+              <table class="table table-xs mb-0">
+                <thead><tr><th>População do Município</th><th>Faturamento Mínimo</th></tr></thead>
+                <tbody>
+                  ${revTiers.map(([p, f]) => `<tr><td>${escHtml(p)}</td><td class="fw-bold">${escHtml(f)}</td></tr>`).join('')}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="mol-panel h-100 mb-0">
+            <div class="mol-panel-head"><span><i class="fa-solid fa-ban me-2 text-danger"></i>6 Fatores que Impedem ou Postergam</span></div>
+            <div class="mol-panel-body">
+              <ol class="small mb-0 ps-3 d-grid gap-1">
+                ${blockers.map((b) => `<li class="fw-semibold" style="color:var(--mol-ink);">${escHtml(b)}</li>`).join('')}
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mol-panel mb-0">
+        <div class="mol-panel-head">
+          <span><i class="fa-solid fa-shop me-2 text-success"></i>36 Ramos de Atividade Elegíveis</span>
+          <span id="apoioBranchCount" class="badge bg-secondary">${filterBranchesList().length} de 36 ramos</span>
+        </div>
+        <div class="mol-panel-body">
+          <div class="input-group input-group-sm mb-2">
+            <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <input id="apoioBranchSearch" type="text" class="form-control" placeholder="Filtrar ramo de atividade (ex.: Farmácia, Padaria, Cartório...)" value="${escHtml(state.branchSearch)}" oninput="SamTraining.onBranchSearch(this.value)" />
+          </div>
+          <div id="apoioBranchGrid" class="apoio-branch-grid">${renderBranchListHtml()}</div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderTabJornada() {
+    const doneCount = MULTIPLIER_STEPS.filter((s) => !!state.checkedSteps[s.id]).length;
+    const pct = Math.round((doneCount / MULTIPLIER_STEPS.length) * 100);
+    const phases = ['Etapa 1 · Acesso', 'Etapa 2 · Prospecção', 'Etapa 3 · Cadastro & Contrato'];
+
+    return `
+      <div class="mol-panel mb-3">
+        <div class="mol-panel-body d-flex align-items-center justify-content-between gap-3 flex-wrap">
+          <div style="flex:1;min-width:220px;">
+            <div class="d-flex justify-content-between small fw-bold mb-1">
+              <span>Progresso de Estudo do Multiplicador</span>
+              <span>${doneCount} / ${MULTIPLIER_STEPS.length} passos (${pct}%)</span>
+            </div>
+            <div class="progress" style="height:8px;">
+              <div class="progress-bar bg-success" style="width:${pct}%;"></div>
+            </div>
+          </div>
+          <button type="button" class="btn btn-sm btn-outline-secondary" onclick="SamTraining.resetSteps()">
+            <i class="fa-solid fa-rotate-left me-1"></i>Desmarcar Todos
+          </button>
+        </div>
+      </div>
+
+      ${phases.map((phaseName) => `
+        <div class="mb-3">
+          <h6 class="fw-bold mb-2" style="color:var(--mol-ink);">${escHtml(phaseName)}</h6>
+          <div class="apoio-steps-grid">
+            ${MULTIPLIER_STEPS.filter((s) => s.phase === phaseName).map((s) => {
+              const checked = !!state.checkedSteps[s.id];
+              return `
+                <div class="apoio-step-card ${checked ? 'is-done' : ''}">
+                  <div class="d-flex align-items-start justify-content-between gap-2 mb-1">
+                    <span class="apoio-step-num">PASSO ${escHtml(s.num)}</span>
+                    <button type="button" class="btn btn-xs ${checked ? 'btn-success' : 'btn-outline-secondary'}" style="font-size:11px;padding:2px 8px;" onclick="SamTraining.toggleStep('${escHtml(s.id)}')">
+                      <i class="fa-solid ${checked ? 'fa-check-double' : 'fa-check'} me-1"></i>${checked ? 'Revisado' : 'Marcar'}
+                    </button>
+                  </div>
+                  <div class="fw-bold small mb-1" style="color:var(--mol-ink);">${escHtml(s.title)}</div>
+                  <div class="small" style="color:var(--mol-ink-muted);">${escHtml(s.desc)}</div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+      `).join('')}
+
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="mol-panel h-100 mb-0">
+            <div class="mol-panel-head"><span><i class="fa-solid fa-timeline me-2 text-primary"></i>Acompanhar Propostas</span></div>
+            <div class="mol-panel-body small" style="color:var(--mol-ink-muted);">
+              Acesse <strong>Gestão de Prospecção → aba Histórico → três pontos (...) → Sim, acessar</strong> para ver a linha do tempo completa (Salva → Concluído → Enviado → Assinado → Status).
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="mol-panel h-100 mb-0">
+            <div class="mol-panel-head"><span><i class="fa-solid fa-gavel me-2 text-warning"></i>Fazer Defesa / Pendência</span></div>
+            <div class="mol-panel-body small" style="color:var(--mol-ink-muted);">
+              Acesse <strong>Gestão de Prospecção → aba Em análise → três pontos (...) → Ver pendência</strong> (ex.: agência/conta incorreta) e clique em <strong>Alterar dados</strong> ou registre sua defesa.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="mol-panel h-100 mb-0">
+            <div class="mol-panel-head"><span><i class="fa-solid fa-circle-xmark me-2 text-danger"></i>Cancelar para Liberar Vaga</span></div>
+            <div class="mol-panel-body small" style="color:var(--mol-ink-muted);">
+              Acesse <strong>aba Salvas → três pontos (...) → Cancelar prospecção → Confirmar</strong>, informe o motivo (ex.: remuneração, segurança, máster indisponível) + comentário opcional e libere vaga nos 10 contratos.
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderTabCliente() {
+    const scriptText = buildClientWhatsappScript();
+    return `
+      <div class="alert alert-warning small d-flex align-items-start gap-2 mb-3">
+        <i class="fa-solid fa-lightbulb mt-1"></i>
+        <div>
+          <strong>Dica para explicar ao comerciante:</strong> Mostre que depois de salvar os dados na visita, ele receberá um e-mail simples e assinará tudo digitalmente no celular em poucos minutos — <strong>sem precisar imprimir nada nem chamar testemunhas</strong>.
+        </div>
+      </div>
+
+      <div class="apoio-client-steps mb-3">
+        <div class="apoio-step-card">
+          <span class="apoio-step-num">PASSO 1</span>
+          <div class="fw-bold small mb-1">Receber Senha Provisória (Validade: 24h)</div>
+          <div class="small" style="color:var(--mol-ink-muted);">Acessar com o <strong>CPF → Enviar</strong>. A senha provisória chega de <strong>no-reply@expressocorban.com.br</strong> (vale só por <strong>24 horas</strong> no 1º acesso). Se não achar, conferir caixa de <strong>Spam</strong> ou clicar em <strong>Reenviar</strong>.</div>
+        </div>
+        <div class="apoio-step-card">
+          <span class="apoio-step-num">PASSO 2</span>
+          <div class="fw-bold small mb-1">Autenticação (Biometria Facial ou Código SMS/E-mail)</div>
+          <div class="small" style="color:var(--mol-ink-muted);">Digitar a senha provisória → <strong>Continuar</strong> → validar com <strong>Biometria facial</strong> ou clicar em <strong>Receber SMS ou e-mail</strong> e digitar o código em <strong>Confirmar</strong>.</div>
+        </div>
+        <div class="apoio-step-card">
+          <span class="apoio-step-num">PASSO 3</span>
+          <div class="fw-bold small mb-1">Boas-vindas &amp; Criar Senha Pessoal Definitiva</div>
+          <div class="small" style="color:var(--mol-ink-muted);">
+            Na tela <em>"O que você encontra por aqui"</em> (produtos, ofertas, treinamentos, ganhos — <strong>nota:</strong> saques, pagamentos e depósitos não ficam nesta plataforma), clique em <strong>Ok, vamos lá</strong> e crie a senha com as <strong>6 regras</strong>:
+            <div class="mt-2 d-flex flex-wrap gap-1">
+              <span class="badge bg-light text-dark border">8 a 16 caracteres</span>
+              <span class="badge bg-light text-dark border">1 maiúscula</span>
+              <span class="badge bg-light text-dark border">1 minúscula</span>
+              <span class="badge bg-light text-dark border">1 número</span>
+              <span class="badge bg-light text-dark border">Sem sequências (ex.: ABCDEF)</span>
+              <span class="badge bg-light text-dark border">Máx. 5 repetições do dígito</span>
+            </div>
+          </div>
+        </div>
+        <div class="apoio-step-card is-highlight">
+          <span class="apoio-step-num">PASSO 4 · CRÍTICO (pdsign_)</span>
+          <div class="fw-bold small mb-1">Assinar os 3 Contratos (Rolar até o Fim de Cada Um!)</div>
+          <div class="small mb-2" style="color:var(--mol-ink-muted);">Em <strong>Assinatura de contratos (Assinatura pendente)</strong> → clicar em <strong>Assinar Contrato</strong>. Em <strong>todos os 3 contratos</strong>, é obrigatório: <strong>rolar até o final da página</strong>, marcar <strong>"Li e concordo com o contrato"</strong> e clicar em <strong>"Assinar contrato"</strong>:</div>
+          <ol class="small fw-semibold mb-0 ps-3" style="color:var(--mol-ink);">
+            <li>Termo de Adesão ao Contrato de Prestação de Serviços de Correspondente no País (Adesão Expresso)</li>
+            <li>Termo de Adesão de Representante de Seguros (Bradesco Vida e Previdência / Seguro de Vida)</li>
+            <li>Contrato de Parceria Comercial "Expresso" + Plano Odontológico</li>
+          </ol>
+        </div>
+        <div class="apoio-step-card is-done">
+          <span class="apoio-step-num">PASSO 5</span>
+          <div class="fw-bold small mb-1">Confirmação Final: "Todos os contratos foram assinados!"</div>
+          <div class="small" style="color:var(--mol-ink-muted);">Após os 3 contratos, aparece a mensagem verde <strong>"Todos os contratos foram assinados!"</strong> e o status muda para <strong>"Em análise"</strong>.</div>
+        </div>
+      </div>
+
+      <div class="mol-panel mb-0">
+        <div class="mol-panel-head">
+          <span><i class="fa-brands fa-whatsapp me-2 text-success"></i>Roteiro Pronto para Enviar ao Comerciante</span>
+          <div class="d-flex gap-2">
+            <button id="apoioCopyScriptBtn" type="button" class="btn btn-sm ${state.copiedFeedback ? 'btn-success' : 'btn-dark'}" onclick="SamTraining.copyClientScript()">
+              <i class="fa-regular fa-copy me-1"></i>${state.copiedFeedback ? 'Roteiro Copiado!' : 'Copiar Roteiro'}
+            </button>
+            <button type="button" class="btn btn-sm btn-success" onclick="SamTraining.openClientWhatsapp()">
+              <i class="fa-brands fa-whatsapp me-1"></i>Enviar WhatsApp
+            </button>
+          </div>
+        </div>
+        <div class="mol-panel-body">
+          <pre id="apoioClientScriptPreview" class="apoio-script-pre mb-0">${escHtml(scriptText)}</pre>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderTabExcecoes() {
+    return `
+      <div class="small mb-3" style="color:var(--mol-ink-muted);">
+        Consulte abaixo exatamente o que fazer quando a Nova Plataforma exibir qualquer aviso na consulta do CNPJ:
+      </div>
+      <div class="apoio-exc-grid">
+        ${EXCEPTION_SCENARIOS.map((e) => `
+          <div class="apoio-exc-card tone-${escHtml(e.tone)}">
+            <div class="d-flex align-items-center justify-content-between gap-2 mb-1">
+              <span class="font-monospace fw-bold" style="font-size:11px;color:var(--mol-ink-muted);">${escHtml(e.code)}</span>
+              ${e.code === 'EXC-07' || e.code === 'EXC-03' ? '<span class="badge bg-success" style="font-size:10px;">Permite Salvar CNPJ</span>' : ''}
+            </div>
+            <div class="fw-bold mb-1" style="color:var(--mol-ink);">“${escHtml(e.screenTitle)}”</div>
+            <div class="small mb-2" style="color:var(--mol-ink-muted);"><strong>Por que aparece:</strong> ${escHtml(e.cause)}</div>
+            <div class="apoio-exc-action"><strong>O que fazer:</strong> ${escHtml(e.action)}</div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  }
+
+  function renderTabApoioQuiz() {
+    const answeredCount = QUIZ_QUESTIONS.filter((q) => state.quizAnswers[q.id] !== undefined).length;
+    const score = QUIZ_QUESTIONS.filter((q) => state.quizAnswers[q.id] === q.correctIndex).length;
+
+    return `
+      <div class="mol-panel mb-3">
+        <div class="mol-panel-head">
+          <span><i class="fa-solid fa-headset me-2 text-primary"></i>Estrutura de Apoio — Gestão de Terceiros</span>
+          <span class="badge bg-dark">Gerente de Área: Anderson Prado</span>
+        </div>
+        <div class="mol-panel-body">
+          <div class="apoio-support-grid">
+            ${SUPPORT_TEAM.map((m) => `
+              <div class="apoio-support-card">
+                <div class="fw-bold" style="color:var(--mol-ink);">${escHtml(m.name)}</div>
+                <div class="small fw-semibold mb-1" style="color:var(--mol-gold-dark);">${escHtml(m.region)}</div>
+                <div class="font-monospace small mb-2" style="color:var(--mol-ink-muted);">${escHtml(m.phoneDisplay)}</div>
+                <button type="button" class="btn btn-xs btn-success w-100" onclick="SamTraining.openSupportWhatsapp('${escHtml(m.waPhone)}', '${escHtml(m.name)}')">
+                  <i class="fa-brands fa-whatsapp me-1"></i>Falar com Analista
+                </button>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      </div>
+
+      <div class="mol-panel mb-0">
+        <div class="mol-panel-head">
+          <span><i class="fa-solid fa-graduation-cap me-2 text-warning"></i>Quiz Rápido de Fixação (${score}/${QUIZ_QUESTIONS.length} acertos · ${answeredCount} respondidas)</span>
+          <button type="button" class="btn btn-sm btn-outline-secondary" onclick="SamTraining.resetQuiz()">Refazer Quiz</button>
+        </div>
+        <div class="mol-panel-body d-grid gap-3">
+          ${QUIZ_QUESTIONS.map((q, idx) => {
+            const chosen = state.quizAnswers[q.id];
+            const hasChosen = chosen !== undefined;
+            const isCorrect = hasChosen && chosen === q.correctIndex;
+            return `
+              <div id="quizCard_${escHtml(q.id)}" class="apoio-quiz-card">
+                <div class="fw-bold small mb-2" style="color:var(--mol-ink);">${idx + 1}. ${escHtml(q.question)}</div>
+                <div class="d-grid gap-1">
+                  ${q.options.map((opt, optIdx) => {
+                    let cls = 'apoio-quiz-opt';
+                    if (hasChosen) {
+                      if (optIdx === q.correctIndex) cls += ' is-correct';
+                      else if (optIdx === chosen) cls += ' is-wrong';
+                    }
+                    return `
+                      <button type="button" class="${cls}" onclick="SamTraining.answerQuiz('${escHtml(q.id)}', ${optIdx})">
+                        <span>${escHtml(opt)}</span>
+                      </button>
+                    `;
+                  }).join('')}
+                </div>
+                ${hasChosen ? `
+                  <div class="small mt-2 p-2 rounded ${isCorrect ? 'bg-success-subtle text-success-emphasis' : 'bg-danger-subtle text-danger-emphasis'}">
+                    <strong>${isCorrect ? 'Correto!' : 'Revise esta regra:'}</strong> ${escHtml(q.explanation)}
+                  </div>
+                ` : ''}
+              </div>
+            `;
+          }).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  function renderLessonView(topic) {
+    let tabHtml = '';
+    if (state.activeTab === 'resumo') tabHtml = renderTabResumo();
+    else if (state.activeTab === 'elegibilidade') tabHtml = renderTabElegibilidade();
+    else if (state.activeTab === 'jornada') tabHtml = renderTabJornada();
+    else if (state.activeTab === 'cliente') tabHtml = renderTabCliente();
+    else if (state.activeTab === 'excecoes') tabHtml = renderTabExcecoes();
+    else tabHtml = renderTabApoioQuiz();
+
+    return `
+      <div class="apoio-lesson-header mb-3">
+        <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap mb-2">
+          <button type="button" id="apoioBackToTopicsBtn" class="btn btn-sm btn-outline-light" onclick="SamTraining.closeTopic()">
+            <i class="fa-solid fa-arrow-left me-1"></i>Voltar aos Assuntos
+          </button>
+          <span class="badge bg-warning text-dark">ASSUNTO ${escHtml(topic.order)} · MULTIPLICADORES</span>
+        </div>
+        <h3 class="dash-title mb-1" style="color:#ffffff;">${escHtml(topic.buttonLabel)}</h3>
+        <div class="small" style="color:rgba(241,237,228,.8);">${escHtml(topic.subtitle)}</div>
+      </div>
+
+      <div class="apoio-tabs-bar mb-3" role="tablist">
+        ${LESSON_TABS.map((tb) => `
+          <button type="button" id="apoioTab_${escHtml(tb.id)}" class="apoio-tab-btn ${state.activeTab === tb.id ? 'active' : ''}" onclick="SamTraining.setTab('${escHtml(tb.id)}')">
+            <i class="${escHtml(tb.icon)}"></i><span>${escHtml(tb.label)}</span>
+          </button>
+        `).join('')}
+      </div>
+
+      <div id="apoioLessonBody">${tabHtml}</div>
+    `;
+  }
+
+  function renderInnerHtml() {
+    const active = state.activeTopicId ? findTopic(state.activeTopicId) : null;
+    return active ? renderLessonView(active) : renderHubView();
+  }
+
+  function renderPage() {
+    return `<div id="samApoioRoot">${renderInnerHtml()}</div>`;
+  }
+
+  global.SamTraining = {
+    TRAINING_TOPICS,
+    ELEGIBLE_BRANCHES,
+    MULTIPLIER_STEPS,
+    EXCEPTION_SCENARIOS,
+    QUIZ_QUESTIONS,
+    getTopics,
+    getTopicCount,
+    hasOpenTopic,
+    openTopic,
+    closeTopic,
+    setTab,
+    onSimChange,
+    onBranchSearch,
+    toggleStep,
+    resetSteps,
+    answerQuiz,
+    resetQuiz,
+    copyClientScript,
+    openClientWhatsapp,
+    openSupportWhatsapp,
+    buildClientWhatsappScript,
+    renderPage
+  };
+})(window);
+
+  </script>
   <script data-inline="app">
 // ==================== DESKTOP STATE & AUTH ====================
 let db = null;
@@ -7840,6 +9353,7 @@ async function ensureUsersIntegrity(targetDb) {
       targetDb.cardSettings.senderContact = '';
     }
     try { window.SamCards?.setSenderContact?.(''); } catch {}
+  try { window.SamTraining?.closeTopic?.(false); } catch {}
     targetDb.contactAutoVersion = 1;
     dirty = true;
   }
@@ -8231,6 +9745,7 @@ function renderCommandResults(rawQ) {
     { label: 'Relatórios & Análises', hint: 'Alt+4', icon: 'fa-solid fa-file-lines', act: () => { closeCommandPalette(); navigate('relatorios'); } },
     { label: 'Upload de Planilhas & Backups', hint: 'Alt+5', icon: 'fa-solid fa-cloud-arrow-up', act: () => { closeCommandPalette(); navigate('upload'); } },
     { label: 'Check-in Prioritários', hint: 'Alt+7', icon: 'fa-solid fa-clipboard-check', act: () => { closeCommandPalette(); navigate('checkin'); } },
+    { label: 'Material de Apoio (Treinamentos)', hint: 'Aulas', icon: 'fa-solid fa-graduation-cap', act: () => { closeCommandPalette(); navigate('apoio'); } },
     { label: 'Recursos · Versão Junho/25', hint: 'Guia', icon: 'fa-solid fa-book-open', act: () => { closeCommandPalette(); navigate('recursos'); } },
     { label: 'Alternar Tema Claro / Escuro', hint: 'Ctrl+Shift+T', icon: 'fa-solid fa-circle-half-stroke', act: () => { closeCommandPalette(); toggleTheme(); } },
     { label: 'Exportar Tela Atual em PDF', hint: 'Ctrl+Shift+P', icon: 'fa-solid fa-file-pdf', act: () => { closeCommandPalette(); exportScreenPdf(); } }
@@ -8288,6 +9803,7 @@ function handleMobileTopBack() {
   if (currentPage === 'agencia_detail') { navigate('agencias'); return true; }
   if (currentPage === 'corban_detail') { navigate('pontos'); return true; }
   if (currentPage === 'user_edit') { navigate('user'); return true; }
+  if (currentPage === 'apoio' && window.SamTraining?.hasOpenTopic?.()) { window.SamTraining.closeTopic(); return true; }
   if (currentPage === 'relatorios' && reportView !== 'hub') { reportView = 'hub'; render(); return true; }
   if (currentPage !== 'dashnova') { navigate('dashnova'); return true; }
   return false;
@@ -8333,6 +9849,7 @@ function logout() {
   cardDetailState.msg = null;
   cardModalState.msg = null;
   try { window.SamCards?.setSenderContact?.(''); } catch {}
+  try { window.SamTraining?.closeTopic?.(false); } catch {}
   if (mapInitTimer) { clearTimeout(mapInitTimer); mapInitTimer = null; }
   if (mapInstance) { try { mapInstance.remove(); } catch {} mapInstance = null; }
   closeMobileSheets();
@@ -8382,6 +9899,7 @@ function getPageDisplayTitle() {
     user: 'Usuários e Acessos',
     user_edit: 'Editar Usuário',
     checkin: 'Check-in Prioritários',
+    apoio: 'Material de Apoio',
     recursos: 'Recursos · Junho/25'
   };
   return labels[currentPage] || 'Painel Executivo';
@@ -8423,6 +9941,8 @@ function updateBadges() {
   if (sAlertCnt) sAlertCnt.textContent = vis.summary?.pontos6a9 ?? 0;
   const ckCnt = document.getElementById('navCheckinCount');
   if (ckCnt) ckCnt.textContent = vis.checkins.filter((x) => x.status !== 'REALIZADO').length;
+  const apCnt = document.getElementById('navApoioCount');
+  if (apCnt) apCnt.textContent = window.SamTraining?.getTopicCount?.() || 1;
 
   const bc = document.getElementById('topbarBreadcrumb');
   if (bc) {
@@ -8432,12 +9952,12 @@ function updateBadges() {
 
   const mTitle = document.getElementById('mobileTopTitle');
   if (mTitle) mTitle.textContent = getPageDisplayTitle();
-  const isChildView = ['agencia_detail', 'corban_detail', 'user_edit', 'upload', 'checkin', 'user', 'recursos', 'cards'].includes(currentPage) || (currentPage === 'relatorios' && reportView !== 'hub');
+  const isChildView = ['agencia_detail', 'corban_detail', 'user_edit', 'upload', 'checkin', 'user', 'apoio', 'recursos', 'cards'].includes(currentPage) || (currentPage === 'relatorios' && reportView !== 'hub');
   document.getElementById('mobileBackBtn')?.classList.toggle('d-none', !isChildView);
 
   const activeBnav = currentPage === 'agencia_detail' ? 'agencias'
     : currentPage === 'corban_detail' ? 'pontos'
-    : ['upload', 'checkin', 'user', 'user_edit', 'recursos', 'cards'].includes(currentPage) ? 'more'
+    : ['upload', 'checkin', 'user', 'user_edit', 'apoio', 'recursos', 'cards'].includes(currentPage) ? 'more'
     : currentPage;
   document.querySelectorAll('.mol-bnav-btn').forEach((btn) => btn.classList.toggle('active', btn.dataset.bnav === activeBnav));
 }
@@ -8467,6 +9987,9 @@ function navigate(page, extra) {
     if (extra.templateId) cardHubState.templateId = extra.templateId;
     cardHubState.phone = null;
     cardHubState.msg = null;
+  }
+  if (page === 'apoio' && extra?.topicId) {
+    window.SamTraining?.openTopic?.(extra.topicId, false);
   }
   document.querySelectorAll('.mol-nav-link').forEach((el) => el.classList.toggle('active', el.dataset.page === page));
   render();
@@ -8546,6 +10069,7 @@ function render() {
   else if (currentPage === 'user') el.innerHTML = renderUsers();
   else if (currentPage === 'user_edit') el.innerHTML = renderUserEdit();
   else if (currentPage === 'checkin') el.innerHTML = renderCheckin();
+  else if (currentPage === 'apoio') el.innerHTML = renderApoio();
   else if (currentPage === 'recursos') el.innerHTML = renderRecursos();
   window.SamCards?.applyBrandLogos?.(el);
 }
@@ -12580,6 +14104,14 @@ function toggleCheckin(i) {
   recalculateAllMetrics();
   saveDB();
   render();
+}
+
+// ==================== MATERIAL DE APOIO (ACADEMIA DE MULTIPLICADORES) ====================
+function renderApoio() {
+  if (window.SamTraining && typeof window.SamTraining.renderPage === 'function') {
+    return window.SamTraining.renderPage();
+  }
+  return '<div class="alert alert-warning">Módulo de treinamento não carregado.</div>';
 }
 
 // ==================== RECURSOS & BEC/CERT DRAWERS ====================
